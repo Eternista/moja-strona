@@ -5,7 +5,7 @@
     font-family: $text-font;
     list-style: none;
     text-decoration: none;
-    &:not(.btn) {
+    &:not(.btn), &:not(.btn span) {
         cursor: none;
     }
 }
