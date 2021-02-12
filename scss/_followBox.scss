@@ -78,7 +78,7 @@
         right: 70%;
         height: 60vh;
         width: 30%;
-        top: calc(60vh + 100px);
+        top: calc(60vh + 200px);
     }
 }
 @keyframes secStep {
@@ -86,12 +86,12 @@
         right: 70%;
         height: 80vh;
         width: 30%;
-        top: calc(70vh + 100px);
+        top: calc(60vh + 200px);
     }
     100% {
         width: 330px;
         height: 250px;
-        top: calc(70vh + 850px);
+        top: calc(70vh + 1050px);
         right: calc(50% + 75px);
         // background-color: turquoise;
     }
@@ -100,25 +100,25 @@
     0% {
         width: 330px;
         height: 250px;
-        top: calc(70vh + 850px);
+        top: calc(70vh + 1050px);
         right: calc(50% + 75px);
     }
     33% {
         width: 330px;
         height: 250px;
-        top: calc(70vh + 850px);
+        top: calc(70vh + 1050px);
         right: 0;
     }
     66% {
         width: 330px;
         height: 250px;
-        top: calc(200vh + 850px);
+        top: calc(200vh + 1050px);
         right: 0;
     }
     100% {
         width: 50%;
         height: 30vh;
-        top: calc(200vh + 850px);
+        top: calc(200vh + 1050px);
         right: 0;
     }
 }

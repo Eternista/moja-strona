@@ -65,6 +65,10 @@ body {
 section {
     position: relative;
     min-height: 80vh;
+    margin-bottom: 100px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 //TEXT
