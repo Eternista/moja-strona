@@ -3,7 +3,7 @@
 $errors = [];
 $errorMessage = '';
 
-$secret = 'your secret key';
+$secret = '6LeJ6VQaAAAAAK7KN34lvQpibWptw7gFbblzRXl7';
 
 if (!empty($_POST)) {
     $name = $_POST['name'];
