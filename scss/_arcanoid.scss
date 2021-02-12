@@ -1,0 +1,159 @@
+.games {
+    min-height: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transition-delay: 2s;
+    &.game-start {
+        min-height: 100vh;
+        &::after {
+            width: 100%;
+        }
+        h2 {
+            top: -500px !important;
+        }
+        .gameStartBtn {
+            bottom: -500px !important;
+        }
+        .game {
+            height: 100vh;
+        }
+    }
+    &::after {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        background-color: $color-primary;
+        transition: width 1s;
+    }
+    .game-intro {
+        text-align: center;
+        padding: 80px;
+        position: relative;
+        z-index: 1;
+        h2 {
+            margin-bottom: 30px;
+            position: relative;
+            transition: 1s ease-in-out;
+            transition-delay: 1s;
+            top: 0;
+        }
+        .btn {
+            margin: 0 auto;
+            transition: 1s ease-in-out;
+            transition-delay: 1s;
+            position: relative;
+            bottom: 0;
+        }
+    }
+    .game {
+        position: absolute;
+        height: 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color-primary;
+        transition: 1s ease-in-out;
+        overflow: hidden;
+        transition-delay: 2s;
+        z-index: 1;
+        .levelHead {
+            text-align: center;
+            color: #fff;
+            margin-top: 40px;
+            &.hover {
+                -webkit-text-fill-color: #fff;
+            }
+        }
+        div {
+            // position: relative;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            // margin: 50px auto 0;
+            button {
+                display: none;
+            }
+            h2 {
+                display: none;
+                &.lose {
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    z-index: 2;
+                    width: 90%;
+                    text-align: center;
+                    top:  20% !important;
+                    transform: translateX(-50%);
+                    color: #fff;
+                    font-size: 30px;
+                    font-family: monospace;
+                }
+            }
+            &.activeGame {
+                &::after {
+                    content: "";
+                    background-color: rgba($color: #333, $alpha: .9);
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                }
+                button {
+                    display: block;
+                    position: absolute;
+                //     padding: 5px 15px;
+                //     min-width: 120px;
+                //     font-size: 18px;
+                //     color: #333;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                //     background-color: deepskyblue;
+                //     border: 2px solid deepskyblue;
+                //     text-transform: uppercase;
+                //     border-radius: 8px;
+                }
+            }
+            &.paused {
+                &::before {
+                    content: "";
+                    background-color: rgba($color: #333, $alpha: .9);
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                }
+                &::after {
+                    content: "PAUSED";
+                    color: #fff;
+                    font-size: 30px;
+                    top: 50%;
+                    left: 50%;
+                    height: 45px;
+                    line-height: 45px;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+            canvas {
+                background-color: snow;
+                display: block;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+}

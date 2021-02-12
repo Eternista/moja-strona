@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $text-font;
+    list-style: none;
+    text-decoration: none;
+    // cursor: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// h1.fl-heading, h2.fl-heading {
+//     // span {
+//         // z-index: 100;
+//         // &.hover {
+//         //     -webkit-text-fill-color: #fff;
+//         //     span {
+//         //         -webkit-text-fill-color: #fff;
+//         //     }
+//         // }
+//         // -webkit-text-fill-color: $color-primary;
+//     // }
+// }
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transition: background-color .3s linear;
+    transform: translate(-50%, -50%);
+    z-index: 98;
+    pointer-events: none;
+    transition: background-color .3s ease-in-out, width .3s ease-in-out .3s,height .3s ease-in-out .3s;
+    border: 1px solid $color-secondary;
+    background-color: transparent;
+    mix-blend-mode: color;
+    &.hover {
+        // z-index: -1;
+        transform: translate(-50%, -50%);
+        // mix-blend-mode: difference;
+        background: $color-secondary;
+        height: 80px;
+        width: 80px;
+    }
+    &.hover-heading {
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        background: $color-secondary;
+        height: 80px;
+        width: 80px;
+    }
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+//TEXT
+
+.stroke {
+    -webkit-text-fill-color: #f6f6f6;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: $color-secondary;
+}
+
+p,li,ul {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.fl-heading {
+    font-family: $heading-font;
+    font-weight: bold;
+    &.title {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -15px;
+            border: 1px solid $color-secondary;
+        }
+    }
+}
+
+h1 {
+    font-size: 160px;
+}
+h2 {
+    font-size: 74px;
+    &.big {
+        font-size: 160px;
+    }
+}
+h3 {
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    span {
+        font-family: $heading-font;
+    }
+}

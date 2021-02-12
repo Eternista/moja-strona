@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="wrapper">
+        <div class="followBox"></div>
+        <header>
+            <img src="/image/MyLogo.svg" alt="">
+            <ul>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#" class="primary">My Work</a></li>
+                <li><a href="#contact" class="btn primary"><span>Say Hello</span></a></li>
+            </ul>
+        </header>
+        <section class="banner">
+            <article>
+                <div class="banner-col">
+                    <h1 class="stroke fl-heading">Hello</h1>
+                    <h2 class="fl-heading">I'm Rafał</h2>
+                    <h3 class="fl-heading">Junior front end developer</h3>
+                    <div class="dual-btn">
+                        <a href="#mywork" class="btn secondary"><span>My work</span></a>
+                        <a href="#mywork" class="btn primary"><span>Contact Me</span></a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <ul>
+                    <li><p class="typing typing1"><span class="remove">&lt;section&gt;</span></p>
+                        <ul class="code">
+                            <li class="typing typing2"><span class='remove'>&lt;h1&gt;Hello&lt;/h1&gt;</span></li>
+                            <li class="typing typing3"><span class="remove">&lt;h2&gt;I'm &lt;span&gt;Rafał&lt;/span&gt;&lt;/h2&gt;</span></li>
+                            <li class="typing typing4"><span class="remove">&lt;h3&gt;Junior front end developer&lt;/h3&gt;</span></li>
+                            <li class="typing typing5"><span class="remove">&lt;div class="dual-btn"&gt;</span></li>
+                            <li>
+                                <ul>
+                                    <li class="typing typing6"><span class="remove">&lt;a href='#mywork' class="btn"&gt;My work&lt;/a&gt;</span></li>
+                                    <li class="typing typing7"><span class="remove">&lt;a href='#contact' class="btn"&gt;Contact me &lt;/a&gt;</span></li>
+                                </ul>
+                            </li>
+                            <li class="typing typing8"><span class="remove">&lt;/div&gt;</span></li>
+                        </ul>
+                    </li>
+                    <li class="typing typing9"><span class="remove">&lt;/section&gt;</span></li>
+                </ul>
+            </article>
+        </section>
+        <section class="about">
+            <div class="about_title"><div><h2 class="fl-heading big stroke">About</h2></div></div>
+            <div class="about_content">
+                <img src="image/murzyn.jpg" class="myPhoto" alt="">
+                <article class="content">
+                    <h3 class="fl-heading title">About Me</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi provident asperiores voluptatum deserunt dolor adipisci.</p>
+                    <h3 class="fl-heading title">Skills & Experience</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus, atque soluta necessitatibus ex numquam est delectus eius accusamus adipisci tenetur autem neque perspiciatis hic?</p>
+                    <div class="icons">
+                        <img src="image/HTML.svg" alt="HTML">
+                        <img src="image/CSS.svg" alt="CSS">
+                        <img src="image/Js.svg" alt="JS">
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="projects">
+            <h2 class="fl-heading stroke big"><span>My</span>Work</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quia repudiandae nemo, commodi aut obcaecati debitis autem atque quos possimus.</p>
+            <div class="projects-flex">
+                <a href="#">
+                    <img src="image/florian-olivo.png" alt="">
+                    <h3 class="fl-heading title">Project Name</h3>
+                </a>
+                <a href="#">
+                    <img src="image/florian-olivo.png" alt="">
+                    <h3 class="fl-heading title">Project Name</h3>
+                </a>
+                <a href="#">
+                    <img src="image/florian-olivo.png" alt="">
+                    <h3 class="fl-heading title">Project Name</h3>
+                </a>
+                <a href="#">
+                    <img src="image/florian-olivo.png" alt="">
+                    <h3 class="fl-heading title">Project Name</h3>
+                </a>
+                <a href="#">
+                    <img src="image/florian-olivo.png" alt="">
+                    <h3 class="fl-heading title">Project Name</h3>
+                </a>
+                <a href="#">
+                    <img src="image/florian-olivo.png" alt="">
+                    <h3 class="fl-heading title">Project Name</h3>
+                </a>
+            </div>
+        </section>
+        <section class="games">
+            <div class="game-intro">
+                <h2 class="fl-heading stroke">Do you like games</h2>
+                <button class="btn primary gameStartBtn"><span>Let's play</span></button>
+            </div>
+            <div class="game">
+                <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
+                <div class="activeGame arcanoid">
+                    <h2 class="fl-heading">You Lose, click 'start' to play again :)</h2>
+                    <canvas id="canvas" width="800" height="600"></canvas>
+                    <button class="btn start-game primary"><span>Start</span></button>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact_title">
+                <h2 class="fl-heading big stroke"><span>Say</span><span>hello</span></h2>
+            </div>
+            <div class="contact_content">
+                <form id="contact-form" method="post" action="contact-form.php">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" row='5' required></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </section>
+        <footer id="contact"><img src="image/MyLogo.svg" alt="MyLogo"></footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+</html>
