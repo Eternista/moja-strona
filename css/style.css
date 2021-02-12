@@ -27,6 +27,7 @@ body {
   transition: background-color .3s ease-in-out, width .3s ease-in-out .3s,height .3s ease-in-out .3s;
   border: 1px solid deepskyblue;
   background-color: transparent;
+  mix-blend-mode: color;
 }
 
 .cursor.hover {
@@ -263,16 +264,6 @@ header {
 
 header ul .hover a {
   color: #fff;
-}
-
-header ul .hover a.btn {
-  position: relative;
-  z-index: 100;
-}
-
-header ul .hover a.btn span {
-  position: relative;
-  z-index: 100;
 }
 
 header img {

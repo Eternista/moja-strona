@@ -9,14 +9,6 @@ header {
     // &.hover {
         ul .hover a {
             color: #fff;
-            &.btn {
-                position: relative;
-                z-index: 100;
-                span {
-                    position: relative;
-                    z-index: 100;
-                }
-            }
         }
     // }
     img {
