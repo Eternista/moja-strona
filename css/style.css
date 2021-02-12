@@ -1114,7 +1114,7 @@ footer img {
   display: flex;
 }
 
-.contact .contact_title .fl-heading span:first-child {
+.contact .contact_title .fl-heading span:nth-child(3) {
   margin-right: 40px;
 }
 
