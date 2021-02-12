@@ -108,7 +108,8 @@ h1 {
 h2 {
     font-size: 74px;
     &.big {
-        font-size: 145px;
+        font-size: 160px;
+        min-width: 520px;
     }
 }
 h3 {

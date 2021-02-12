@@ -30,7 +30,13 @@ bigH2.forEach(single => {
         span.classList.add('letter');
         single.appendChild(span);
     })
-    single.removeChild(single.firstChild);
+    if(single.classList.contains('spans')) {
+        single.removeChild(single.firstChild);
+        single.removeChild(single.firstChild);
+    }else {
+        single.removeChild(single.firstChild);
+    }
+    
 });
 
 //TEXT "TYPING"

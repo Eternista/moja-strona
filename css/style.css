@@ -102,7 +102,8 @@ h2 {
 }
 
 h2.big {
-  font-size: 145px;
+  font-size: 160px;
+  min-width: 520px;
 }
 
 h3 {
@@ -756,10 +757,18 @@ header ul li a:hover::after {
   line-height: 1.5;
 }
 
-.projects h2 span {
+.projects h2 span:nth-child(1), .projects h2 span:nth-child(2) {
   background-color: crimson;
   -webkit-text-fill-color: #fff;
-  padding: 20px 30px;
+  padding: 20px 0;
+}
+
+.projects h2 span:nth-child(1) {
+  padding-left: 30px;
+}
+
+.projects h2 span:nth-child(2) {
+  padding-right: 30px;
   margin-right: 30px;
 }
 
