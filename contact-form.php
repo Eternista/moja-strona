@@ -37,7 +37,7 @@ if (!empty($_POST)) {
         $allErrors = join('<br/>', $errors);
         $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
     } else {
-        $toEmail = 'example@example.com';
+        $toEmail = 'rafal.ziolkowski1234@gmail.com';
         $emailSubject = 'New email from your contant form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
