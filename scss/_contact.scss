@@ -1,5 +1,6 @@
 .contact {
     display: flex;
+    padding: 100px 0;
     &>div {
         display: flex;
         min-height: 100%;
@@ -18,9 +19,6 @@
             transform: rotate(-90deg);
             margin-left: -20px;
             display: flex;
-            span:nth-child(3) {
-                margin-right: 40px;
-            }
         }
     }
     .contact_content {

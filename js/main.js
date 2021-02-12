@@ -1,3 +1,10 @@
+//HAMBURGER MENU ACTIVE
+
+const hamb = document.querySelector('.hamburger');
+hamb.addEventListener('click', function(){
+    hamb.classList.toggle('is-active');
+})
+
 
 //PUT HEADING LETTER TO SPAN
 

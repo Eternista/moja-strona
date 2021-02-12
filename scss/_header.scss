@@ -5,18 +5,47 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 100;
+    justify-content: space-between;
     // &.hover {
-        ul .hover {
+        ul .hover a {
             color: #fff;
         }
+
+
     // }
+
+    //HAMBURGER MENU
+        .hamburger {
+            position: relative;
+            // z-index: 101;
+            &.hover {
+                
+                .hamburger-inner {
+                    background-color: #fff;
+                    transition: background-color .3s;
+                    &::after, &::before {
+                        // border-radius: 0;
+                        background-color: #fff;
+                        transition: background-color .3s;
+                    }
+                }
+            }
+            .hamburger-inner {
+                background-color: $color-secondary;
+                &::after, &::before {
+                    border-radius: 0;
+                    background-color: $color-secondary;
+                }
+            }
+        }
+
     img {
         width: 70px;
         height: 70px;
     }
     ul {
-        display: flex;
+        display: none;
         min-height: 100%;
         align-items: center;
         width: calc(100% - 70px);

@@ -1,10 +1,10 @@
 .followBox {
-    top: 0;
+    top: 125px;
     right: 0;
-    height: 80vh;
+    height: calc(100vh - 250px);
     position: absolute;
     background-color: $color-primary;
-    width: 40%;
+    width: 45%;
     &.active0 {
         animation: backStep 4s ease-in-out 1 forwards;
     }
@@ -20,105 +20,105 @@
 
 }
 
-@keyframes backStep {
-    0%{
-        right: 70%;
-        height: 80vh;
-        width: 30%;
-        top: calc(80vh + 100px);
-    }
-    25% {
-        height: 80vh;
-        right: 60%;
-        width: 40%;
-        top: calc(80vh + 80px);
-    }
-    50% {
-        right: 60%;
-        top: 70vh;
-        height: 10vh;
-    }
-    75% {
-        top: 70vh;
-        height: 10vh;
-        right: 0;
-    }
-    100%{
-        top: 0;
-        right: 0;
-        height: 80vh;
-        width: 40%;
-    }
-}
+// @keyframes backStep {
+//     0%{
+//         right: 70%;
+//         height: 80vh;
+//         width: 30%;
+//         top: calc(80vh + 100px);
+//     }
+//     25% {
+//         height: 80vh;
+//         right: 60%;
+//         width: 40%;
+//         top: calc(80vh + 80px);
+//     }
+//     50% {
+//         right: 60%;
+//         top: 70vh;
+//         height: 10vh;
+//     }
+//     75% {
+//         top: 70vh;
+//         height: 10vh;
+//         right: 0;
+//     }
+//     100%{
+//         top: 0;
+//         right: 0;
+//         height: 80vh;
+//         width: 40%;
+//     }
+// }
 
-@keyframes firstStep {
-    0%{
-        top: 0;
-        right: 0;
-        height: 80vh;
-        width: 40%;
-    }
-    25% {
-        top: 70vh;
-        height: 10vh;
-        right: 0;
-    }
-    50% {
-        right: 60%;
-        top: 70vh;
-        height: 10vh;
-    }
-    75% {
-        height: 60vh;
-        right: 60%;
-        width: 40%;
-        top: calc(80vh + 80px);
-    }
-    100%{
-        right: 70%;
-        height: 60vh;
-        width: 30%;
-        top: calc(60vh + 200px);
-    }
-}
-@keyframes secStep {
-    0% {
-        right: 70%;
-        height: 80vh;
-        width: 30%;
-        top: calc(60vh + 200px);
-    }
-    100% {
-        width: 330px;
-        height: 250px;
-        top: calc(70vh + 1050px);
-        right: calc(50% + 75px);
-        // background-color: turquoise;
-    }
-}
-@keyframes thirdStep {
-    0% {
-        width: 330px;
-        height: 250px;
-        top: calc(70vh + 1050px);
-        right: calc(50% + 75px);
-    }
-    33% {
-        width: 330px;
-        height: 250px;
-        top: calc(70vh + 1050px);
-        right: 0;
-    }
-    66% {
-        width: 330px;
-        height: 250px;
-        top: calc(200vh + 1050px);
-        right: 0;
-    }
-    100% {
-        width: 50%;
-        height: 30vh;
-        top: calc(200vh + 1050px);
-        right: 0;
-    }
-}
+// @keyframes firstStep {
+//     0%{
+//         top: 0;
+//         right: 0;
+//         height: 80vh;
+//         width: 40%;
+//     }
+//     25% {
+//         top: 70vh;
+//         height: 10vh;
+//         right: 0;
+//     }
+//     50% {
+//         right: 60%;
+//         top: 70vh;
+//         height: 10vh;
+//     }
+//     75% {
+//         height: 60vh;
+//         right: 60%;
+//         width: 40%;
+//         top: calc(80vh + 80px);
+//     }
+//     100%{
+//         right: 70%;
+//         height: 60vh;
+//         width: 30%;
+//         top: calc(60vh + 200px);
+//     }
+// }
+// @keyframes secStep {
+//     0% {
+//         right: 70%;
+//         height: 80vh;
+//         width: 30%;
+//         top: calc(60vh + 200px);
+//     }
+//     100% {
+//         width: 330px;
+//         height: 250px;
+//         top: calc(70vh + 1050px);
+//         right: calc(50% + 75px);
+//         // background-color: turquoise;
+//     }
+// }
+// @keyframes thirdStep {
+//     0% {
+//         width: 330px;
+//         height: 250px;
+//         top: calc(70vh + 1050px);
+//         right: calc(50% + 75px);
+//     }
+//     33% {
+//         width: 330px;
+//         height: 250px;
+//         top: calc(70vh + 1050px);
+//         right: 0;
+//     }
+//     66% {
+//         width: 330px;
+//         height: 250px;
+//         top: calc(200vh + 1050px);
+//         right: 0;
+//     }
+//     100% {
+//         width: 50%;
+//         height: 30vh;
+//         top: calc(200vh + 1050px);
+//         right: 0;
+//     }
+// }

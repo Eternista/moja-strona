@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css//hamburgers.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -13,6 +14,11 @@
         <div class="followBox"></div>
         <header>
             <img src="/image/MyLogo.svg" alt="">
+            <button class="hamburger hamburger--emphatic" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
             <ul>
                 <li><a href="#">About Me</a></li>
                 <li><a href="#" class="primary">My Work</a></li>
@@ -56,11 +62,13 @@
             <div class="about_title"><div><h2 class="fl-heading big stroke">About</h2></div></div>
             <div class="about_content">
                 <img src="image/murzyn.jpg" class="myPhoto" alt="">
-                <article class="content">
+                <div class="aboutMe">
                     <h3 class="fl-heading title">About Me</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi provident asperiores voluptatum deserunt dolor adipisci.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque quod eius, consequatur error odit aspernatur velit eaque dignissimos, aliquid saepe, obcaecati veniam perspiciatis tempore! Provident dicta dignissimos at omnis sequi accusantium voluptates consectetur. Doloribus autem eveniet, provident totam dolorem nemo. Dignissimos adipisci tenetur neque?</p>
+                </div>
+                <article class="content">
                     <h3 class="fl-heading title">Skills & Experience</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus, atque soluta necessitatibus ex numquam est delectus eius accusamus adipisci tenetur autem neque perspiciatis hic?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque quod eius, consequatur error odit aspernatur velit eaque dignissimos, aliquid saepe, obcaecati veniam perspiciatis tempore! Provident dicta dignissimos at omnis sequi accusantium voluptates consectetur. Doloribus autem eveniet, provident totam dolorem nemo. Dignissimos adipisci tenetur neque?</p>
                     <div class="icons">
                         <img src="image/HTML.svg" alt="HTML">
                         <img src="image/CSS.svg" alt="CSS">
@@ -70,8 +78,7 @@
             </div>
         </section>
         <section class="projects">
-            <h2 class="fl-heading stroke spans big"><span>My</span>Work</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quia repudiandae nemo, commodi aut obcaecati debitis autem atque quos possimus.</p>
+            <h2 class="fl-heading stroke myWork big">Projects</h2>
             <div class="projects-flex">
                 <a href="#">
                     <img src="image/florian-olivo.png" alt="">
@@ -85,42 +92,32 @@
                     <img src="image/florian-olivo.png" alt="">
                     <h3 class="fl-heading title">Project Name</h3>
                 </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
             </div>
         </section>
-        <section class="games">
-            <div class="game-intro">
-                <h2 class="fl-heading stroke">Do you like games</h2>
-                <button class="btn primary gameStartBtn"><span>Let's play</span></button>
-            </div>
-            <div class="game">
-                <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
-                <div class="activeGame arcanoid">
-                    <h2 class="fl-heading">You Lose, click 'start' to play again :)</h2>
-                    <canvas id="canvas" width="800" height="600"></canvas>
-                    <button class="btn start-game primary"><span>Start</span></button>
+        <section class="gameSection">
+            <div class="games">
+                <div class="game-intro">
+                    <h2 class="fl-heading stroke">Do you like games</h2>
+                    <button class="btn primary gameStartBtn"><span>Let's play</span></button>
+                </div>
+                <div class="game">
+                    <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
+                    <div class="activeGame arcanoid">
+                        <h2 class="fl-heading">You Lose, click 'start' to play again :)</h2>
+                        <canvas id="canvas" width="800" height="600"></canvas>
+                        <button class="btn start-game primary"><span>Start</span></button>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="contact">
             <div class="contact_title">
-                <h2 class="fl-heading big spans stroke"><span>Say</span><span>hello</span></h2>
+                <h2 class="fl-heading big stroke">Contact</h2>
             </div>
             <div class="contact_content">
                 <form action="/contact_form.php" method="post" id="contact-form" data-netlify="true">
-                    <h2 class="fl-heading stroke">Contact us</h2>
-                
+                    <h2 class="fl-heading stroke">Say Hello</h2>
+                    <p><a href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>,I'd love to hear from you!</p>
                     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
                     <p>
                       <input name="name" type="text" placeholder="Your Name" required/>
@@ -138,7 +135,7 @@
                   </form>
             </div>
         </section>
-        <footer><img src="image/MyLogo.svg" alt="MyLogo"></footer>
+        <!-- <footer><img src="image/MyLogo.svg" alt="MyLogo"></footer> -->
     </div>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
