@@ -37,7 +37,7 @@ if (!empty($_POST)) {
         $allErrors = join('<br/>', $errors);
         $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
     } else {
-        $toEmail = 'rafal.ziolkowski1234@gmail.com';
+        $toEmail = 'd37efa5301-06bfd7@inbox.mailtrap.io';
         $emailSubject = 'New email from your contant form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
