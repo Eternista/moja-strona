@@ -117,7 +117,7 @@ h1 span, h2 span, h3 span {
 .letter {
   display: inline-block;
   cursor: pointer;
-  text-shadow: 0px 2px 8px #aaad00;
+  text-shadow: 0px 2px 8px deepskyblue;
 }
 
 .animated {
