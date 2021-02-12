@@ -12,7 +12,8 @@
         "../scss/_arcanoid.scss",
         "../scss/_main.scss",
         "../scss/_footer.scss",
-        "../scss/_followBox.scss"
+        "../scss/_followBox.scss",
+        "../scss/_contact.scss"
     ],
     "names": [],
     "file": "style.css"
