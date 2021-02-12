@@ -12,6 +12,10 @@ header {
             &.btn {
                 position: relative;
                 z-index: 100;
+                span {
+                    position: relative;
+                    z-index: 100;
+                }
             }
         }
     // }

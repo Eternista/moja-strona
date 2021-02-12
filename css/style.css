@@ -270,6 +270,11 @@ header ul .hover a.btn {
   z-index: 100;
 }
 
+header ul .hover a.btn span {
+  position: relative;
+  z-index: 100;
+}
+
 header img {
   width: 70px;
   height: 70px;
