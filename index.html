@@ -117,12 +117,27 @@
                 <h2 class="fl-heading big stroke"><span>Say</span><span>hello</span></h2>
             </div>
             <div class="contact_content">
-                <form id="contact-form" method="post" action="contact-form.php">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" row='5' required></textarea>
-                    <input type="submit" value="Send">
-                </form>
+                <form action="/swiftmailer_form.php" method="post" id="contact-form">
+                    <h2>Contact us</h2>
+                
+                    <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+                    <p>
+                      <label>First Name:</label>
+                      <input name="name" type="text" value="dima"/>
+                    </p>
+                    <p>
+                      <label>Email Address:</label>
+                      <input style="cursor: pointer;" name="email" value="dima@dima.com" type="text"/>
+                    </p>
+                    <p>
+                      <label>Message:</label>
+                      <textarea name="message">dima</textarea>
+                    </p>
+                
+                    <p>
+                      <input type="submit" value="Send"/>
+                    </p>
+                  </form>
             </div>
         </section>
         <footer id="contact"><img src="image/MyLogo.svg" alt="MyLogo"></footer>
