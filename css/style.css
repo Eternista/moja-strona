@@ -11,7 +11,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: deepskyblue;
+  background-color: #f6f6f6;
 }
 
 h1.fl-heading.hover .rubberBand, h2.fl-heading.hover .rubberBand {
@@ -424,6 +424,20 @@ header ul li a:hover::after {
           transition-delay: 2s;
 }
 
+.gameSection .games .mario {
+  position: absolute;
+  height: 45px;
+  width: 35px;
+  bottom: calc(100% - 80px);
+  z-index: 20;
+  background-image: url(../image/Mario.png);
+  background-size: cover;
+  background-position: 0 0;
+  left: 80px;
+  -webkit-animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
+          animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
+}
+
 .gameSection .games.game-start {
   min-height: 100vh;
 }
@@ -602,6 +616,74 @@ header ul li a:hover::after {
   display: block;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+@-webkit-keyframes walk {
+  /* 0% {
+     background-position: 0 0;
+    } */
+  100% {
+    background-position: -315px 0;
+  }
+}
+
+@keyframes walk {
+  /* 0% {
+     background-position: 0 0;
+    } */
+  100% {
+    background-position: -315px 0;
+  }
+}
+
+@-webkit-keyframes move {
+  100% {
+    left: calc(100% - 80px);
+  }
+}
+
+@keyframes move {
+  100% {
+    left: calc(100% - 80px);
+  }
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50.001% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50.001% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }
 
 .banner {
