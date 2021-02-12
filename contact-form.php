@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 $errors = [];
 $errorMessage = '';
@@ -52,4 +52,4 @@ if (!empty($_POST)) {
     }
 }
 
-?>
+?> -->
