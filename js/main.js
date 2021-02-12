@@ -21,6 +21,17 @@ h2Text.forEach((e) => {
 })
 mainBannerh2.removeChild(mainBannerh2.firstChild);
 
+const bigH2 = [... document.querySelectorAll('h2.big')];
+bigH2.forEach(single => {
+    const textArr = [... single.textContent];
+    textArr.forEach(e => {
+        const span = document.createElement('span');
+        span.innerHTML = `${e}`
+        span.classList.add('letter');
+        single.appendChild(span);
+    })
+});
+
 //TEXT "TYPING"
 
 const typing1 = document.querySelector('.typing1 .remove');
