@@ -19,7 +19,7 @@ headingsArray.forEach(single => {
     })
 })
 
-const navLinks = [... document.querySelectorAll('header ul li')];
+const navLinks = [... document.querySelectorAll('header ul li a:not(.btn)')];
 navLinks.forEach(single => {
     single.addEventListener('mouseover', function(){
         mouseCursor.classList.add('hover');
