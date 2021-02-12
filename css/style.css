@@ -309,10 +309,13 @@ header {
   display: -ms-flexbox;
   display: flex;
   padding: 20px 30px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
+  max-width: 1440px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 100;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -903,6 +906,7 @@ header ul li a:hover::after {
 .projects h2 {
   text-align: left;
   line-height: 1.5;
+  background-color: crimson;
   padding: 20px 30px;
 }
 
