@@ -231,30 +231,3 @@
         }
     }
 }
-
-.contact {
-    display: flex;
-    &>div {
-        display: flex;
-        min-height: 100%;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .contact_title {
-        width: 30%;
-        position: relative;
-        // height: 700px;
-        background-color: $color-primary;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .fl-heading {
-            transform: rotate(-90deg);
-            margin-left: -20px;
-            display: flex;
-            span:first-child {
-                margin-right: 40px;
-            }
-        }
-    }
-}
