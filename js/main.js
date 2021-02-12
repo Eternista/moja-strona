@@ -46,6 +46,28 @@ bigH2.forEach(single => {
     
 });
 
+const gameH2 = document.querySelector('.game-intro h2');
+const gameH2Array = [... gameH2.textContent];
+
+gameH2Array.forEach(e => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    gameH2.appendChild(span);
+})
+gameH2.removeChild(gameH2.firstChild);
+
+const contactH2 = document.querySelector('.contact_content div h2');
+const contactH2Array = [... contactH2.textContent];
+
+contactH2Array.forEach(e => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    contactH2.appendChild(span);
+})
+contactH2.removeChild(contactH2.firstChild);
+
 //TEXT "TYPING"
 
 const typing1 = document.querySelector('.typing1 .remove');

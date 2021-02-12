@@ -42,11 +42,22 @@
             position: relative;
             z-index: 1;
             h2 {
-                margin-bottom: 30px;
+                margin-bottom: 50px;
                 position: relative;
                 transition: 1s ease-in-out;
                 transition-delay: 1s;
                 top: 0;
+                span {
+                    color: #000;
+                        -webkit-text-fill-color: #000;
+                    &:nth-child(1n + 13) {
+                        color: $color-secondary;
+                    -webkit-text-fill-color: $color-secondary;
+                    }
+                    &:nth-child(3), &:nth-child(7), &:nth-child(12) {
+                        padding: 10px;
+                    }
+                }
             }
             .btn {
                 margin: 0 auto;

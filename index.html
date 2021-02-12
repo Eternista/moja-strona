@@ -97,8 +97,8 @@
         <section class="gameSection">
             <div class="games">
                 <div class="game-intro">
-                    <h2 class="fl-heading stroke">Do you like games</h2>
-                    <button class="btn primary gameStartBtn"><span>Let's play</span></button>
+                    <h2 class="fl-heading">Do you like games?</h2>
+                    <button class="btn primary big gameStartBtn"><span>Let's play</span></button>
                 </div>
                 <div class="game">
                     <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
@@ -115,9 +115,11 @@
                 <h2 class="fl-heading big stroke">Contact</h2>
             </div>
             <div class="contact_content">
+                <div>
+                    <h2 class="fl-heading">Say Hello</h2>
+                    <p><a href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>, I'd love to hear from you!</p>
+                </div>
                 <form action="/contact_form.php" method="post" id="contact-form" data-netlify="true">
-                    <h2 class="fl-heading stroke">Say Hello</h2>
-                    <p><a href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>,I'd love to hear from you!</p>
                     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
                     <p>
                       <input name="name" type="text" placeholder="Your Name" required/>
@@ -126,11 +128,11 @@
                       <input style="cursor: pointer;" name="email" placeholder="Your Emiail" type="text" required/>
                     </p>
                     <p>
-                      <textarea name="message" placeholder="Your message" required></textarea>
+                      <textarea rows="8" name="message" placeholder="Your message" required></textarea>
                     </p>
                 
                     <p>
-                      <button type="submit" class="btn primary"/><span>Send</span></button>
+                      <button type="submit" class="btn secondary long"/><span>Send</span></button>
                     </p>
                   </form>
             </div>
