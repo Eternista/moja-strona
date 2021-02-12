@@ -986,7 +986,12 @@ footer img {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
+  text-align: center;
   line-height: 1;
+}
+
+.contact .contact_content form p:first-of-type a {
+  color: crimson;
 }
 
 .contact .contact_content form h2 {

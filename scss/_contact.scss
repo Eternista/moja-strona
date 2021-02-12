@@ -31,7 +31,11 @@
                 text-transform: uppercase;
                 font-family: $heading-font;
                 font-weight: 900;
+                text-align: center;
                 line-height: 1;
+                a {
+                    color: $color-primary;
+                }
             }
             h2 {
                 text-align: center;
