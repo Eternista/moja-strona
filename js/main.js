@@ -137,3 +137,21 @@ for(let i=0; i < typing9.textContent.length; i++) {
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
+
+//BOUNCING LETTERS
+
+$(document).ready(function () {
+    "use strict";
+
+    var span = $('.letter');
+
+    span.on('mouseover', function () {
+        
+        // -- Bounce Effect -- //
+        
+        $(this).addClass('rubberBand animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $(this).removeClass('rubberBand animated');
+        });
+        
+    });
+});
