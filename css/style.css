@@ -265,6 +265,11 @@ header ul .hover a {
   color: #fff;
 }
 
+header ul .hover a.btn {
+  position: relative;
+  z-index: 100;
+}
+
 header img {
   width: 70px;
   height: 70px;
