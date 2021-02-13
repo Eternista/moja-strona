@@ -11,8 +11,10 @@
 }
 
 body {
-    overflow-x: hidden;
+    // overflow: hidden;
     background-color: #f6f6f6;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 700ms ease;
 }
 
 h1.fl-heading, h2.fl-heading {

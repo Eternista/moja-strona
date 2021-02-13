@@ -10,8 +10,11 @@
 }
 
 body {
-  overflow-x: hidden;
   background-color: #f6f6f6;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+  -webkit-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
 
 h1.fl-heading.hover .rubberBand, h2.fl-heading.hover .rubberBand {
