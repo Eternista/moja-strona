@@ -11,8 +11,6 @@
 
 body {
   background-color: #f6f6f6;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
   -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
 }
@@ -311,7 +309,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 30px;
+  padding: 20px 25px;
   position: fixed;
   top: 0;
   left: 50%;
