@@ -197,6 +197,7 @@ h1 span, h2 span, h3 span {
   transition: .3s ease-in-out;
   position: relative;
   overflow: hidden;
+  border: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   line-height: 1;
@@ -268,7 +269,6 @@ h1 span, h2 span, h3 span {
 .btn.secondary {
   background-color: deepskyblue !important;
   color: #fff;
-  border: 1px solid deepskyblue;
 }
 
 .btn.secondary span {
@@ -329,6 +329,12 @@ header ul .hover a {
 
 header .hamburger {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .hamburger.hover .hamburger-inner {

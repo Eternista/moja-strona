@@ -7,6 +7,7 @@
     transition: .3s ease-in-out;
     position: relative;
     overflow: hidden;
+    border: none;
     text-decoration: none;
     font-family: $btn-font;
     line-height: 1;
@@ -63,7 +64,7 @@
     &.secondary {
         background-color: $color-secondary !important;
         color: #fff;
-        border: 1px solid $color-secondary;
+        // border: 1px solid $color-secondary;
         span {
             position: relative;
             z-index: 2;

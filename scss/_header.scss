@@ -20,6 +20,8 @@ header {
     //HAMBURGER MENU
         .hamburger {
             position: relative;
+            display: flex;
+            align-items: center;
             // z-index: 101;
             &.hover {
                 
