@@ -10,7 +10,7 @@ class Scroller {
   
       this.isThrottled = false;
   
-      this.drawNavigation();
+      // this.drawNavigation();
     }
   
     isScrolledIntoView(el) {
@@ -51,50 +51,50 @@ class Scroller {
     }
   
     scrollToCurrentSection() {
-      this.selectActiveNavItem();
+      // this.selectActiveNavItem();
       this.sections[this.currentSectionIndex].scrollIntoView({
         behavior: 'smooth',
         block: "start"
       })
     }
   
-    drawNavigation() {
-      this.navigationContainer = document.createElement('aside');
-      this.navigationContainer.setAttribute('class', 'scroller__navigation');
-      const list = document.createElement('ul');
+    // drawNavigation() {
+    //   this.navigationContainer = document.createElement('aside');
+    //   this.navigationContainer.setAttribute('class', 'scroller__navigation');
+    //   const list = document.createElement('ul');
   
-      this.sections.forEach((section, index) => {
-        const listItem = document.createElement('li');
-        listItem.classList.add('btn', 'primary');
-        listItem.addEventListener('click', () => {
-          this.currentSectionIndex = index;
+    //   this.sections.forEach((section, index) => {
+    //     const listItem = document.createElement('li');
+    //     listItem.classList.add('btn', 'primary');
+    //     listItem.addEventListener('click', () => {
+    //       this.currentSectionIndex = index;
   
-          this.scrollToCurrentSection();
-        })
+    //       this.scrollToCurrentSection();
+    //     })
   
-        list.appendChild(listItem);
-      })
+    //     list.appendChild(listItem);
+    //   })
   
-      this.navigationContainer.appendChild(list);
+    //   this.navigationContainer.appendChild(list);
   
-      document.body.appendChild(this.navigationContainer);
+    //   document.body.appendChild(this.navigationContainer);
   
-      this.selectActiveNavItem();
-    }
+    //   this.selectActiveNavItem();
+    // }
   
-    selectActiveNavItem() {
-      if (this.navigationContainer) {
-        const navigationItems = this.navigationContainer.querySelectorAll('li');
+    // selectActiveNavItem() {
+    //   if (this.navigationContainer) {
+    //     const navigationItems = this.navigationContainer.querySelectorAll('li');
   
-        navigationItems.forEach((item, index) => {
-          if (index === this.currentSectionIndex) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        })
-      }
-    }
+    //     navigationItems.forEach((item, index) => {
+    //       if (index === this.currentSectionIndex) {
+    //         item.classList.add('active');
+    //       } else {
+    //         item.classList.remove('active');
+    //       }
+    //     })
+    //   }
+    // }
   
   }
   

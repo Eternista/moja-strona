@@ -14,6 +14,7 @@ body {
   -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 h1.fl-heading.hover .rubberBand, h2.fl-heading.hover .rubberBand {
@@ -399,7 +400,7 @@ header ul li a:hover::after {
   right: 0;
 }
 
-.scroller__navigation {
+.navigation {
   height: 100vh;
   width: 300px;
   position: fixed;
@@ -411,67 +412,30 @@ header ul li a:hover::after {
   transition: .75s ease-in-out;
 }
 
-.scroller__navigation.active {
+.navigation.active {
   left: 0;
 }
 
-.scroller__navigation ul {
+.navigation ul {
   margin: 80px auto 0;
   max-width: 260px;
 }
 
-.scroller__navigation ul li {
+.navigation ul li {
   width: 100%;
-  min-height: 50px;
   margin-bottom: 20px;
 }
 
-.scroller__navigation ul li:nth-child(2)::after {
-  content: 'About';
+.navigation ul li .btn {
+  width: 100%;
 }
 
-.scroller__navigation ul li:nth-child(3)::after {
-  content: 'Portfolio';
-}
-
-.scroller__navigation ul li:nth-child(4)::after {
-  content: 'Games';
-}
-
-.scroller__navigation ul li:last-child {
-  margin-bottom: 0;
-}
-
-.scroller__navigation ul li:last-child::after {
-  content: 'Contact';
-}
-
-.scroller__navigation ul li::after {
-  content: 'Home';
-  position: absolute;
-  line-height: 1;
-  font-family: "Poppins", sans-serif;
+.navigation ul li .btn span {
   color: crimson;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 20px;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out;
-  z-index: 10;
 }
 
-.scroller__navigation ul li::before {
-  background-color: crimson !important;
-}
-
-.scroller__navigation ul li:hover::before, .scroller__navigation ul li.active::before {
-  right: 0;
-}
-
-.scroller__navigation ul li:hover::after, .scroller__navigation ul li.active::after {
-  color: #f6f6f6;
+.navigation ul li .btn::before {
+  background-color: crimson;
 }
 
 .gameSection {
