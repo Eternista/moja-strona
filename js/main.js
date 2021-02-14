@@ -3,6 +3,7 @@
 const hamb = document.querySelector('.hamburger');
 hamb.addEventListener('click', function(){
     hamb.classList.toggle('is-active');
+    document.querySelector('.scroller__navigation').classList.toggle('active');
 })
 
 

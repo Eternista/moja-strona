@@ -13,6 +13,7 @@ body {
   background-color: #f6f6f6;
   -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
+  overflow: hidden;
 }
 
 h1.fl-heading.hover .rubberBand, h2.fl-heading.hover .rubberBand {
@@ -339,14 +340,10 @@ header .hamburger {
 
 header .hamburger.hover .hamburger-inner {
   background-color: #fff;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
 }
 
 header .hamburger.hover .hamburger-inner::after, header .hamburger.hover .hamburger-inner::before {
   background-color: #fff;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
 }
 
 header .hamburger .hamburger-inner {
@@ -400,6 +397,81 @@ header ul li a {
 header ul li a:hover::after {
   left: 0;
   right: 0;
+}
+
+.scroller__navigation {
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 100;
+  background-color: deepskyblue;
+  -webkit-transition: .75s ease-in-out;
+  transition: .75s ease-in-out;
+}
+
+.scroller__navigation.active {
+  left: 0;
+}
+
+.scroller__navigation ul {
+  margin: 80px auto 0;
+  max-width: 260px;
+}
+
+.scroller__navigation ul li {
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.scroller__navigation ul li:nth-child(2)::after {
+  content: 'About';
+}
+
+.scroller__navigation ul li:nth-child(3)::after {
+  content: 'Portfolio';
+}
+
+.scroller__navigation ul li:nth-child(4)::after {
+  content: 'Games';
+}
+
+.scroller__navigation ul li:last-child {
+  margin-bottom: 0;
+}
+
+.scroller__navigation ul li:last-child::after {
+  content: 'Contact';
+}
+
+.scroller__navigation ul li::after {
+  content: 'Home';
+  position: absolute;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+  color: crimson;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  z-index: 10;
+}
+
+.scroller__navigation ul li::before {
+  background-color: crimson !important;
+}
+
+.scroller__navigation ul li:hover::before, .scroller__navigation ul li.active::before {
+  right: 0;
+}
+
+.scroller__navigation ul li:hover::after, .scroller__navigation ul li.active::after {
+  color: #f6f6f6;
 }
 
 .gameSection {
