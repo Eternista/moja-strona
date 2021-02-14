@@ -337,6 +337,7 @@ header .hamburger {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 101;
 }
 
 header .hamburger.hover .hamburger-inner {
@@ -402,11 +403,11 @@ header ul li a:hover::after {
 
 .navigation {
   height: 100vh;
-  width: 300px;
+  width: 100vw;
   position: fixed;
   top: 0;
-  left: -300px;
-  z-index: 100;
+  left: -100vw;
+  z-index: 10;
   background-color: deepskyblue;
   -webkit-transition: .75s ease-in-out;
   transition: .75s ease-in-out;
@@ -1026,53 +1027,116 @@ header ul li a:hover::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.projects .fa-chevron-left, .projects .fa-chevron-right {
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  color: deepskyblue;
+  font-size: 42px;
+}
+
+.projects .fa-chevron-left {
+  left: 80px;
+}
+
+.projects .fa-chevron-right {
+  right: 80px;
 }
 
 .projects h2 {
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
-  background-color: crimson;
   padding: 20px 30px;
 }
 
-.projects .projects-flex {
+.projects .wrapp {
+  background-color: crimson;
+  height: 85vh;
+  width: 85vw;
+  padding: 60px;
+}
+
+.projects .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: calc(85vw - 120px);
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
 }
 
-.projects .projects-flex a {
+.projects .slider .slide {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 33%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
 }
 
-.projects .projects-flex a img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 0 15px;
+.projects .slider .slide.active, .projects .slider .slide.left, .projects .slider .slide.right {
+  position: absolute;
+  top: 0;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  opacity: 1;
 }
 
-.projects .projects-flex a h3 {
-  line-height: 1.5;
-  padding: 15px 0;
-  display: block;
-  color: #333;
+.projects .slider .slide.left {
+  left: -100%;
+}
+
+.projects .slider .slide.right {
+  left: 100%;
+}
+
+.projects .slider .slide.active {
+  left: 0%;
+}
+
+.projects .slider .slide img {
+  width: 50%;
+  height: calc(100% - 80px);
+  margin-bottom: 40px;
+}
+
+.projects .slider .slide .slide_content {
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  height: calc(100% - 80px);
+  margin-top: 40px;
+}
+
+.projects .slider .slide .slide_content h2 {
+  font-size: 40px;
+  text-align: left;
+  padding: 0;
+}
+
+.projects .slider .slide .slide_content p {
+  text-align: left;
 }
 
 footer {
