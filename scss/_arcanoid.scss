@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     .games {
-        min-height: calc(100vh - 200px);
+        height: calc(100vh - 200px);
         width: 100%;
         position: relative;
         display: flex;
@@ -24,7 +24,7 @@
             animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
         }
         &.game-start {
-            min-height: 100vh;
+            height: calc(100vh - 200px);
             &::after {
                 width: 100%;
             }
@@ -35,7 +35,7 @@
                 bottom: -500px !important;
             }
             .game {
-                height: 100vh;
+                height: 90%;
             }
         }
         &::after {
@@ -83,7 +83,8 @@
             position: absolute;
             height: 0;
             width: 100%;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
             left: 0;
             background-color: $color-primary;
             transition: 1s ease-in-out;
@@ -93,22 +94,19 @@
             .levelHead {
                 text-align: center;
                 color: #fff;
-                position: absolute;
-                top: calc(50% - 350px);
-                left: 50%;
-                transform: translate(-50%, -50%);
+                padding-bottom: 20px;
                 &.hover {
                     -webkit-text-fill-color: #fff;
                 }
             }
             div {
-                // position: relative;
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
+                position: relative;
+                // position: absolute;
+                // transform: translate(-50%, -50%);
+                // top: 50%;
+                // left: 50%;
                 width: 800px;
-                // margin: 50px auto 0;
+                margin: 0 auto;
                 button {
                     display: none;
                 }

@@ -7,7 +7,6 @@ hamb.addEventListener('click', function(){
     document.querySelector('.cursor').classList.toggle('red');
 })
 
-
 //PUT HEADING LETTER TO SPAN
 
 const h1 = document.querySelector('h1');

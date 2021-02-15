@@ -1,7 +1,7 @@
 const slider = document.querySelector('.slider');
 const slides = [... document.querySelectorAll('.slide')];
-const nextBtn = document.querySelector('.fa-chevron-right');
-const prevBtn = document.querySelector('.fa-chevron-left');
+const nextBtn = document.querySelector('.fa-arrow-right');
+const prevBtn = document.querySelector('.fa-arrow-left');
 const dots = [... document.querySelectorAll('.dot')];
 var i = 0;
 

@@ -209,7 +209,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    .fa-chevron-left, .fa-chevron-right {
+    .fas, .fas {
         top: 55%;
         transform: translateY(-50%);
         position: absolute;
@@ -217,10 +217,10 @@
         font-size: 42px;
         z-index: 99;
     }
-    .fa-chevron-left {
+    .fa-arrow-left {
         left: -30px;
     }
-    .fa-chevron-right {
+    .fa-arrow-right {
         right: -30px;
     }
     .dots {
@@ -232,7 +232,7 @@
         justify-content: space-between;
         .dot {
             width: 16%;
-            height: 10px;
+            height: 6px;
             background-color: #fff;
             font-size: 0;
             &.active {
@@ -245,7 +245,6 @@
         line-height: 1;
         padding: 20px 30px;
         margin-bottom: 30px;
-        font-size: 120px;
     }
     .wrapp {
         background-color: $color-primary;

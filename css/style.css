@@ -111,11 +111,11 @@ h1 {
 }
 
 h2 {
-  font-size: 74px;
+  font-size: 60px;
 }
 
 h2.big {
-  font-size: 150px;
+  font-size: 110px;
   min-width: 520px;
   text-align: center;
 }
@@ -451,7 +451,7 @@ header img {
 }
 
 .gameSection .games {
-  min-height: calc(100vh - 200px);
+  height: calc(100vh - 200px);
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -485,7 +485,7 @@ header img {
 }
 
 .gameSection .games.game-start {
-  min-height: 100vh;
+  height: calc(100vh - 200px);
 }
 
 .gameSection .games.game-start::after {
@@ -501,7 +501,7 @@ header img {
 }
 
 .gameSection .games.game-start .game {
-  height: 100vh;
+  height: 90%;
 }
 
 .gameSection .games::after {
@@ -561,7 +561,9 @@ header img {
   position: absolute;
   height: 0;
   width: 100%;
-  top: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 0;
   background-color: crimson;
   -webkit-transition: 1s ease-in-out;
@@ -575,11 +577,7 @@ header img {
 .gameSection .games .game .levelHead {
   text-align: center;
   color: #fff;
-  position: absolute;
-  top: calc(50% - 350px);
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  padding-bottom: 20px;
 }
 
 .gameSection .games .game .levelHead.hover {
@@ -587,12 +585,9 @@ header img {
 }
 
 .gameSection .games .game div {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  position: relative;
   width: 800px;
+  margin: 0 auto;
 }
 
 .gameSection .games .game div button {
@@ -1036,7 +1031,7 @@ header img {
   position: relative;
 }
 
-.projects .fa-chevron-left, .projects .fa-chevron-right {
+.projects .fas, .projects .fas {
   top: 55%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1046,11 +1041,11 @@ header img {
   z-index: 99;
 }
 
-.projects .fa-chevron-left {
+.projects .fa-arrow-left {
   left: -30px;
 }
 
-.projects .fa-chevron-right {
+.projects .fa-arrow-right {
   right: -30px;
 }
 
@@ -1069,7 +1064,7 @@ header img {
 
 .projects .dots .dot {
   width: 16%;
-  height: 10px;
+  height: 6px;
   background-color: #fff;
   font-size: 0;
 }
@@ -1083,7 +1078,6 @@ header img {
   line-height: 1;
   padding: 20px 30px;
   margin-bottom: 30px;
-  font-size: 120px;
 }
 
 .projects .wrapp {
