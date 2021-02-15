@@ -402,45 +402,6 @@ header img {
   height: 70px;
 }
 
-header ul {
-  display: none;
-  min-height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: calc(100% - 70px);
-}
-
-header ul li {
-  padding: 20px 15px;
-  text-align: center;
-}
-
-header ul li:first-child {
-  padding-left: 30px;
-}
-
-header ul li:last-child {
-  position: absolute;
-  right: 21%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  top: 15px;
-}
-
-header ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-header ul li a:hover::after {
-  left: 0;
-  right: 0;
-}
-
 .navigation {
   height: 100vh;
   width: 100vw;
@@ -458,7 +419,7 @@ header ul li a:hover::after {
 }
 
 .navigation ul {
-  width: 260px;
+  min-width: 260px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -468,11 +429,16 @@ header ul li a:hover::after {
 
 .navigation ul li {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .navigation ul li .btn {
   width: 100%;
+  font-size: 50px;
+  line-height: 1.4;
+}
+
+.navigation ul li:last-child .btn::after {
+  display: none;
 }
 
 .gameSection {
@@ -1136,7 +1102,8 @@ header ul li a:hover::after {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  max-width: calc(85vw - 120px);
+  max-width: calc(100% - 120px);
+  margin: 0 auto;
   width: 100%;
   overflow: hidden;
   -webkit-box-orient: horizontal;
@@ -1162,6 +1129,9 @@ header ul li a:hover::after {
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .projects .slider .slide.active, .projects .slider .slide.left, .projects .slider .slide.right {
@@ -1186,18 +1156,14 @@ header ul li a:hover::after {
 
 .projects .slider .slide img {
   width: 50%;
-  height: calc(300px - 40px);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  min-height: 100%;
 }
 
 .projects .slider .slide .slide_content {
   width: 50%;
   padding: 30px;
   background-color: #fff;
-  height: calc(300px - 40px);
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  min-height: 100%;
 }
 
 .projects .slider .slide .slide_content h2 {
