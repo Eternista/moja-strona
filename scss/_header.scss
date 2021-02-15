@@ -116,19 +116,17 @@ header {
         left: 0;
     }
     ul {
-        margin: 80px auto 0;
-        max-width: 260px;
+        // margin: 80px auto 0;
+        width: 260px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         li {
             width: 100%;
             margin-bottom: 20px;
             .btn {
                 width: 100%;
-                span {
-                    color: $color-primary;
-                }
-                &::before {
-                    background-color: $color-primary;
-                }
             }
         }
     }

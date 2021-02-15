@@ -28,7 +28,7 @@
             &::after {
                 width: 100%;
             }
-            h2 {
+            .game-intro h2 {
                 top: -500px !important;
             }
             .gameStartBtn {
@@ -93,7 +93,10 @@
             .levelHead {
                 text-align: center;
                 color: #fff;
-                margin-top: 40px;
+                position: absolute;
+                top: calc(50% - 350px);
+                left: 50%;
+                transform: translate(-50%, -50%);
                 &.hover {
                     -webkit-text-fill-color: #fff;
                 }
@@ -138,18 +141,10 @@
                     button {
                         display: block;
                         position: absolute;
-                    //     padding: 5px 15px;
-                    //     min-width: 120px;
-                    //     font-size: 18px;
-                    //     color: #333;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 1;
-                    //     background-color: deepskyblue;
-                    //     border: 2px solid deepskyblue;
-                    //     text-transform: uppercase;
-                    //     border-radius: 8px;
                     }
                 }
                 &.paused {

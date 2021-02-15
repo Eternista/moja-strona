@@ -6,7 +6,7 @@ function cursor(e) {
     mouseCursor.style.left = e.pageX + 'px';
 }
 
-const headings = document.querySelectorAll('.fl-heading:not(h3)');
+const headings = document.querySelectorAll('.heading:not(h3)');
 const headingsArray = [... headings];
 headingsArray.forEach(single => {
     single.addEventListener('mouseover', function(){
