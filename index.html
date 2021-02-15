@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css//hamburgers.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/287bffc749.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/Scroller.js"></script>
+    <script src="js/swiper.js"></script>
+</head>
 </head>
 <body>
     <div class="cursor"></div>
@@ -12,13 +19,18 @@
         <div class="followBox"></div>
         <header>
             <img src="/image/MyLogo.svg" alt="">
+            <button class="hamburger hamburger--emphatic" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
             <ul>
                 <li><a href="#">About Me</a></li>
                 <li><a href="#" class="primary">My Work</a></li>
                 <li><a href="#contact" class="btn primary"><span>Say Hello</span></a></li>
             </ul>
         </header>
-        <section class="banner">
+        <section id='home' class="banner">
             <article>
                 <div class="banner-col">
                     <h1 class="stroke fl-heading">Hello</h1>
@@ -51,15 +63,17 @@
                 </ul>
             </article>
         </section>
-        <section class="about">
+        <section id='about' class="about">
             <div class="about_title"><div><h2 class="fl-heading big stroke">About</h2></div></div>
             <div class="about_content">
                 <img src="image/murzyn.jpg" class="myPhoto" alt="">
-                <article class="content">
+                <div class="aboutMe">
                     <h3 class="fl-heading title">About Me</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi provident asperiores voluptatum deserunt dolor adipisci.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
+                </div>
+                <article class="content">
                     <h3 class="fl-heading title">Skills & Experience</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus, atque soluta necessitatibus ex numquam est delectus eius accusamus adipisci tenetur autem neque perspiciatis hic?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
                     <div class="icons">
                         <img src="image/HTML.svg" alt="HTML">
                         <img src="image/CSS.svg" alt="CSS">
@@ -68,68 +82,114 @@
                 </article>
             </div>
         </section>
-        <section class="projects">
-            <h2 class="fl-heading stroke big"><span>My</span>Work</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quia repudiandae nemo, commodi aut obcaecati debitis autem atque quos possimus.</p>
-            <div class="projects-flex">
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-                <a href="#">
-                    <img src="image/florian-olivo.png" alt="">
-                    <h3 class="fl-heading title">Project Name</h3>
-                </a>
-            </div>
-        </section>
-        <section class="games">
-            <div class="game-intro">
-                <h2 class="fl-heading stroke">Do you like games</h2>
-                <button class="btn primary gameStartBtn"><span>Let's play</span></button>
-            </div>
-            <div class="game">
-                <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
-                <div class="activeGame arcanoid">
-                    <h2 class="fl-heading">You Lose, click 'start' to play again :)</h2>
-                    <canvas id="canvas" width="800" height="600"></canvas>
-                    <button class="btn start-game primary"><span>Start</span></button>
+        <section id='projects' class="projects">
+            <div class="wrapp">
+                <h2 class="fl-heading stroke myWork big">Projects</h2>
+                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-chevron-left"></i>
+                <div class="slider">
+                    <div class="slide left">
+                        <img src="image/florian-olivo.png" alt="">
+                        <div class="slide_content">
+                            <h2>Project name</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
+                            <a href="#" class="btn transparent">View Project</a>
+                        </div>
+                    </div>
+                    <div class="slide active">
+                        <img src="image/florian-olivo.png" alt="">
+                        <div class="slide_content">
+                            <h2>Project name</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
+                            <a href="#" class="btn transparent">View Project</a>
+                        </div>
+                    </div>
+                    <div class="slide right">
+                        <img src="image/florian-olivo.png" alt="">
+                        <div class="slide_content">
+                            <h2>Project name</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis omnis rem itaque quos reprehenderit illo quibusdam, similique dolorem culpa quis.</p>
+                            <a href="#" class="btn transparent">View Project</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="image/florian-olivo.png" alt="">
+                        <div class="slide_content">
+                            <h2>Project name</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis omnis rem itaque quos reprehenderit illo quibusdam, similique dolorem culpa quis.</p>
+                            <a href="#" class="btn transparent">View Project</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="image/florian-olivo.png" alt="">
+                        <div class="slide_content">
+                            <h2>Project name</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis omnis rem itaque quos reprehenderit illo quibusdam, similique dolorem culpa quis.</p>
+                            <a href="#" class="btn transparent">View Project</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="contact">
-            <div class="contact_title">
-                <h2 class="fl-heading big stroke"><span>Say</span><span>hello</span></h2>
-            </div>
-            <div class="contact_content">
-                <form id="contact-form" method="post" action="contact-form.php">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" row='5' required></textarea>
-                    <input type="submit" value="Send">
-                </form>
+        <section id='games' class="gameSection">
+            <div class="games">
+                <div class="game-intro">
+                    <h2 class="fl-heading">Do you like games?</h2>
+                    <div class="mario"></div>
+                    <button class="btn primary big gameStartBtn"><span>Let's play</span></button>
+                </div>
+                <div class="game">
+                    <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
+                    <div class="activeGame arcanoid">
+                        <h2 class="fl-heading">You Lose, click 'start' to play again :)</h2>
+                        <canvas id="canvas" width="800" height="600"></canvas>
+                        <button class="btn start-game primary"><span>Start</span></button>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer id="contact"><img src="image/MyLogo.svg" alt="MyLogo"></footer>
+        <section id='contact' class="contact">
+            <div class="contact_title">
+                <h2 class="fl-heading big stroke">Contact</h2>
+            </div>
+            <div class="contact_content">
+                <div>
+                    <h2 class="fl-heading">Say Hello</h2>
+                    <p><a href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>, I'd love to hear from you!</p>
+                </div>
+                <form action="/contact_form.php" method="post" id="contact-form" data-netlify="true">
+                    <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+                    <p>
+                      <input name="name" type="text" placeholder="Your Name" required/>
+                    </p>
+                    <p>
+                      <input style="cursor: pointer;" name="email" placeholder="Your Emiail" type="text" required/>
+                    </p>
+                    <p>
+                      <textarea rows="8" name="message" placeholder="Your message" required></textarea>
+                    </p>
+                
+                    <p>
+                      <button type="submit" class="btn secondary long"/><span>Send</span></button>
+                    </p>
+                  </form>
+            </div>
+        </section>
+        <!-- <footer><img src="image/MyLogo.svg" alt="MyLogo"></footer> -->
     </div>
+    <aside class="navigation">
+        <ul>
+            <li><a href="#home" class="btn primary"><span>Home</span></a></li>
+            <li><a href="#about" class="btn primary"><span>About</span></a></li>
+            <li><a href="#projects" class="btn primary"><span>Projects</span></a></li>
+            <li><a href="#games" class="btn primary"><span>Games</span></a></li>
+            <li><a href="#contact" class="btn primary"><span>Contact</span></a></li>
+        </ul>
+    </aside>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>

@@ -5,25 +5,27 @@
     font-family: $text-font;
     list-style: none;
     text-decoration: none;
-    // cursor: none;
+    // &:not(.btn), &:not(form), &:not(p){
+    //     cursor: none;
+    // }
 }
 
 body {
-    overflow-x: hidden;
+    background-color: #f6f6f6;
+    transition: all 700ms ease;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
-// h1.fl-heading, h2.fl-heading {
-//     // span {
-//         // z-index: 100;
-//         // &.hover {
-//         //     -webkit-text-fill-color: #fff;
-//         //     span {
-//         //         -webkit-text-fill-color: #fff;
-//         //     }
-//         // }
-//         // -webkit-text-fill-color: $color-primary;
-//     // }
-// }
+h1.fl-heading, h2.fl-heading {
+    &.hover {
+        // -webkit-text-fill-color: $color-secondary;
+        .rubberBand {
+            -webkit-text-fill-color: $color-secondary;
+            color: $color-secondary;
+        }
+    }
+}
 
 .cursor {
     width: 30px;
@@ -36,7 +38,7 @@ body {
     transition: background-color .3s ease-in-out, width .3s ease-in-out .3s,height .3s ease-in-out .3s;
     border: 1px solid $color-secondary;
     background-color: transparent;
-    mix-blend-mode: color;
+    // mix-blend-mode: color;
     &.hover {
         // z-index: -1;
         transform: translate(-50%, -50%);
@@ -47,10 +49,10 @@ body {
     }
     &.hover-heading {
         transform: translate(-50%, -50%);
-        mix-blend-mode: difference;
-        background: $color-secondary;
-        height: 80px;
-        width: 80px;
+        // mix-blend-mode: difference;
+        // background: $color-secondary;
+        height: 50px;
+        width: 50px;
     }
 }
 
@@ -62,7 +64,12 @@ body {
 
 section {
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
+    background-color: #fff;
+    // margin-bottom: 100px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 //TEXT
@@ -74,13 +81,14 @@ section {
 }
 
 p,li,ul {
-    font-size: 16px;
-    line-height: 1.3;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .fl-heading {
     font-family: $heading-font;
-    font-weight: bold;
+    font-weight: 900;
+    line-height: 1;
     &.title {
         position: relative;
         &::after {
@@ -102,7 +110,9 @@ h1 {
 h2 {
     font-size: 74px;
     &.big {
-        font-size: 160px;
+        font-size: 150px;
+        min-width: 520px;
+        text-align: center;
     }
 }
 h3 {
@@ -114,4 +124,49 @@ h1, h2, h3 {
     span {
         font-family: $heading-font;
     }
+}
+
+//BOUCING LETTERS
+
+.letter {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  color: $color-secondary;
+}
+
+@keyframes rubberBand {
+  0% {
+  
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  30% {
+    -ms-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    -ms-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    -ms-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
 }

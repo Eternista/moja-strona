@@ -1,22 +1,53 @@
 header {
     display: flex;
-    padding: 20px 30px;
-    position: absolute;
+    padding: 15px 30px;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
     width: 100%;
-    z-index: 20;
+    max-width: 1440px;
+    transform: translateX(-50%);
+    z-index: 100;
+    justify-content: space-between;
     // &.hover {
         ul .hover a {
             color: #fff;
         }
+
+
     // }
+
+    //HAMBURGER MENU
+        .hamburger {
+            position: relative;
+            display: flex;
+            align-items: center;
+            z-index: 101;
+            &.hover {
+                
+                .hamburger-inner {
+                    background-color: #fff;
+                    &::after, &::before {
+                        // border-radius: 0;
+                        background-color: #fff;
+                    }
+                }
+            }
+            .hamburger-inner {
+                background-color: $color-secondary;
+                &::after, &::before {
+                    border-radius: 0;
+                    background-color: $color-secondary;
+                }
+            }
+        }
+
     img {
         width: 70px;
         height: 70px;
     }
     ul {
-        display: flex;
+        display: none;
         min-height: 100%;
         align-items: center;
         width: calc(100% - 70px);
@@ -67,6 +98,37 @@ header {
                 //         background-color: $color-primary;
                 //     }
                 // }
+            }
+        }
+    }
+}
+
+.navigation {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 10;
+    background-color: $color-secondary;
+    transition: .75s ease-in-out;
+    &.active {
+        left: 0;
+    }
+    ul {
+        margin: 80px auto 0;
+        max-width: 260px;
+        li {
+            width: 100%;
+            margin-bottom: 20px;
+            .btn {
+                width: 100%;
+                span {
+                    color: $color-primary;
+                }
+                &::before {
+                    background-color: $color-primary;
+                }
             }
         }
     }

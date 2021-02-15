@@ -1,3 +1,11 @@
+//HAMBURGER MENU ACTIVE
+
+const hamb = document.querySelector('.hamburger');
+hamb.addEventListener('click', function(){
+    hamb.classList.toggle('is-active');
+    document.querySelector('.navigation').classList.toggle('active');
+})
+
 
 //PUT HEADING LETTER TO SPAN
 
@@ -20,6 +28,46 @@ h2Text.forEach((e) => {
     mainBannerh2.appendChild(span);
 })
 mainBannerh2.removeChild(mainBannerh2.firstChild);
+
+const bigH2 = [... document.querySelectorAll('h2.big')];
+bigH2.forEach(single => {
+    const textArr = [... single.textContent];
+    textArr.forEach(e => {
+        const span = document.createElement('span');
+        span.innerHTML = `${e}`
+        span.classList.add('letter');
+        single.appendChild(span);
+    })
+    if(single.classList.contains('spans')) {
+        single.removeChild(single.firstChild);
+        single.removeChild(single.firstChild);
+    }else {
+        single.removeChild(single.firstChild);
+    }
+    
+});
+
+const gameH2 = document.querySelector('.game-intro h2');
+const gameH2Array = [... gameH2.textContent];
+
+gameH2Array.forEach(e => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    gameH2.appendChild(span);
+})
+gameH2.removeChild(gameH2.firstChild);
+
+const contactH2 = document.querySelector('.contact_content div h2');
+const contactH2Array = [... contactH2.textContent];
+
+contactH2Array.forEach(e => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    contactH2.appendChild(span);
+})
+contactH2.removeChild(contactH2.firstChild);
 
 //TEXT "TYPING"
 
@@ -137,3 +185,21 @@ for(let i=0; i < typing9.textContent.length; i++) {
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
+
+//BOUNCING LETTERS
+
+$(document).ready(function () {
+    "use strict";
+
+    var span = $('.letter');
+
+    span.on('mouseover', function () {
+        
+        // -- Bounce Effect -- //
+        
+        $(this).addClass('rubberBand animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $(this).removeClass('rubberBand animated');
+        });
+        
+    });
+});

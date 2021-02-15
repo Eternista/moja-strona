@@ -206,14 +206,14 @@ function increaseScore() {
         lvl.innerHTML = lvlNum;
         if(s === 1) {
             color = 'yellowgreen';
-            document.body.style.backgroundColor = 'yellowgreen';
+            document.querySelector('.game').style.backgroundColor = 'yellowgreen';
         } else if(s === 2) {
-            document.body.style.backgroundColor = 'deepskyblue';
+            document.querySelector('.game').style.backgroundColor = 'deepskyblue';
             color = 'deepskyblue'
         } else if(s === 3) {
             s = 0;
             color = 'crimson';
-            document.body.style.backgroundColor = 'crimson'
+            document.querySelector('.game').style.backgroundColor = 'crimson'
         }
     }
 }

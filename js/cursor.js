@@ -19,7 +19,7 @@ headingsArray.forEach(single => {
     })
 })
 
-const navLinks = [... document.querySelectorAll('header ul li')];
+const navLinks = [... document.querySelectorAll('header ul li a:not(.btn)')];
 navLinks.forEach(single => {
     single.addEventListener('mouseover', function(){
         mouseCursor.classList.add('hover');
@@ -29,6 +29,15 @@ navLinks.forEach(single => {
         mouseCursor.classList.remove('hover');
         single.classList.remove("hover");
     })
+})
+
+hamb.addEventListener('mouseover', function(){
+    mouseCursor.classList.add('hover');
+    hamb.classList.add("hover");
+})
+hamb.addEventListener('mouseleave', function(){
+    mouseCursor.classList.remove('hover');
+    hamb.classList.remove("hover");
 })
 
 // const navLinks = [... document.querySelectorAll('header ul li a')];
