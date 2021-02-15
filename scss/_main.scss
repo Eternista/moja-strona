@@ -210,7 +210,7 @@
     justify-content: center;
     position: relative;
     .fa-chevron-left, .fa-chevron-right {
-        top: 60%;
+        top: 55%;
         transform: translateY(-50%);
         position: absolute;
         color: $color-secondary;
@@ -218,21 +218,21 @@
         z-index: 99;
     }
     .fa-chevron-left {
-        left: 10px;
+        left: -30px;
     }
     .fa-chevron-right {
-        right: 10px;
+        right: -30px;
     }
     .dots {
         display: flex;
-        max-width: 600px;
+        max-width: 400px;
         margin: 0 auto;
         padding: 30px;
         width: 100%;
         justify-content: space-between;
         .dot {
             width: 16%;
-            height: 15px;
+            height: 10px;
             background-color: #fff;
             font-size: 0;
             &.active {
@@ -296,26 +296,27 @@
             img {
                 width: 50%;
                 height: calc(40vh - 50px);
-                align-self: flex-start;
+                align-self: center;
             }
             .slide_content {
                 width: 50%;
-                padding: 40px 30px;
+                padding: 45px 30px;
                 height: calc(40vh - 50px);
                 background-color: #fff;
-                align-self: flex-end;
+                align-self: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: flex-start;
-                h2 {
-                    font-size: 40px;
+                h3 {
+                    font-size: 25px;
                     text-align: left;
                     padding: 0;
                     line-height: 1;
                     margin-bottom: 0;
                     &:first-letter {
-                        font-size: 75px;
+                        font-size: 50px;
+                        color: $color-primary;
                     }
                 }
                 p {

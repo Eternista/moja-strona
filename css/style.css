@@ -1037,7 +1037,7 @@ header img {
 }
 
 .projects .fa-chevron-left, .projects .fa-chevron-right {
-  top: 60%;
+  top: 55%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: absolute;
@@ -1047,18 +1047,18 @@ header img {
 }
 
 .projects .fa-chevron-left {
-  left: 10px;
+  left: -30px;
 }
 
 .projects .fa-chevron-right {
-  right: 10px;
+  right: -30px;
 }
 
 .projects .dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 30px;
   width: 100%;
@@ -1069,7 +1069,7 @@ header img {
 
 .projects .dots .dot {
   width: 16%;
-  height: 15px;
+  height: 10px;
   background-color: #fff;
   font-size: 0;
 }
@@ -1167,17 +1167,18 @@ header img {
 .projects .slider .slide img {
   width: 50%;
   height: calc(40vh - 50px);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .projects .slider .slide .slide_content {
   width: 50%;
-  padding: 40px 30px;
+  padding: 45px 30px;
   height: calc(40vh - 50px);
   background-color: #fff;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1185,24 +1186,25 @@ header img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-.projects .slider .slide .slide_content h2 {
-  font-size: 40px;
+.projects .slider .slide .slide_content h3 {
+  font-size: 25px;
   text-align: left;
   padding: 0;
   line-height: 1;
   margin-bottom: 0;
 }
 
-.projects .slider .slide .slide_content h2:first-letter {
-  font-size: 75px;
+.projects .slider .slide .slide_content h3:first-letter {
+  font-size: 50px;
+  color: crimson;
 }
 
 .projects .slider .slide .slide_content p {
