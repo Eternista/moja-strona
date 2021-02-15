@@ -39,16 +39,3 @@ hamb.addEventListener('mouseleave', function(){
     mouseCursor.classList.remove('hover');
     hamb.classList.remove("hover");
 })
-
-// const navLinks = [... document.querySelectorAll('header ul li a')];
-// const header = document.querySelector('header');
-// navLinks.forEach(single => {
-//     header.addEventListener('mouseover', function(){
-//         mouseCursor.classList.add('hover');
-//         header.classList.add("hover");
-//     })
-//     header.addEventListener('mouseleave', function(){
-//         mouseCursor.classList.remove('hover');
-//         header.classList.remove("hover");
-//     })
-// })

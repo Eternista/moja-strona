@@ -7,6 +7,14 @@ hamb.addEventListener('click', function(){
     document.querySelector('.cursor').classList.toggle('red');
 })
 
+const navBtns = [... document.querySelectorAll('.navigation a')];
+
+navBtns.forEach((e) => {
+    e.addEventListener('click', function(){
+        hamb.classList.remove('is-active');
+        document.querySelector('.navigation').classList.remove('active');
+    })
+})
 //PUT HEADING LETTER TO SPAN
 
 const h1 = document.querySelector('h1');

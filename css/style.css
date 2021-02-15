@@ -1333,7 +1333,8 @@ footer img {
 
 .contact .contact_content form {
   padding-top: 50px;
-  width: 80%;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 

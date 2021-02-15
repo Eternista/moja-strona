@@ -44,7 +44,8 @@
         }
         form {
             padding-top: 50px;
-            width: 80%;
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
             input, textarea {
                 border: 1px solid #000;
