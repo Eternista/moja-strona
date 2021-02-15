@@ -4,6 +4,7 @@ const hamb = document.querySelector('.hamburger');
 hamb.addEventListener('click', function(){
     hamb.classList.toggle('is-active');
     document.querySelector('.navigation').classList.toggle('active');
+    document.querySelector('.cursor').classList.toggle('red');
 })
 
 

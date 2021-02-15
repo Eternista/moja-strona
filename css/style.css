@@ -17,7 +17,7 @@ body {
   scroll-behavior: smooth;
 }
 
-h1.fl-heading.hover .rubberBand, h2.fl-heading.hover .rubberBand {
+h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   -webkit-text-fill-color: deepskyblue;
   color: deepskyblue;
 }
@@ -53,6 +53,10 @@ h1.fl-heading.hover .rubberBand, h2.fl-heading.hover .rubberBand {
   width: 50px;
 }
 
+.cursor.red {
+  border-color: crimson;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -80,17 +84,17 @@ p, li, ul {
   line-height: 1.6;
 }
 
-.fl-heading {
+.heading {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   line-height: 1;
 }
 
-.fl-heading.title {
+.heading.title {
   position: relative;
 }
 
-.fl-heading.title::after {
+.heading.title::after {
   content: '';
   position: absolute;
   height: 40px;
@@ -222,7 +226,7 @@ h1 span, h2 span, h3 span {
 }
 
 .btn.primary {
-  background-color: #fff;
+  background-color: white;
   border: 1px solid deepskyblue;
 }
 
@@ -266,6 +270,42 @@ h1 span, h2 span, h3 span {
   transition: .3s ease-in-out;
   -webkit-transition-delay: 0;
           transition-delay: 0;
+}
+
+.btn.transparent {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn.transparent span {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.btn.transparent::after {
+  content: '';
+  position: absolute;
+  top: calc(100% - 2px);
+  z-index: 1;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.7);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.btn.transparent:hover {
+  color: white;
+}
+
+.btn.transparent:hover::after {
+  background-color: white;
+}
+
+.btn.transparent:hover span {
+  color: white;
 }
 
 .btn.secondary {
@@ -418,8 +458,12 @@ header ul li a:hover::after {
 }
 
 .navigation ul {
-  margin: 80px auto 0;
-  max-width: 260px;
+  width: 260px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .navigation ul li {
@@ -429,14 +473,6 @@ header ul li a:hover::after {
 
 .navigation ul li .btn {
   width: 100%;
-}
-
-.navigation ul li .btn span {
-  color: crimson;
-}
-
-.navigation ul li .btn::before {
-  background-color: crimson;
 }
 
 .gameSection {
@@ -490,7 +526,7 @@ header ul li a:hover::after {
   width: 100%;
 }
 
-.gameSection .games.game-start h2 {
+.gameSection .games.game-start .game-intro h2 {
   top: -500px !important;
 }
 
@@ -573,7 +609,11 @@ header ul li a:hover::after {
 .gameSection .games .game .levelHead {
   text-align: center;
   color: #fff;
-  margin-top: 40px;
+  position: absolute;
+  top: calc(50% - 350px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .gameSection .games .game .levelHead.hover {
@@ -740,12 +780,12 @@ header ul li a:hover::after {
           align-items: center;
 }
 
-.banner h1.fl-heading, .banner h2.fl-heading {
+.banner h1.heading, .banner h2.heading {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-.banner h1.fl-heading span, .banner h2.fl-heading span {
+.banner h1.heading span, .banner h2.heading span {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
@@ -944,7 +984,7 @@ header ul li a:hover::after {
           justify-content: center;
 }
 
-.about .about_title .fl-heading {
+.about .about_title .heading {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   margin-left: -20px;
@@ -1037,26 +1077,57 @@ header ul li a:hover::after {
   position: absolute;
   color: deepskyblue;
   font-size: 42px;
+  z-index: 99;
 }
 
 .projects .fa-chevron-left {
-  left: 80px;
+  left: 10px;
 }
 
 .projects .fa-chevron-right {
-  right: 80px;
+  right: 10px;
+}
+
+.projects .dots {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects .dots .dot {
+  width: 16%;
+  height: 15px;
+  background-color: #fff;
+  font-size: 0;
+}
+
+.projects .dots .dot.active {
+  background-color: deepskyblue;
 }
 
 .projects h2 {
   text-align: center;
   line-height: 1.5;
   padding: 20px 30px;
+  font-size: 120px;
 }
 
 .projects .wrapp {
   background-color: crimson;
-  height: 85vh;
-  width: 85vw;
+  height: 78vh;
+  max-width: 90%;
+  width: 100%;
+  position: relative;
   padding: 60px;
 }
 
@@ -1065,7 +1136,8 @@ header ul li a:hover::after {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  width: calc(85vw - 120px);
+  max-width: calc(85vw - 120px);
+  width: 100%;
   overflow: hidden;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1076,7 +1148,7 @@ header ul li a:hover::after {
 
 .projects .slider .slide {
   min-width: 100%;
-  min-height: 100%;
+  min-height: 300px;
   max-width: 100%;
   max-height: 100%;
   display: -webkit-box;
@@ -1086,9 +1158,6 @@ header ul li a:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1117,16 +1186,18 @@ header ul li a:hover::after {
 
 .projects .slider .slide img {
   width: 50%;
-  height: calc(100% - 80px);
-  margin-bottom: 40px;
+  height: calc(300px - 40px);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .projects .slider .slide .slide_content {
   width: 50%;
   padding: 30px;
   background-color: #fff;
-  height: calc(100% - 80px);
-  margin-top: 40px;
+  height: calc(300px - 40px);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .projects .slider .slide .slide_content h2 {
@@ -1135,8 +1206,25 @@ header ul li a:hover::after {
   padding: 0;
 }
 
+.projects .slider .slide .slide_content h2:first-letter {
+  font-size: 60px;
+}
+
 .projects .slider .slide .slide_content p {
   text-align: left;
+}
+
+.projects .slider .slide .slide_content a {
+  text-align: left;
+  padding: 20px 0;
+  color: #000;
+  margin: 0 auto;
+  display: block;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  line-height: 1;
 }
 
 footer {
@@ -1219,7 +1307,7 @@ footer img {
           justify-content: center;
 }
 
-.contact .contact_title .fl-heading {
+.contact .contact_title .heading {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   margin-left: -20px;
