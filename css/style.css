@@ -1055,15 +1055,12 @@ header img {
 }
 
 .projects .dots {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1083,8 +1080,9 @@ header img {
 
 .projects h2 {
   text-align: center;
-  line-height: 1.5;
+  line-height: 1;
   padding: 20px 30px;
+  margin-bottom: 30px;
   font-size: 120px;
 }
 
@@ -1094,7 +1092,20 @@ header img {
   max-width: 90%;
   width: 100%;
   position: relative;
-  padding: 60px;
+  padding: 30px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .projects .slider {
@@ -1115,9 +1126,8 @@ header img {
 
 .projects .slider .slide {
   min-width: 100%;
-  min-height: 300px;
+  height: 40vh;
   max-width: 100%;
-  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1156,24 +1166,43 @@ header img {
 
 .projects .slider .slide img {
   width: 50%;
-  min-height: 100%;
+  height: calc(40vh - 50px);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .projects .slider .slide .slide_content {
   width: 50%;
-  padding: 30px;
+  padding: 40px 30px;
+  height: calc(40vh - 50px);
   background-color: #fff;
-  min-height: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .projects .slider .slide .slide_content h2 {
   font-size: 40px;
   text-align: left;
   padding: 0;
+  line-height: 1;
+  margin-bottom: 0;
 }
 
 .projects .slider .slide .slide_content h2:first-letter {
-  font-size: 60px;
+  font-size: 75px;
 }
 
 .projects .slider .slide .slide_content p {
@@ -1182,9 +1211,7 @@ header img {
 
 .projects .slider .slide .slide_content a {
   text-align: left;
-  padding: 20px 0;
   color: #000;
-  margin: 0 auto;
   display: block;
   font-size: 19px;
   text-transform: uppercase;
