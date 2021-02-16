@@ -56,6 +56,13 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   mix-blend-mode: difference;
 }
 
+.cursor.dotHover {
+  height: 50px;
+  width: 50px;
+  border-color: #fff;
+  background-color: transparent;
+}
+
 .cursor.hover-heading {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

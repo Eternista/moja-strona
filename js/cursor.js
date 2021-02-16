@@ -62,8 +62,19 @@ arrows.forEach((single) => {
 const image = document.querySelector('.myPhoto');
 
 image.addEventListener('mouseover', function(){
-    mouseCursor.classList.add('hover');
+    mouseCursor.classList.add('hover', 'imageHover');
 })
 image.addEventListener('mouseleave', function(){
-    mouseCursor.classList.remove('hover');
+    mouseCursor.classList.remove('hover', 'imageHover');
+})
+
+//SLIDER DOTS HOVER
+
+dots.forEach((dot) => {
+    dot.addEventListener('mouseover', function(){
+        mouseCursor.classList.add('hover', 'dotHover');
+    })
+    dot.addEventListener('mouseleave', function(){
+        mouseCursor.classList.remove('hover', 'dotHover');
+    })
 })
