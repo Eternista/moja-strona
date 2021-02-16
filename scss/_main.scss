@@ -298,7 +298,7 @@
         .dot {
             width: 16%;
             height: 6px;
-            background-color: #fff;
+            background-color: #f6f6f6;
             font-size: 0;
             transition: background-color .3s ease-in-out;
             &.active, &:hover {
@@ -310,6 +310,7 @@
         text-align: center;
         line-height: 1;
         padding: 20px 30px;
+        // background-color: $color-primary;
         // margin-bottom: 30px;
     }
     .wrapp {
@@ -357,14 +358,27 @@
             }
             &.active {
                 left: 0%;
+                .image {
+                    position: relative;
+                    z-index: 3;
+                    img {
+                        position: relative;
+                        z-index: 3;
+                    }
+                }
             }
-            img {
-                width: 50%;
+            .image {
+                width: 55%;
                 height: calc(40vh - 50px);
                 align-self: center;
+                overflow-x: unset;
+                overflow-y: scroll;
+                img {
+                    width: 100%;
+                }
             }
             .slide_content {
-                width: 50%;
+                width: 45%;
                 padding: 45px 30px;
                 height: calc(40vh - 50px);
                 background-color: #fff;

@@ -35,9 +35,36 @@
                 line-height: 1;
                 .drop {
                     color: $color-primary;
-                    span:nth-child(5), span:nth-child(8), span:nth-child(10) {
-                        padding: 3px;
+                    position: relative;
+                    span {
+                        font-size: 14px;
+                        font-weight: normal;
+                        position: absolute;
+                        display: none;
+                        top: -30px;
+                        left: 0%;
+                        transform: translateX(-50%);
+                        width: 240px;
+                        padding: 5px 10px;
+                        background-color: $color-secondary;
+                        &::after {
+                            content: '';
+                            border: 5px solid transparent;
+                            border-top-color: $color-secondary;
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
                     }
+                    &:hover {
+                        span {
+                            display: block;
+                        }
+                    }
+                    // span:nth-child(5), span:nth-child(8), span:nth-child(10) {
+                    //     padding: 3px;
+                    // }
                 }
             }
             h2 {

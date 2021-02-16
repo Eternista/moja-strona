@@ -1175,7 +1175,7 @@ header img {
 .projects .dots .dot {
   width: 16%;
   height: 6px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   font-size: 0;
   -webkit-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
@@ -1269,16 +1269,32 @@ header img {
   left: 0%;
 }
 
-.projects .slider .slide img {
-  width: 50%;
+.projects .slider .slide.active .image {
+  position: relative;
+  z-index: 3;
+}
+
+.projects .slider .slide.active .image img {
+  position: relative;
+  z-index: 3;
+}
+
+.projects .slider .slide .image {
+  width: 55%;
   height: calc(40vh - 50px);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  overflow-x: unset;
+  overflow-y: scroll;
+}
+
+.projects .slider .slide .image img {
+  width: 100%;
 }
 
 .projects .slider .slide .slide_content {
-  width: 50%;
+  width: 45%;
   padding: 45px 30px;
   height: calc(40vh - 50px);
   background-color: #fff;
@@ -1437,10 +1453,36 @@ footer img {
 
 .contact .contact_content div p:first-of-type .drop {
   color: crimson;
+  position: relative;
 }
 
-.contact .contact_content div p:first-of-type .drop span:nth-child(5), .contact .contact_content div p:first-of-type .drop span:nth-child(8), .contact .contact_content div p:first-of-type .drop span:nth-child(10) {
-  padding: 3px;
+.contact .contact_content div p:first-of-type .drop span {
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  display: none;
+  top: -30px;
+  left: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 240px;
+  padding: 5px 10px;
+  background-color: deepskyblue;
+}
+
+.contact .contact_content div p:first-of-type .drop span::after {
+  content: '';
+  border: 5px solid transparent;
+  border-top-color: deepskyblue;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact .contact_content div p:first-of-type .drop:hover span {
+  display: block;
 }
 
 .contact .contact_content div h2 {
