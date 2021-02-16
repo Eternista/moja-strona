@@ -61,7 +61,6 @@ header {
         left: 0;
     }
     ul {
-        // margin: 80px auto 0;
         min-width: 260px;
         position: absolute;
         top: 50%;
@@ -69,17 +68,33 @@ header {
         transform: translate(-50%, -50%);
         li {
             width: 100%;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(100% - 2px);
+                z-index: 1;
+                display: block;
+                background-color: rgba(255,255,255,.7);
+                left: 0;
+                width: 100%;
+                height: 2px;
+                transition: .3s ease-in-out;
+            }
             .btn {
                 width: 100%;
                 font-size: 50px;
                 line-height: 1.4;
             }
             &:last-child {
-                .btn {
-                    &::after {
-                        display: none;
-                    }
-                }   
+                &::after {
+                    display: none;
+                }
+            }
+            &:hover {
+                &::after {
+                    background-color: rgba(255,255,255,1);
+                }
             }
         }
     }

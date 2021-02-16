@@ -54,9 +54,14 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   width: 80px;
 }
 
-.cursor.imageHover, .cursor.hover-trans {
+.cursor.hover-trans {
   background-color: white;
   mix-blend-mode: difference;
+}
+
+.cursor.imageHover {
+  background-color: white;
+  mix-blend-mode: hue;
 }
 
 .cursor.hover-btn {
@@ -309,20 +314,6 @@ h1 span, h2 span, h3 span {
   transition: .3s ease-in-out;
 }
 
-.btn.transparent::after {
-  content: '';
-  position: absolute;
-  top: calc(100% - 2px);
-  z-index: 1;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.7);
-  left: 0;
-  width: 100%;
-  height: 2px;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
 .btn.transparent:hover {
   color: white;
 }
@@ -456,6 +447,21 @@ header img {
 
 .navigation ul li {
   width: 100%;
+  position: relative;
+}
+
+.navigation ul li::after {
+  content: '';
+  position: absolute;
+  top: calc(100% - 2px);
+  z-index: 1;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.7);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .navigation ul li .btn {
@@ -464,8 +470,12 @@ header img {
   line-height: 1.4;
 }
 
-.navigation ul li:last-child .btn::after {
+.navigation ul li:last-child::after {
   display: none;
+}
+
+.navigation ul li:hover::after {
+  background-color: white;
 }
 
 .gameSection {
@@ -1000,6 +1010,15 @@ header img {
      object-fit: cover;
   position: relative;
   z-index: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.about .about_content .myPhoto:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .about .about_content .aboutMe {
@@ -1040,6 +1059,62 @@ header img {
 .about .about_content .content .icons img {
   height: 75px;
   margin-right: 20px;
+}
+
+.about .about_content .content .progressbars {
+  padding: 10px 0;
+}
+
+.about .about_content .content .progressbars > div {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .about_content .content .progressbars > div span {
+  min-width: 70px;
+  text-align: center;
+}
+
+.about .about_content .content .progressbars > div .progress {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+.about .about_content .content .progressbars > div:last-child {
+  margin-bottom: 0;
+}
+
+.about .about_content .content .progressbars > div .size {
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  background-color: deepskyblue;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  width: 0%;
+  font-size: 0;
+}
+
+.about .about_content .content .progressbars.show div .size {
+  font-size: 20px;
+}
+
+.about .about_content .content .progressbars.show .html .size {
+  width: 80%;
+}
+
+.about .about_content .content .progressbars.show .css .size {
+  width: 80%;
+}
+
+.about .about_content .content .progressbars.show .js .size {
+  width: 65%;
+}
+
+.about .about_content .content .progressbars.show .react .size {
+  width: 30%;
 }
 
 .projects {
@@ -1360,8 +1435,12 @@ footer img {
   line-height: 1;
 }
 
-.contact .contact_content div p:first-of-type a {
+.contact .contact_content div p:first-of-type .drop {
   color: crimson;
+}
+
+.contact .contact_content div p:first-of-type .drop span:nth-child(5), .contact .contact_content div p:first-of-type .drop span:nth-child(8), .contact .contact_content div p:first-of-type .drop span:nth-child(10) {
+  padding: 3px;
 }
 
 .contact .contact_content div h2 {

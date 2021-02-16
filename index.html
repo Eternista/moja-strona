@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="css//hamburgers.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/287bffc749.js" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
-    <script src="js/Scroller.js"></script>
-    <script src="js/swiper.js"></script>
 </head>
 </head>
 <body>
@@ -71,20 +68,26 @@
         <section id='about' class="about">
             <div class="about_title"><div><h2 class="heading big stroke">About</h2></div></div>
             <div class="about_content">
-                <img src="image/ja.jpg" class="myPhoto" alt="My Photo">
+                <img src="image/ja2.jpg" class="myPhoto" alt="My Photo">
                 <div class="aboutMe">
                     <h3 class="heading title">About Me</h3>
                     <p>Hello I'm Rafał and I'm 22 years old and I'm from Poland. Currently I'm first-year computer science student. In my spare time, I love spending time with music, listening to it, or playing the guitar.</p>
                 </div>
                 <article class="content">
                     <h3 class="heading title">Skills & Experience</h3>
-                    <p>I became interested in coding during the technical school through the internship.
+                    <p>I became interested in coding during the technical school through the internship in the company named "Artneo".
                         This "love" enlarged my older brother who made it possible for me by giving me the opportunity to help him with his projects.
                         The main area of my expertise is Front End Development (client side of the web).</p>
-                    <div class="icons">
+                    <!-- <div class="icons">
                         <img src="image/HTML.svg" alt="HTML">
                         <img src="image/CSS.svg" alt="CSS">
                         <img src="image/Js.svg" alt="JS">
+                    </div> -->
+                    <div class="progressbars">
+                        <div class="html"><span>HTML</span><div class="progress"><div class="size">80%</div></div></div>
+                        <div class="css"><span>CSS</span><div class="progress"><div class="size">80%</div></div></div>
+                        <div class="js"><span>JS</span><div class="progress"><div class="size">65%</div></div></div>
+                        <div class="react"><span>REACT</span><div class="progress"><div class="size">30%</div></div></div>
                     </div>
                 </article>
             </div>
@@ -169,7 +172,7 @@
             <div class="contact_content">
                 <div>
                     <h2 class="heading">Say Hello</h2>
-                    <p><a href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>, I'd love to hear from you!</p>
+                    <p><a class='drop' href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>, I'd love to hear from you!</p>
                 </div>
                 <form action="/contact_form.php" method="post" id="contact-form" data-netlify="true">
                     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
@@ -177,7 +180,7 @@
                       <input name="name" type="text" placeholder="Your Name" required/>
                     </p>
                     <p>
-                      <input style="cursor: pointer;" name="email" placeholder="Your Emiail" type="text" required/>
+                      <input style="cursor: pointer;" name="email" placeholder="Your Email" type="text" required/>
                     </p>
                     <p>
                       <textarea rows="8" name="message" placeholder="Your message" required></textarea>
@@ -190,6 +193,9 @@
             </div>
         </section>
     </div>
+    <script src="js/index.js"></script>
+    <script src="js/Scroller.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
     <script src="js/slider.js"></script>

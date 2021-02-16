@@ -166,6 +166,11 @@
             object-fit: cover;
             position: relative;
             z-index: 1;
+            transition: .3s ease-in-out;
+            filter: grayscale(100%);
+            &:hover {
+                filter: grayscale(0%);
+            }
         }
         .aboutMe {
             width: calc(100% - 300px);
@@ -195,6 +200,61 @@
                 img {
                     height: 75px;
                     margin-right: 20px;
+                }
+            }
+            .progressbars {
+                padding: 10px 0;
+                & > div {
+                    // border: 1px solid;
+                    margin-bottom: 15px;
+                    display: flex;
+                    span {
+                        min-width: 70px;
+                        text-align: center;
+                    }
+                    .progress {
+                        background-color: #f6f6f6;
+                        width: 100%;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .size {
+                        line-height: 25px;
+                        color: #fff;
+                        text-align: center;
+                        background-color: $color-secondary;
+                        transition: width 1s ease-in-out;
+                        width: 0%;
+                        font-size: 0;
+                    }
+                }
+                &.show {
+                    div .size {
+                        font-size: 20px;
+                    }
+                    .html {
+                        .size {
+                            width: 80%;
+                        }
+                    }
+                    .css {
+                        .size {
+                            width: 80%;
+                        }
+                    }
+                    .js {
+                        .size {
+                            width: 65%;
+
+                        }
+                    }
+                    .react {
+                        .size {
+                            width: 30%;
+
+                        }
+                    }
                 }
             }
         }

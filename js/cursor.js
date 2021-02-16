@@ -33,7 +33,7 @@ hamb.addEventListener('mouseleave', function(){
 
 //TRANSPARENT BUTTON HOVER
 
-const trans = document.querySelectorAll('.transparent');
+const trans = document.querySelectorAll('.transparent span');
 const transArray = [... trans];
 transArray.forEach(single => {
     single.addEventListener('mouseover', function(){

@@ -194,6 +194,17 @@ for(let i=0; i < typing9.textContent.length; i++) {
     that.style.display = 'none';
 }
 
+// const drop = document.querySelector('.drop');
+// const dropArray = [... drop.textContent];
+
+// dropArray.forEach(e => {
+//     const span = document.createElement('span');
+//     span.innerHTML = `${e}`
+//     span.classList.add('letter');
+//     drop.appendChild(span);
+// })
+// drop.removeChild(drop.firstChild);
+
 //BOUNCING LETTERS
 
 $(document).ready(function () {
