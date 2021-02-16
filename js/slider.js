@@ -6,7 +6,7 @@ const dots = [... document.querySelectorAll('.dot')];
 var i = 0;
 
 const nextSlide = () => {
-    nextBtn.classList.add('clicked');
+    // nextBtn.classList.add('clicked');
     for(i = 0; i < slides.length; i++) {
         if(slides[i].classList.contains('left')){
             slides[i].classList.remove('left');
@@ -50,7 +50,7 @@ const nextSlide = () => {
 }
 
 const previousSlide = () => {
-    prevBtn.classList.add('clicked');
+    // prevBtn.classList.add('clicked');
     for(i = slides.length - 1; i >= 0; i--) {
         if(slides[i].classList.contains('left')){
             slides[i].classList.remove('left');
@@ -134,13 +134,13 @@ dots.forEach((dot) => {
     })
 })
 
-setInterval(() => {
-    if(!nextBtn.classList.contains('clicked') || !prevBtn.classList.contains('clicked')) {
-        nextSlide();
-    }
-    nextBtn.classList.remove('clicked');
-    prevBtn.classList.remove('clicked');
-}, 5000);
+// setInterval(() => {
+//     if(!nextBtn.classList.contains('clicked') || !prevBtn.classList.contains('clicked')) {
+//         nextSlide();
+//     }
+//     nextBtn.classList.remove('clicked');
+//     prevBtn.classList.remove('clicked');
+// }, 5000);
 
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', previousSlide);

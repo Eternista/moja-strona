@@ -215,17 +215,18 @@
         position: absolute;
         color: $color-secondary;
         transition: color .3s ease-in-out;
-        font-size: 42px;
+        font-size: 60px;
+        font-weight: 600;
         z-index: 99;
         &:hover {
             color: #fff;
         }
     }
     .fa-arrow-left {
-        left: -30px;
+        left: -55px;
     }
     .fa-arrow-right {
-        right: -30px;
+        right: -55px;
     }
     .dots {
         display: flex;
@@ -249,7 +250,7 @@
         text-align: center;
         line-height: 1;
         padding: 20px 30px;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
     }
     .wrapp {
         background-color: $color-primary;
@@ -261,7 +262,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .slider {
         display: flex;

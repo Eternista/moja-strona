@@ -5,9 +5,12 @@
     font-family: $text-font;
     list-style: none;
     text-decoration: none;
-    // &:not(.btn), &:not(form), &:not(p){
-    //     cursor: none;
-    // }
+    &:not(.btn){
+        cursor: none;
+    }
+    .btn {
+        cursor: pointer;
+    }
 }
 
 body {
