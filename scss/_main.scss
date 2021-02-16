@@ -209,13 +209,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    .fas, .fas {
+    .fas {
         top: 55%;
         transform: translateY(-50%);
         position: absolute;
         color: $color-secondary;
+        transition: color .3s ease-in-out;
         font-size: 42px;
         z-index: 99;
+        &:hover {
+            color: #fff;
+        }
     }
     .fa-arrow-left {
         left: -30px;
@@ -235,7 +239,8 @@
             height: 6px;
             background-color: #fff;
             font-size: 0;
-            &.active {
+            transition: background-color .3s ease-in-out;
+            &.active, &:hover {
                 background-color: $color-secondary;
             }
         }
@@ -312,6 +317,7 @@
                     text-align: left;
                     padding: 0;
                     line-height: 1;
+                    text-transform: none;
                     margin-bottom: 0;
                     &:first-letter {
                         font-size: 50px;

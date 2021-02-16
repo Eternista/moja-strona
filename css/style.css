@@ -32,8 +32,8 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
           transform: translate(-50%, -50%);
   z-index: 98;
   pointer-events: none;
-  -webkit-transition: background-color .3s ease-in-out, width .3s ease-in-out .3s,height .3s ease-in-out .3s;
-  transition: background-color .3s ease-in-out, width .3s ease-in-out .3s,height .3s ease-in-out .3s;
+  -webkit-transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
+  transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
   border: 1px solid deepskyblue;
   background-color: transparent;
 }
@@ -44,6 +44,16 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   background: deepskyblue;
   height: 80px;
   width: 80px;
+}
+
+.cursor.imageHover {
+  background-color: white;
+  mix-blend-mode: difference;
+}
+
+.cursor.hover-btn {
+  background-color: white;
+  mix-blend-mode: difference;
 }
 
 .cursor.hover-heading {
@@ -1031,14 +1041,20 @@ header img {
   position: relative;
 }
 
-.projects .fas, .projects .fas {
+.projects .fas {
   top: 55%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: absolute;
   color: deepskyblue;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
   font-size: 42px;
   z-index: 99;
+}
+
+.projects .fas:hover {
+  color: #fff;
 }
 
 .projects .fa-arrow-left {
@@ -1067,9 +1083,11 @@ header img {
   height: 6px;
   background-color: #fff;
   font-size: 0;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
 }
 
-.projects .dots .dot.active {
+.projects .dots .dot.active, .projects .dots .dot:hover {
   background-color: deepskyblue;
 }
 
@@ -1193,6 +1211,7 @@ header img {
   text-align: left;
   padding: 0;
   line-height: 1;
+  text-transform: none;
   margin-bottom: 0;
 }
 

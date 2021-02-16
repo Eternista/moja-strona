@@ -35,7 +35,7 @@ h1.heading, h2.heading {
     transform: translate(-50%, -50%);
     z-index: 98;
     pointer-events: none;
-    transition: background-color .3s ease-in-out, width .3s ease-in-out .3s,height .3s ease-in-out .3s;
+    transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
     border: 1px solid $color-secondary;
     background-color: transparent;
     // mix-blend-mode: color;
@@ -46,6 +46,14 @@ h1.heading, h2.heading {
         background: $color-secondary;
         height: 80px;
         width: 80px;
+    }
+    &.imageHover {
+        background-color: rgba(255,255,255,1);
+        mix-blend-mode: difference;
+    }
+    &.hover-btn {
+        background-color: rgba(255,255,255,1);
+        mix-blend-mode: difference;
     }
     &.hover-heading {
         transform: translate(-50%, -50%);

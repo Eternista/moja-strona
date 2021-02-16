@@ -5,6 +5,7 @@ function cursor(e) {
     mouseCursor.style.top = e.pageY + 'px';
     mouseCursor.style.left = e.pageX + 'px';
 }
+//HEADING HOVER
 
 const headings = document.querySelectorAll('.heading:not(h3)');
 const headingsArray = [... headings];
@@ -19,17 +20,7 @@ headingsArray.forEach(single => {
     })
 })
 
-const navLinks = [... document.querySelectorAll('header ul li a:not(.btn)')];
-navLinks.forEach(single => {
-    single.addEventListener('mouseover', function(){
-        mouseCursor.classList.add('hover');
-        single.classList.add("hover");
-    })
-    single.addEventListener('mouseleave', function(){
-        mouseCursor.classList.remove('hover');
-        single.classList.remove("hover");
-    })
-})
+//HAMBURGER HOVER
 
 hamb.addEventListener('mouseover', function(){
     mouseCursor.classList.add('hover');
@@ -38,4 +29,41 @@ hamb.addEventListener('mouseover', function(){
 hamb.addEventListener('mouseleave', function(){
     mouseCursor.classList.remove('hover');
     hamb.classList.remove("hover");
+})
+
+//BUTTON HOVER
+
+const btns = document.querySelectorAll('.btn');
+const btnsArray = [... btns];
+btnsArray.forEach(single => {
+    single.addEventListener('mouseover', function(){
+        mouseCursor.classList.add('hover','hover-btn');
+    })
+    single.addEventListener('mouseleave', function(){
+        mouseCursor.classList.remove('hover','hover-btn');
+    })
+})
+
+//ARROW
+
+const arrows = [... document.querySelectorAll('.fas')];
+
+arrows.forEach((single) => {
+    single.addEventListener('mouseover', function(){
+        mouseCursor.classList.add('hover','hover-arrow');
+    })
+    single.addEventListener('mouseleave', function(){
+        mouseCursor.classList.remove('hover','hover-arrow');
+    })
+})
+
+//IMAGE HOVER
+
+const image = document.querySelector('.myPhoto');
+
+image.addEventListener('mouseover', function(){
+    mouseCursor.classList.add('hover');
+})
+image.addEventListener('mouseleave', function(){
+    mouseCursor.classList.remove('hover');
 })
