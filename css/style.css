@@ -46,14 +46,16 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   width: 80px;
 }
 
-.cursor.imageHover {
+.cursor.imageHover, .cursor.hover-trans {
   background-color: white;
   mix-blend-mode: difference;
 }
 
 .cursor.hover-btn {
-  background-color: white;
-  mix-blend-mode: difference;
+  height: 50px;
+  width: 50px;
+  border-color: #000;
+  background-color: transparent;
 }
 
 .cursor.dotHover {

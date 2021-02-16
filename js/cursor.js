@@ -31,9 +31,22 @@ hamb.addEventListener('mouseleave', function(){
     hamb.classList.remove("hover");
 })
 
-//BUTTON HOVER
+//TRANSPARENT BUTTON HOVER
 
-const btns = document.querySelectorAll('.btn');
+const trans = document.querySelectorAll('.transparent');
+const transArray = [... trans];
+transArray.forEach(single => {
+    single.addEventListener('mouseover', function(){
+        mouseCursor.classList.add('hover','hover-trans');
+    })
+    single.addEventListener('mouseleave', function(){
+        mouseCursor.classList.remove('hover','hover-trans');
+    })
+})
+
+// BUTTON HOVER
+
+const btns = document.querySelectorAll('.btn:not(.transparent)');
 const btnsArray = [... btns];
 btnsArray.forEach(single => {
     single.addEventListener('mouseover', function(){
