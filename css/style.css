@@ -1259,6 +1259,9 @@ header img {
 }
 
 @media all and (max-width: 740px) {
+  .about {
+    padding-bottom: 80px;
+  }
   .about .about_content {
     padding: 80px 20px 0;
   }
@@ -1268,6 +1271,9 @@ header img {
   .about .about_content .aboutMe, .about .about_content .content {
     width: 100%;
     padding: 40px 15px;
+  }
+  .about .about_content .content {
+    padding-bottom: 0;
   }
 }
 
@@ -1402,6 +1408,7 @@ header img {
 @media all and (max-width: 992px) {
   .projects {
     padding: 0 !important;
+    padding-bottom: 80px !important;
   }
   .projects .wrap .heading {
     padding: 0;

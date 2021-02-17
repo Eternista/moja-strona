@@ -336,6 +336,7 @@
         }
     }
     @include mobile {
+        padding-bottom: 80px;
         .about_content {
             padding: 80px 20px 0;
             img {
@@ -344,6 +345,9 @@
             .aboutMe, .content {
                 width: 100%;
                 padding: 40px 15px;
+            }
+            .content {
+                padding-bottom: 0;
             }
         }
     }
@@ -457,6 +461,7 @@
 
     @include tablet {
         padding: 0 !important;
+        padding-bottom: 80px !important;
         .wrap {
             .heading {
                 padding: 0;
