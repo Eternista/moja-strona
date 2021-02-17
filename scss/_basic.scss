@@ -50,6 +50,9 @@ h1.heading, h2.heading {
         height: 80px;
         width: 80px;
     }
+    &.hover-image {
+        background-color: $color-primary;
+    }
      &.hover-trans {
         background-color: rgba(255,255,255,1);
         mix-blend-mode: difference;

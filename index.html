@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css//hamburgers.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/287bffc749.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/Scroller.js"></script>
+    <script src="js/swiper.js"></script>
 </head>
 </head>
 <body>
@@ -93,7 +96,17 @@
             </div>
         </section>
         <section id='projects' class="projects">
-            <div class="wrapp">
+            <div class="wrap">
+                <h2 class="heading stroke big">Projects</h2>
+                <ul class="menu">
+                    <li id="all">All</li>
+                    <li id="app">App</li>
+                    <li id="pages">Pages</li>
+                    <li id="react">React</li>
+                </ul>
+                <div id="grid"></div>
+            </div>
+            <!-- <div class="wrapp">
                 <h2 class="heading stroke myWork big">Projects</h2>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-right"></i>
@@ -130,23 +143,23 @@
                             <a href="#">View Project</a>
                         </div>
                     </div>
-                    <!-- <div class="slide">
+                    <div class="slide">
                         <div class="image"><img src="image/Perfect Melody.png" alt=""></div>
                         <div class="slide_content">
                             <h3>Project name 5</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis Est, dicta quo animi molestias reiciendis.</p>
                             <a href="#">View Project</a>
                         </div>
-                    </div> -->
+                    </div> 
                 </div>
                 <ul class="dots">
                     <li class="dot">0</li>
                     <li class="dot active">1</li>
                     <li class="dot">2</li>
                     <li class="dot">3</li>
-                    <!-- <li class="dot">4</li> -->
+                    <li class="dot">4</li>
                 </ul>
-            </div>
+            </div> -->
         </section>
         <section id='games' class="gameSection">
             <div class="games">
@@ -193,13 +206,10 @@
             </div>
         </section>
     </div>
-    <script src="js/index.js"></script>
-    <script src="js/Scroller.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/cursor.js"></script>
-    <script src="js/scroll.js"></script>
 </body>
 </html>

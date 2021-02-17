@@ -57,18 +57,18 @@ btnsArray.forEach(single => {
     })
 })
 
-//ARROW
+// //ARROW
 
-const arrows = [... document.querySelectorAll('.fas')];
+// const arrows = [... document.querySelectorAll('.fas')];
 
-arrows.forEach((single) => {
-    single.addEventListener('mouseover', function(){
-        mouseCursor.classList.add('hover','hover-arrow');
-    })
-    single.addEventListener('mouseleave', function(){
-        mouseCursor.classList.remove('hover','hover-arrow');
-    })
-})
+// arrows.forEach((single) => {
+//     single.addEventListener('mouseover', function(){
+//         mouseCursor.classList.add('hover','hover-arrow');
+//     })
+//     single.addEventListener('mouseleave', function(){
+//         mouseCursor.classList.remove('hover','hover-arrow');
+//     })
+// })
 
 //IMAGE HOVER
 
@@ -83,11 +83,11 @@ image.addEventListener('mouseleave', function(){
 
 //SLIDER DOTS HOVER
 
-dots.forEach((dot) => {
-    dot.addEventListener('mouseover', function(){
-        mouseCursor.classList.add('hover', 'dotHover');
-    })
-    dot.addEventListener('mouseleave', function(){
-        mouseCursor.classList.remove('hover', 'dotHover');
-    })
-})
+// dots.forEach((dot) => {
+//     dot.addEventListener('mouseover', function(){
+//         mouseCursor.classList.add('hover', 'dotHover');
+//     })
+//     dot.addEventListener('mouseleave', function(){
+//         mouseCursor.classList.remove('hover', 'dotHover');
+//     })
+// })
