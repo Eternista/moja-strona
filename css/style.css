@@ -957,6 +957,7 @@ header img {
   .banner article:first-child h1, .banner article:first-child h2, .banner article:first-child h3, .banner article:first-child .dual-btn a {
     -webkit-animation: none !important;
             animation: none !important;
+    opacity: 1;
   }
   .banner article:first-child .dual-btn {
     display: -webkit-box;
