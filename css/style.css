@@ -1132,6 +1132,7 @@ header img {
 
 .projects .wrap h2 {
   padding: 20px 30px;
+  background-color: crimson;
 }
 
 .projects .wrap .menu {
@@ -1140,8 +1141,8 @@ header img {
   display: flex;
   max-width: 400px;
   margin: 0 auto;
-  height: 5vh;
-  padding: 5px 0;
+  min-height: 5vh;
+  padding: 20px 0;
 }
 
 .projects .wrap .menu li {
@@ -1156,12 +1157,19 @@ header img {
 
 .projects .wrap .menu li.active, .projects .wrap .menu li:hover {
   font-weight: bold;
+}
+
+.projects .wrap .menu li.active {
   color: crimson;
+}
+
+.projects .wrap .menu li.hover {
+  color: deepskyblue;
 }
 
 .projects .wrap #grid {
   height: calc(100vh - 200px - 5vh - 150px);
-  padding: 20px;
+  padding: 0 40px;
   overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
