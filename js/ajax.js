@@ -38,11 +38,7 @@ if(this.status == 200){
 xhr.send();
 }
 
-window.addEventListener('scroll', function(){
-  if(Number(window.pageYOffset) === Number(document.querySelector('#projects').scrollHeight)){
-    loadAll(); 
-  }
-})
+loadAll(); 
 
 function loadJsApp(){
 var xhr = new XMLHttpRequest();
