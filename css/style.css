@@ -954,17 +954,9 @@ header img {
   .banner article:first-child {
     width: 100%;
   }
-  .banner article:first-child h1, .banner article:first-child h2, .banner article:first-child h3 {
-    -webkit-animation: show .5s linear forwards;
-            animation: show .5s linear forwards;
-  }
-  .banner article:first-child h2 {
-    -webkit-animation-delay: 2.5s;
-            animation-delay: 2.5s;
-  }
-  .banner article:first-child h3 {
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
+  .banner article:first-child h1, .banner article:first-child h2, .banner article:first-child h3, .banner article:first-child .dual-btn a {
+    -webkit-animation: none !important;
+            animation: none !important;
   }
   .banner article:first-child .dual-btn {
     display: -webkit-box;
@@ -979,19 +971,7 @@ header img {
     margin-bottom: 20px;
   }
   .banner article:first-child .dual-btn a:first-child {
-    -webkit-animation: show 1s linear forwards;
-            animation: show 1s linear forwards;
-    -webkit-animation-delay: 8s !important;
-            animation-delay: 8s !important;
-    opacity: 0;
     margin-right: 20px;
-  }
-  .banner article:first-child .dual-btn a:last-child {
-    -webkit-animation: show 1s linear forwards;
-            animation: show 1s linear forwards;
-    -webkit-animation-delay: 10s !important;
-            animation-delay: 10s !important;
-    opacity: 0;
   }
   .banner article:last-child {
     display: none;
