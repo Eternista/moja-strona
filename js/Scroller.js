@@ -63,8 +63,6 @@
 //PROGRESS BAR CLASS GIVING
 
 window.addEventListener('scroll', function(){
-  // console.log(window.top);
-  // console.log(document.querySelector('#about').scrollHeight);
   if(width > 992) {
     if(Number(window.pageYOffset) === Number(document.querySelector('#about').scrollHeight)){
       document.querySelector('.progressbars').classList.add('show');

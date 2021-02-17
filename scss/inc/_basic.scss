@@ -109,6 +109,9 @@ section {
     &:last-child {
         margin-bottom: 0;
     }
+    @include tablet {
+        min-height: 0;
+    }
 }
 
 //TEXT

@@ -105,8 +105,9 @@
     }
 
     @include tablet {
+        
         padding: 0 !important;
-        padding-bottom: 80px !important;
+        padding-bottom: 40px !important;
         .wrap {
             .heading {
                 padding: 0;
@@ -131,6 +132,13 @@
                 & > div {
                     width: 100% !important;
                 }
+            }
+        }
+    }
+    @include small-mobile {
+        .wrap {
+            .heading {
+                line-height: 150px;
             }
         }
     }

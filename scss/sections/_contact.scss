@@ -113,7 +113,8 @@
             }
         }
         .contact_content {
-            height: calc(100vh - 200px);
+            min-height: calc(100vh - 200px);
+            padding: 80px 0;
         }
     }
     @include mobile {
@@ -121,6 +122,11 @@
             form {
                 width: 80%;
             }
+        }
+    }@include small-mobile {
+        .contact_title {
+            min-height: 150px;
+            height: 150px;
         }
     }
 }

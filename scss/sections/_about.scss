@@ -141,7 +141,6 @@
         }
         .about_content {
             width: 100%;
-            
             padding: 100px 65px 0;
         }
     }
@@ -149,16 +148,25 @@
         padding-bottom: 80px;
         .about_content {
             padding: 80px 20px 0;
-            img {
-                margin-bottom: 40px;
+            .myPhoto {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 0;
+                height: 100%;
+                max-height: 400px;
             }
             .aboutMe, .content {
                 width: 100%;
-                padding: 40px 15px;
+                padding: 30px 15px;
             }
             .content {
                 padding-bottom: 0;
             }
+        }
+    }
+    @include small-mobile {
+        .about_title {
+            height: 150px;
         }
     }
 }
