@@ -1,3 +1,4 @@
+// if(width > 992){
 class Swiper {
   constructor() {
     this.initialY = null;
@@ -49,3 +50,4 @@ class Swiper {
 }
 
 new Swiper();
+// }
