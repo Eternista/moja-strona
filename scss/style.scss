@@ -1,11 +1,20 @@
-@import 'variables';
-@import 'mixins';
-@import 'fonts';
-@import 'basic';
-@import 'buttons';
-@import 'header';
-@import 'arcanoid';
-@import 'main';
-@import 'footer';
-@import 'followBox';
-@import 'contact';
+//INCLUDE
+
+@import 'inc/variables';
+@import 'inc/mixins';
+@import 'inc/fonts';
+@import 'inc/basic';
+@import 'inc/buttons';
+
+//LAYOUTS
+
+@import 'layouts/footer';
+@import 'layouts/header';
+
+//SECTION
+
+@import 'sections/hello';
+@import 'sections/about';
+@import 'sections/portfolio';
+@import 'sections/games';
+@import 'sections/contact';

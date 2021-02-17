@@ -1,0 +1,190 @@
+
+
+//BANNER
+
+.banner {
+    display: flex;
+    // min-height: 60vh;
+    margin-top: 0;
+    align-items: center;
+    h1.heading, h2.heading {
+        transition: .3s ease-in-out;
+        span {
+            transition: .3s ease-in-out;
+        }
+        // &.hover {
+        //     // -webkit-text-fill-color: $color-primary;
+        //     // span {
+        //     //     -webkit-text-fill-color: $color-primary;
+        //     // }
+        // }
+    }
+    h2 {
+        span:nth-child(4) {
+            padding: 10px;
+        }
+    }
+    article {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:first-child {
+            width: 55%;
+            padding: 0 60px;
+            text-align: center;
+        }
+        &:last-child {
+            width: 45%;
+            color: #fff;
+            padding: 30px;
+            background-color: $color-primary;
+            height: calc(100vh - 200px);
+            a {
+                margin: 0 auto 80px;
+                display: block;
+            }
+            p,li {
+                margin-bottom: 15px;
+            }
+            & > ul {
+                & > li {
+                    & > ul {
+                        margin-left: 40px;
+                        ul {
+                            margin-left: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .banner-col {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            animation: show 1s linear forwards;
+            animation-delay: 2s !important;
+            opacity: 0;
+            // margin-bottom: -85px;
+            margin-bottom: -60px;
+            text-align: left;
+        }
+        h2 {
+            animation: show 1s linear forwards;
+            animation-delay: 5s !important;
+            opacity: 0;
+
+            span:nth-child(1n + 4) {
+                color: $color-primary;
+            }
+        }
+        h3 {
+            animation: show 1s linear forwards;
+            animation-delay: 8s !important;
+            opacity: 0;
+        }
+        .dual-btn {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+            a {
+                &:first-child {
+                    animation: show 1s linear forwards;
+                    animation-delay: 15s !important;
+                    opacity: 0;
+                }
+                &:last-child {
+                    animation: show 1s linear forwards;
+                    animation-delay: 20s !important;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    @include tablet {
+        article:first-child {
+            width: 100%;
+            h1,h2,h3, .dual-btn a {
+                animation: none !important;
+                opacity: 1;
+            }
+            .dual-btn {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 40px;
+                a {
+                    margin-bottom: 20px;
+                    &:first-child {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        article:last-child {
+            display: none;
+        }
+    }
+    @include mobile {
+        article:first-child {
+            .banner-col {
+                max-width: 100%;
+            }
+            h1 {
+                margin-bottom: -35px;
+            }
+            h2 {
+                text-align: right;
+            }
+            .dual-btn {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 40px;
+                flex-wrap: wrap;
+                a {
+                    &:first-child {
+                        animation: show 1s linear forwards;
+                        animation-delay: 8s !important;
+                        opacity: 0;
+                    }
+                    &:last-child {
+                        animation: show 1s linear forwards;
+                        animation-delay: 10s !important;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include small-mobile {
+        article:first-child {
+            padding: 0 20px;
+        }
+    }
+}
+
+//TYPING in javascript you can find code to this part. (delay)
+
+.typing {
+    span {
+        animation: typing .05s linear 1 forwards;
+        opacity: 0;
+    }
+}
+@keyframes typing {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

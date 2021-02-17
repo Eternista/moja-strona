@@ -407,6 +407,21 @@ h1 span, h2 span, h3 span {
           transition-delay: 0;
 }
 
+footer {
+  margin: 80px 0;
+  background-color: crimson;
+  height: 60px;
+}
+
+footer img {
+  margin: 0 auto;
+  display: block;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: -20px;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -518,303 +533,6 @@ header img {
 
 .navigation ul li:hover::after {
   background-color: white;
-}
-
-.gameSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.gameSection .games {
-  height: calc(100vh - 200px);
-  width: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
-}
-
-.gameSection .games .mario {
-  position: absolute;
-  height: 45px;
-  width: 35px;
-  bottom: calc(100% - 80px);
-  z-index: 20;
-  background-image: url(../image/Mario.png);
-  background-size: cover;
-  background-position: 0 0;
-  left: 80px;
-  -webkit-animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
-          animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
-}
-
-.gameSection .games.game-start {
-  height: calc(100vh - 200px);
-}
-
-.gameSection .games.game-start::after {
-  width: 100%;
-}
-
-.gameSection .games.game-start .game-intro h2 {
-  top: -500px !important;
-}
-
-.gameSection .games.game-start .gameStartBtn {
-  bottom: -500px !important;
-}
-
-.gameSection .games.game-start .game {
-  height: 90%;
-}
-
-.gameSection .games::after {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  background-color: crimson;
-  -webkit-transition: width 1s;
-  transition: width 1s;
-}
-
-.gameSection .games .game-intro {
-  text-align: center;
-  padding: 80px;
-  position: relative;
-  z-index: 1;
-}
-
-.gameSection .games .game-intro h2 {
-  margin-bottom: 50px;
-  position: relative;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  top: 0;
-}
-
-.gameSection .games .game-intro h2 span {
-  color: #000;
-  -webkit-text-fill-color: #000;
-}
-
-.gameSection .games .game-intro h2 span:nth-child(1n + 13) {
-  color: deepskyblue;
-  -webkit-text-fill-color: deepskyblue;
-}
-
-.gameSection .games .game-intro h2 span:nth-child(3), .gameSection .games .game-intro h2 span:nth-child(7), .gameSection .games .game-intro h2 span:nth-child(12) {
-  padding: 10px;
-}
-
-.gameSection .games .game-intro .btn {
-  margin: 0 auto;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  position: relative;
-  bottom: 0;
-}
-
-.gameSection .games .game {
-  position: absolute;
-  height: 0;
-  width: 100%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-  background-color: crimson;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  overflow: hidden;
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
-  z-index: 1;
-}
-
-.gameSection .games .game .levelHead {
-  text-align: center;
-  color: #fff;
-  padding-bottom: 20px;
-  font-size: 40px;
-}
-
-.gameSection .games .game .levelHead.hover {
-  -webkit-text-fill-color: #fff;
-}
-
-.gameSection .games .game div {
-  position: relative;
-  width: 800px;
-  margin: 0 auto;
-}
-
-.gameSection .games .game div button {
-  display: none;
-}
-
-.gameSection .games .game div h2 {
-  display: none;
-}
-
-.gameSection .games .game div h2.lose {
-  display: block;
-  position: absolute;
-  left: 50%;
-  z-index: 2;
-  width: 90%;
-  text-align: center;
-  top: 20% !important;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  color: #fff;
-  font-size: 30px;
-  font-family: monospace;
-}
-
-.gameSection .games .game div.activeGame::after {
-  content: "";
-  background-color: rgba(51, 51, 51, 0.9);
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.gameSection .games .game div.activeGame button {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.gameSection .games .game div.paused::before {
-  content: "";
-  background-color: rgba(51, 51, 51, 0.9);
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.gameSection .games .game div.paused::after {
-  content: "PAUSED";
-  color: #fff;
-  font-size: 30px;
-  top: 50%;
-  left: 50%;
-  height: 45px;
-  line-height: 45px;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.gameSection .games .game div canvas {
-  background-color: snow;
-  display: block;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-@media all and (max-width: 992px) {
-  .gameSection {
-    display: none;
-  }
-}
-
-@-webkit-keyframes walk {
-  /* 0% {
-     background-position: 0 0;
-    } */
-  100% {
-    background-position: -315px 0;
-  }
-}
-
-@keyframes walk {
-  /* 0% {
-     background-position: 0 0;
-    } */
-  100% {
-    background-position: -315px 0;
-  }
-}
-
-@-webkit-keyframes move {
-  100% {
-    left: calc(100% - 80px);
-  }
-}
-
-@keyframes move {
-  100% {
-    left: calc(100% - 80px);
-  }
-}
-
-@-webkit-keyframes turn {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  50% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  50.001% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-  100% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-}
-
-@keyframes turn {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  50% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  50.001% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-  100% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
 }
 
 .banner {
@@ -1446,48 +1164,301 @@ header img {
   }
 }
 
-footer {
-  margin: 80px 0;
-  background-color: crimson;
-  height: 60px;
+.gameSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-footer img {
-  margin: 0 auto;
-  display: block;
-  height: 100px;
-  width: 100px;
+.gameSection .games {
+  height: calc(100vh - 200px);
+  width: 100%;
   position: relative;
-  top: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 
-.followBox {
-  top: 125px;
-  right: 0;
-  height: calc(100vh - 250px);
+.gameSection .games .mario {
   position: absolute;
+  height: 45px;
+  width: 35px;
+  bottom: calc(100% - 80px);
+  z-index: 20;
+  background-image: url(../image/Mario.png);
+  background-size: cover;
+  background-position: 0 0;
+  left: 80px;
+  -webkit-animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
+          animation: walk 1.2s infinite steps(8), move 4s infinite linear alternate, turn 8s infinite linear;
+}
+
+.gameSection .games.game-start {
+  height: calc(100vh - 200px);
+}
+
+.gameSection .games.game-start::after {
+  width: 100%;
+}
+
+.gameSection .games.game-start .game-intro h2 {
+  top: -500px !important;
+}
+
+.gameSection .games.game-start .gameStartBtn {
+  bottom: -500px !important;
+}
+
+.gameSection .games.game-start .game {
+  height: 90%;
+}
+
+.gameSection .games::after {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
   background-color: crimson;
-  width: 45%;
+  -webkit-transition: width 1s;
+  transition: width 1s;
 }
 
-.followBox.active0 {
-  -webkit-animation: backStep 4s ease-in-out 1 forwards;
-          animation: backStep 4s ease-in-out 1 forwards;
+.gameSection .games .game-intro {
+  text-align: center;
+  padding: 80px;
+  position: relative;
+  z-index: 1;
 }
 
-.followBox.active {
-  -webkit-animation: firstStep 4s ease-in-out 1 forwards;
-          animation: firstStep 4s ease-in-out 1 forwards;
+.gameSection .games .game-intro h2 {
+  margin-bottom: 50px;
+  position: relative;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  top: 0;
 }
 
-.followBox.active2 {
-  -webkit-animation: secStep 2s ease-in-out 1 forwards;
-          animation: secStep 2s ease-in-out 1 forwards;
+.gameSection .games .game-intro h2 span {
+  color: #000;
+  -webkit-text-fill-color: #000;
 }
 
-.followBox.active3 {
-  -webkit-animation: thirdStep 4s ease-in-out 1 forwards;
-          animation: thirdStep 4s ease-in-out 1 forwards;
+.gameSection .games .game-intro h2 span:nth-child(1n + 13) {
+  color: deepskyblue;
+  -webkit-text-fill-color: deepskyblue;
+}
+
+.gameSection .games .game-intro h2 span:nth-child(3), .gameSection .games .game-intro h2 span:nth-child(7), .gameSection .games .game-intro h2 span:nth-child(12) {
+  padding: 10px;
+}
+
+.gameSection .games .game-intro .btn {
+  margin: 0 auto;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  position: relative;
+  bottom: 0;
+}
+
+.gameSection .games .game {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  background-color: crimson;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  z-index: 1;
+}
+
+.gameSection .games .game .levelHead {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.gameSection .games .game .levelHead.hover {
+  -webkit-text-fill-color: #fff;
+}
+
+.gameSection .games .game div {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.gameSection .games .game div button {
+  display: none;
+}
+
+.gameSection .games .game div h2 {
+  display: none;
+}
+
+.gameSection .games .game div h2.lose {
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  width: 90%;
+  text-align: center;
+  top: 20% !important;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+  font-size: 30px;
+  font-family: monospace;
+}
+
+.gameSection .games .game div.activeGame::after {
+  content: "";
+  background-color: rgba(51, 51, 51, 0.9);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.gameSection .games .game div.activeGame button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.gameSection .games .game div.paused::before {
+  content: "";
+  background-color: rgba(51, 51, 51, 0.9);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.gameSection .games .game div.paused::after {
+  content: "PAUSED";
+  color: #fff;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  height: 45px;
+  line-height: 45px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gameSection .games .game div canvas {
+  background-color: snow;
+  display: block;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+@media all and (max-width: 992px) {
+  .gameSection {
+    display: none;
+  }
+}
+
+@-webkit-keyframes walk {
+  /* 0% {
+     background-position: 0 0;
+    } */
+  100% {
+    background-position: -315px 0;
+  }
+}
+
+@keyframes walk {
+  /* 0% {
+     background-position: 0 0;
+    } */
+  100% {
+    background-position: -315px 0;
+  }
+}
+
+@-webkit-keyframes move {
+  100% {
+    left: calc(100% - 80px);
+  }
+}
+
+@keyframes move {
+  100% {
+    left: calc(100% - 80px);
+  }
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50.001% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  50.001% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }
 
 .contact {
