@@ -128,7 +128,7 @@
         }
     }
     @include mobile {
-        min-height: auto;
+        min-height: 80vh;
         padding: 80px 0;
         article:first-child {
             .banner-col {

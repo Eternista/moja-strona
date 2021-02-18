@@ -765,7 +765,7 @@ header img {
 
 @media all and (max-width: 740px) {
   .banner {
-    min-height: auto;
+    min-height: 80vh;
     padding: 80px 0;
   }
   .banner article:first-child .banner-col {
