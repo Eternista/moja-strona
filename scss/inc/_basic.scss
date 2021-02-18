@@ -180,6 +180,24 @@ h3 {
         font-size: 16px;
     }
 }
+@include small-mobile {
+    h1 {
+        font-size: 90px;
+    }
+    h2 {
+        font-size: 35px;
+        &.big {
+            font-size: 60px;
+            min-width: 0;
+        }
+    }
+    h3 {
+        font-size: 14px;
+    }
+    p,ul,li {
+        font-size: 16px;
+    }
+}
 
 h1, h2, h3 {
     span {

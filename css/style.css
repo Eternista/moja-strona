@@ -206,6 +206,25 @@ h3 {
   }
 }
 
+@media all and (max-width: 440px) {
+  h1 {
+    font-size: 90px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h2.big {
+    font-size: 60px;
+    min-width: 0;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p, ul, li {
+    font-size: 16px;
+  }
+}
+
 h1 span, h2 span, h3 span {
   font-family: "Poppins", sans-serif;
 }
@@ -1031,7 +1050,7 @@ header img {
 
 @media all and (max-width: 440px) {
   .about .about_title {
-    height: 150px;
+    height: 130px;
   }
 }
 
@@ -1197,7 +1216,7 @@ header img {
 
 @media all and (max-width: 440px) {
   .projects .wrap .heading {
-    line-height: 150px;
+    line-height: 130px;
   }
 }
 
@@ -1694,8 +1713,8 @@ header img {
 
 @media all and (max-width: 440px) {
   .contact .contact_title {
-    min-height: 150px;
-    height: 150px;
+    min-height: 130px;
+    height: 130px;
   }
 }
 /*# sourceMappingURL=style.css.map */
