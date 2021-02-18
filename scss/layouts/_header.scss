@@ -9,17 +9,25 @@ header {
     transform: translateX(-50%);
     z-index: 100;
     justify-content: space-between;
-    @include mobile {
-        position: sticky;
-        transform: none;
+    .backArrow {
+        display: none;
     }
-    // &.hover {
+    @include mobile {
+        position: static;
+        transform: none;
+        .backArrow {
+            display: block;
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            z-index: 99;
+            color: $color-secondary;
+            font-size: 40px;
+        }
+    }
         ul .hover a {
             color: #fff;
         }
-
-
-    // }
 
     //HAMBURGER MENU
         .hamburger {

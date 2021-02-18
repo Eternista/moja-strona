@@ -15,6 +15,9 @@
     display: block;
     width: fit-content;
     cursor: pointer;
+    @include small-mobile {
+        min-width: 140px;
+    }
     &.big {
         min-width: 260px;
         font-size: 20px;
