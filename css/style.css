@@ -774,12 +774,10 @@ header img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 40px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .banner article:first-child .dual-btn a:first-child {
     -webkit-animation: show 1s linear forwards;
@@ -787,6 +785,7 @@ header img {
     -webkit-animation-delay: 8s !important;
             animation-delay: 8s !important;
     opacity: 0;
+    margin-right: 40px;
   }
   .banner article:first-child .dual-btn a:last-child {
     -webkit-animation: show 1s linear forwards;
@@ -804,9 +803,6 @@ header img {
   .banner article:first-child .banner-col {
     width: 100%;
     max-width: 400px;
-  }
-  .banner article:first-child .dual-btn a:first-child {
-    margin-right: 0;
   }
 }
 

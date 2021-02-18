@@ -141,14 +141,15 @@
             }
             .dual-btn {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 margin-top: 40px;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
                 a {
                     &:first-child {
                         animation: show 1s linear forwards;
                         animation-delay: 8s !important;
                         opacity: 0;
+                        margin-right: 40px;
                     }
                     &:last-child {
                         animation: show 1s linear forwards;
@@ -166,13 +167,13 @@
                 width: 100%;
                 max-width: 400px;
             }
-            .dual-btn {
-                a {
-                    &:first-child {
-                        margin-right: 0;
-                    }
-                }
-            }
+            // .dual-btn {
+            //     a {
+            //         &:first-child {
+            //             margin-right: 0;
+            //         }
+            //     }
+            // }
         }
     }
 }
