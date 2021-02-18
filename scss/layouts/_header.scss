@@ -16,19 +16,35 @@ header {
         position: static;
         transform: none;
         padding: 10px 20px;
-        padding-bottom: 0;
+        height: 10vh;
+        align-items: center;
+        // padding-bottom: 0;
+        background-color: $color-secondary;
         .backArrow {
-            display: block;
+            display: none;
             position: fixed;
             bottom: 10px;
             right: 20px;
             z-index: 99;
             color: $color-secondary;
             font-size: 40px;
+            &.active {
+                display: block;
+            }
         }
         img {
             width: 60px !important;
             height: 60px !important;
+        }
+        .hamburger {
+            .hamburger-box {
+                .hamburger-inner {
+                    background-color: #fff;
+                    &::after, &::before {
+                        background-color: #fff;
+                    }
+                }
+            }
         }
     }
         ul .hover a {
