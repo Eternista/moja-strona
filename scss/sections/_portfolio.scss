@@ -107,7 +107,7 @@
     @include tablet {
         
         padding: 0 !important;
-        padding-bottom: 80px;
+        padding-bottom: 80px !important;
         .wrap {
             .heading {
                 padding: 0;

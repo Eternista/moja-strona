@@ -494,8 +494,8 @@ header .backArrow {
     font-size: 40px;
   }
   header img {
-    width: 50px !important;
-    height: 50px !important;
+    width: 60px !important;
+    height: 60px !important;
   }
 }
 
@@ -735,7 +735,7 @@ header img {
 
 @media all and (max-width: 992px) {
   .banner {
-    min-height: auto;
+    min-height: 100vh;
     padding: 80px 0;
   }
   .banner article:first-child {
@@ -765,7 +765,8 @@ header img {
 
 @media all and (max-width: 740px) {
   .banner {
-    padding: 0 0 60px;
+    min-height: auto;
+    padding: 80px 0;
   }
   .banner article:first-child .banner-col {
     max-width: 100%;
@@ -783,7 +784,7 @@ header img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 20px;
+    margin-top: 35px;
   }
   .banner article:first-child .dual-btn a:first-child {
     -webkit-animation: show 1s linear forwards;
@@ -1218,7 +1219,7 @@ header img {
 @media all and (max-width: 992px) {
   .projects {
     padding: 0 !important;
-    padding-bottom: 80px;
+    padding-bottom: 80px !important;
   }
   .projects .wrap .heading {
     padding: 0;
