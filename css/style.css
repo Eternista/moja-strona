@@ -777,6 +777,9 @@ header img {
   .banner article:first-child {
     padding: 0 20px;
   }
+  .banner article:first-child h1 {
+    text-align: center;
+  }
   .banner article:first-child .dual-btn a:first-child {
     margin-right: 0;
   }
