@@ -9,6 +9,10 @@ header {
     transform: translateX(-50%);
     z-index: 100;
     justify-content: space-between;
+    @include mobile {
+        position: sticky;
+        transform: none;
+    }
     // &.hover {
         ul .hover a {
             color: #fff;

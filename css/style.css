@@ -116,6 +116,7 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  background-color: #fff;
 }
 
 section {
@@ -444,6 +445,15 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media all and (max-width: 740px) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 header ul .hover a {
