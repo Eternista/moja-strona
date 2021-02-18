@@ -73,6 +73,11 @@ header {
         li {
             width: 100%;
             position: relative;
+            &:nth-last-child(2) {
+                @include tablet {
+                    display: none;
+                }
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -85,6 +90,7 @@ header {
                 height: 2px;
                 transition: .3s ease-in-out;
             }
+
             .btn {
                 width: 100%;
                 font-size: 50px;

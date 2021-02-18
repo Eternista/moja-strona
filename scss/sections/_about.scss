@@ -130,7 +130,7 @@
     }
     @include tablet {
         flex-wrap: wrap;
-        padding-bottom: 100px;
+        padding-bottom: 0;
         .about_title {
             height: 200px;
             width: 100%;
@@ -141,7 +141,10 @@
         }
         .about_content {
             width: 100%;
-            padding: 100px 65px 0;
+            padding: 80px 65px;
+            .progressbars {
+                padding-bottom: 0 !important;
+            }
         }
     }
     @include mobile {
