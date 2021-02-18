@@ -107,7 +107,7 @@
     @include tablet {
         
         padding: 0 !important;
-        padding-bottom: 80px !important;
+        padding-bottom: 80px;
         .wrap {
             .heading {
                 padding: 0;
@@ -124,7 +124,7 @@
         }
     }
     @include mobile {
-        padding-bottom: 60px;
+        padding-bottom: 60px !important;
         .wrap {
             #grid {
                 flex-direction: column;

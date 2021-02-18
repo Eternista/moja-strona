@@ -128,7 +128,7 @@
         }
     }
     @include mobile {
-        padding: 60px 0;
+        padding: 0 0 60px;
         article:first-child {
             .banner-col {
                 max-width: 100%;
