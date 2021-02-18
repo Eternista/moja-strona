@@ -117,8 +117,15 @@
                 padding: 60px 0 ;
             }
             #grid {
+                height: auto;
                 & > div {
                     max-height: 500px;
+                    min-height: 300px;
+                    height: auto !important;
+                    margin-bottom: 0;
+                    img {
+                        min-height: 300px;
+                    }
                 }
             }
         }
