@@ -1259,6 +1259,7 @@ header img {
     width: 100% !important;
   }
   .projects .wrap #grid > div:last-child {
+    margin-top: 60px;
     margin-bottom: 0;
   }
 }
