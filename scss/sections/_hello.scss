@@ -142,14 +142,14 @@
             .dual-btn {
                 display: flex;
                 justify-content: center;
-                margin-top: 40px;
+                margin-top: 20px;
                 // flex-wrap: wrap;
                 a {
                     &:first-child {
                         animation: show 1s linear forwards;
                         animation-delay: 8s !important;
                         opacity: 0;
-                        margin-right: 40px;
+                        margin-right: 20px;
                     }
                     &:last-child {
                         animation: show 1s linear forwards;

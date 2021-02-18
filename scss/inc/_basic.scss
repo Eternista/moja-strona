@@ -182,17 +182,17 @@ h3 {
 }
 @include small-mobile {
     h1 {
-        font-size: 90px;
+        font-size: 100px;
     }
     h2 {
-        font-size: 35px;
+        font-size: 40px;
         &.big {
             font-size: 60px;
             min-width: 0;
         }
     }
     h3 {
-        font-size: 14px;
+        font-size: 16px;
     }
     p,ul,li {
         font-size: 16px;

@@ -208,17 +208,17 @@ h3 {
 
 @media all and (max-width: 440px) {
   h1 {
-    font-size: 90px;
+    font-size: 100px;
   }
   h2 {
-    font-size: 35px;
+    font-size: 40px;
   }
   h2.big {
     font-size: 60px;
     min-width: 0;
   }
   h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
   p, ul, li {
     font-size: 16px;
@@ -777,7 +777,7 @@ header img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .banner article:first-child .dual-btn a:first-child {
     -webkit-animation: show 1s linear forwards;
@@ -785,7 +785,7 @@ header img {
     -webkit-animation-delay: 8s !important;
             animation-delay: 8s !important;
     opacity: 0;
-    margin-right: 40px;
+    margin-right: 20px;
   }
   .banner article:first-child .dual-btn a:last-child {
     -webkit-animation: show 1s linear forwards;
