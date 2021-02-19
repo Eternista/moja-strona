@@ -45,6 +45,8 @@
                         left: 0%;
                         transform: translateX(-50%);
                         width: 240px;
+                        color: #fff;
+                        font-weight: bold;
                         padding: 5px 10px;
                         background-color: $color-secondary;
                         &::after {
@@ -117,12 +119,27 @@
             padding: 60px 0;
         }
     }
+    @media (max-width: 480px) {
+        .contact_content {
+            & > div:first-child p {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    }
     @include mobile {
         .contact_content {
             width: 100%;
             max-width: 600px;
             padding: 60px 20px;
             margin: 0 auto;
+            p {
+                .drop {
+                    span {
+                        display: none !important;
+                    }
+                }
+            }
             div {
                 width: 100%;
             }
