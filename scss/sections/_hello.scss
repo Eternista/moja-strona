@@ -129,8 +129,9 @@
     }
     @include mobile {
         min-height: 90vh;
-        padding: 80px 0;
+        // padding: 80px 0;
         article:first-child {
+            height: 75vh;
             padding: 0;
             .banner-col {
                 max-width: 100%;
