@@ -133,6 +133,9 @@
     @include mobile {
         padding-bottom: 60px !important;
         .wrap {
+            .menu {
+                padding: 40px 0;
+            }
             #grid {
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -140,7 +143,7 @@
                 & > div {
                     width: 100% !important;
                     &:last-child {
-                        margin-top: 60px;
+                        margin-top: 40px;
                         margin-bottom: 0;
                     }
                 }

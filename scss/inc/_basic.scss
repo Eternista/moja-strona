@@ -159,15 +159,15 @@ h2 {
     }
 }
 h3 {
-    font-size: 19px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 @include mobile {
     h1 {
-        font-size: 120px;
+        font-size: 140px;
     }
     h2 {
-        font-size: 40px;
+        font-size: 50px;
         &.big {
             font-size: 80px;
             min-width: 0;
@@ -182,7 +182,7 @@ h3 {
 }
 @include small-mobile {
     h1 {
-        font-size: 100px;
+        font-size: 120px;
     }
     h2 {
         font-size: 40px;
@@ -192,7 +192,7 @@ h3 {
         }
     }
     h3 {
-        font-size: 16px;
+        font-size: 17px;
     }
     p,ul,li {
         font-size: 16px;

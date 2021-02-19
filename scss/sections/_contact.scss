@@ -121,6 +121,9 @@
         .contact_content {
             form {
                 width: 80%;
+                input, textarea {
+                    margin-bottom: 40px;
+                }
             }
         }
     }@include small-mobile {

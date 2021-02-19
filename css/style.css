@@ -183,16 +183,16 @@ h2.big {
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
 @media all and (max-width: 740px) {
   h1 {
-    font-size: 120px;
+    font-size: 140px;
   }
   h2 {
-    font-size: 40px;
+    font-size: 50px;
   }
   h2.big {
     font-size: 80px;
@@ -208,7 +208,7 @@ h3 {
 
 @media all and (max-width: 440px) {
   h1 {
-    font-size: 100px;
+    font-size: 120px;
   }
   h2 {
     font-size: 40px;
@@ -218,7 +218,7 @@ h3 {
     min-width: 0;
   }
   h3 {
-    font-size: 16px;
+    font-size: 17px;
   }
   p, ul, li {
     font-size: 16px;
@@ -781,11 +781,14 @@ header img {
     min-height: 90vh;
     padding: 80px 0;
   }
+  .banner article:first-child {
+    padding: 0;
+  }
   .banner article:first-child .banner-col {
     max-width: 100%;
   }
   .banner article:first-child h1 {
-    margin-bottom: -35px;
+    margin-bottom: -45px;
   }
   .banner article:first-child h1, .banner article:first-child h2 {
     text-align: center;
@@ -1075,23 +1078,22 @@ header img {
   .about .about_content .myPhoto {
     width: 100%;
     max-width: 400px;
-    margin-bottom: 25px;
     height: 100%;
     max-height: 400px;
   }
   .about .about_content .aboutMe, .about .about_content .content {
     width: 100%;
-    padding: 30px 15px 15px;
+    padding: 40px 15px;
   }
   .about .about_content .aboutMe h3, .about .about_content .content h3 {
     margin-bottom: 20px;
   }
-  .about .about_content .aboutMe p, .about .about_content .content p {
-    margin-bottom: 30px;
-  }
   .about .about_content .content {
-    padding-top: 15px;
+    padding-top: 0;
     padding-bottom: 0;
+  }
+  .about .about_content .content p {
+    margin-bottom: 40px;
   }
 }
 
@@ -1259,6 +1261,9 @@ header img {
   .projects {
     padding-bottom: 60px !important;
   }
+  .projects .wrap .menu {
+    padding: 40px 0;
+  }
   .projects .wrap #grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1272,7 +1277,7 @@ header img {
     width: 100% !important;
   }
   .projects .wrap #grid > div:last-child {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 0;
   }
 }
@@ -1771,6 +1776,9 @@ header img {
 @media all and (max-width: 740px) {
   .contact .contact_content form {
     width: 80%;
+  }
+  .contact .contact_content form input, .contact .contact_content form textarea {
+    margin-bottom: 40px;
   }
 }
 
