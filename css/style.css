@@ -510,6 +510,17 @@ header .backArrow {
   header .hamburger .hamburger-box .hamburger-inner::after, header .hamburger .hamburger-box .hamburger-inner::before {
     background-color: #fff;
   }
+  header .hamburger:not(.is-active) .hamburger-box .hamburger-inner {
+    width: 30px;
+    margin-left: 10px;
+  }
+  header .hamburger:not(.is-active) .hamburger-box .hamburger-inner::before {
+    width: 40px;
+    margin-left: -10px;
+  }
+  header .hamburger:not(.is-active) .hamburger-box .hamburger-inner::after {
+    width: 20px;
+  }
 }
 
 header ul .hover a {
@@ -778,7 +789,8 @@ header img {
 
 @media all and (max-width: 740px) {
   .banner {
-    min-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
+    min-height: 0;
   }
   .banner article:first-child {
     height: 75vh;
@@ -786,6 +798,9 @@ header img {
   }
   .banner article:first-child .banner-col {
     max-width: 100%;
+  }
+  .banner article:first-child .banner-col h2.heading span:nth-child(4) {
+    padding: 5px;
   }
   .banner article:first-child h1 {
     margin-bottom: -45px;
@@ -1074,6 +1089,8 @@ header img {
   }
   .about .about_content {
     padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .about .about_content .myPhoto {
     width: 100%;
@@ -1083,7 +1100,7 @@ header img {
   }
   .about .about_content .aboutMe, .about .about_content .content {
     width: 100%;
-    padding: 40px 15px;
+    padding: 50px 15px;
   }
   .about .about_content .aboutMe h3, .about .about_content .content h3 {
     margin-bottom: 20px;
@@ -1091,6 +1108,9 @@ header img {
   .about .about_content .content {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .about .about_content .content .progressbars {
+    padding: 0;
   }
   .about .about_content .content p {
     margin-bottom: 40px;
@@ -1262,7 +1282,14 @@ header img {
     padding-bottom: 60px !important;
   }
   .projects .wrap .menu {
-    padding: 40px 0;
+    padding: 60px 0 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projects .wrap .menu li {
+    padding: 0;
+    width: 25%;
   }
   .projects .wrap #grid {
     -webkit-box-orient: vertical;
@@ -1272,12 +1299,19 @@ header img {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     height: auto !important;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
   }
   .projects .wrap #grid > div {
     width: 100% !important;
   }
+  .projects .wrap #grid > div:first-child {
+    margin-bottom: 20px;
+  }
   .projects .wrap #grid > div:last-child {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
 }
@@ -1774,11 +1808,17 @@ header img {
 }
 
 @media all and (max-width: 740px) {
-  .contact .contact_content form {
-    width: 80%;
+  .contact .contact_content {
+    width: 100%;
+    max-width: 600px;
+    padding: 60px 20px;
+    margin: 0 auto;
+  }
+  .contact .contact_content div {
+    width: 100%;
   }
   .contact .contact_content form input, .contact .contact_content form textarea {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 

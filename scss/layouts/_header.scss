@@ -45,6 +45,21 @@ header {
                     }
                 }
             }
+            &:not(.is-active){
+                .hamburger-box {
+                    .hamburger-inner {
+                width: 30px;
+                        margin-left: 10px;
+                        &::before {
+                            width: 40px;
+                            margin-left: -10px;
+                        }
+                        &::after {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
         ul .hover a {
