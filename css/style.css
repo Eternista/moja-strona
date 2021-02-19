@@ -1810,7 +1810,7 @@ header img {
 
 @media (max-width: 480px) {
   .contact .contact_content > div:first-child p {
-    max-width: 280px;
+    max-width: 260px;
     margin: 0 auto;
   }
 }
