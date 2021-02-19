@@ -1282,7 +1282,7 @@ header img {
     padding-bottom: 60px !important;
   }
   .projects .wrap .menu {
-    padding: 60px 0;
+    padding: 40px 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1810,8 +1810,11 @@ header img {
 
 @media (max-width: 480px) {
   .contact .contact_content > div:first-child p {
-    max-width: 260px;
+    max-width: 290px;
     margin: 0 auto;
+  }
+  .contact .contact_content > div:first-child p a {
+    display: block;
   }
 }
 
@@ -1827,6 +1830,12 @@ header img {
   }
   .contact .contact_content div {
     width: 100%;
+  }
+  .contact .contact_content div h2.heading {
+    margin-bottom: 25px;
+  }
+  .contact .contact_content form {
+    padding-top: 40px;
   }
   .contact .contact_content form input, .contact .contact_content form textarea {
     margin-bottom: 20px;

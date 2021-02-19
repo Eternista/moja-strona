@@ -122,7 +122,10 @@
     @media (max-width: 480px) {
         .contact_content {
             & > div:first-child p {
-                max-width: 260px;
+                max-width: 290px;
+                a {
+                    display: block;
+                }
                 margin: 0 auto;
             }
         }
@@ -142,9 +145,13 @@
             }
             div {
                 width: 100%;
+                h2.heading {
+                    margin-bottom: 25px;
+                }
             }
             form {
                 // width: 80%;
+                padding-top: 40px;
                 input, textarea {
                     margin-bottom: 20px;
                 }
