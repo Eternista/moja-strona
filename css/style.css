@@ -482,7 +482,7 @@ header .backArrow {
     -webkit-transform: none;
             transform: none;
     padding: 10px 20px;
-    height: 60px;
+    height: 100px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -778,7 +778,7 @@ header img {
 
 @media all and (max-width: 740px) {
   .banner {
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 100px);
   }
   .banner article:first-child {
     height: 75vh;
