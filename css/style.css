@@ -778,7 +778,7 @@ header img {
 
 @media all and (max-width: 740px) {
   .banner {
-    min-height: 90vh;
+    min-height: calc(100vh - 60px);
   }
   .banner article:first-child {
     height: 75vh;
