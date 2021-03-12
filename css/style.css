@@ -1340,6 +1340,7 @@ header img {
 .projects .wrap #grid > div div::-webkit-scrollbar {
   width: 10px;
   border: 2px solid #f6f6f6;
+  border-right: none;
 }
 
 .projects .wrap #grid > div div::-webkit-scrollbar-thumb {
