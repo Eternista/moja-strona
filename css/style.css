@@ -1299,7 +1299,7 @@ header img {
 
 .projects .wrap #grid {
   height: calc(100vh - 200px - 5vh - 150px);
-  padding: 0 40px;
+  padding: 80px 40px 30px;
   overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1313,6 +1313,9 @@ header img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .projects .wrap #grid.two-elements > div {
@@ -1323,60 +1326,74 @@ header img {
 .projects .wrap #grid > div {
   position: relative;
   width: calc(33% - 20px);
-  height: calc(50% - 15px);
+  height: 100%;
   margin-bottom: 30px;
-  -webkit-animation: show 1s ease-in-out 1 forwards;
-          animation: show 1s ease-in-out 1 forwards;
-}
-
-.projects .wrap #grid > div:nth-child(1n + 4) {
-  margin-bottom: 0;
 }
 
 .projects .wrap #grid > div div {
-  position: absolute;
-  width: 80%;
   height: 80%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 100%;
+  border: 1px solid deepskyblue;
+  overflow-y: scroll;
+}
+
+.projects .wrap #grid > div div::-webkit-scrollbar {
+  width: 10px;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+}
+
+.projects .wrap #grid > div div::-webkit-scrollbar-thumb {
   background-color: deepskyblue;
+  width: 10px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.projects .wrap #grid > div div::-webkit-scrollbar-thumb:hover {
+  background-color: crimson;
+}
+
+.projects .wrap #grid > div img {
+  width: 100%;
+}
+
+.projects .wrap #grid > div a {
+  color: crimson;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  position: relative;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  opacity: 0;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-.projects .wrap #grid > div div h3, .projects .wrap #grid > div div p {
-  color: #fff;
-}
-
-.projects .wrap #grid > div div h3 {
-  margin-bottom: 10px;
-}
-
-.projects .wrap #grid > div img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.projects .wrap #grid > div:hover div {
+.projects .wrap #grid > div:hover a {
   opacity: 1;
+}
+
+.projects .wrap .btn {
+  margin: 0 auto;
 }
 
 @media all and (max-width: 992px) {
