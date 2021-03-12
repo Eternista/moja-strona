@@ -1333,14 +1333,12 @@ header img {
 .projects .wrap #grid > div div {
   height: 80%;
   width: 100%;
-  border: 1px solid #f6f6f6;
+  border: 2px solid #f6f6f6;
   overflow-y: scroll;
 }
 
 .projects .wrap #grid > div div::-webkit-scrollbar {
   width: 10px;
-  -webkit-box-shadow: inset 0 0 5px grey;
-          box-shadow: inset 0 0 5px grey;
 }
 
 .projects .wrap #grid > div div::-webkit-scrollbar-thumb {
