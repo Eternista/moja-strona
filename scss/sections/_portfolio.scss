@@ -115,7 +115,6 @@
     }
 
     @include tablet {
-        
         padding: 0 !important;
         padding-bottom: 80px !important;
         .wrap {
@@ -123,16 +122,20 @@
                 padding: 0;
                 line-height: 200px;
             }
-            .menu {
-                padding: 60px 0 ;
-            }
+            // .menu {
+            //     padding: 60px 0 ;
+            // }
             #grid {
-                height: auto;
+                // max-height: calc(80vh - 200px);
                 & > div {
-                    max-height: 500px;
-                    min-height: 300px;
-                    height: auto !important;
+                    // max-height: 300px;
+                    // min-height: 300px;
+                    // height: auto !important;
                     margin-bottom: 0;
+                    div {
+                        max-height: 300px;
+                        min-height: 300px;
+                    }
                     img {
                         min-height: 300px;
                     }
@@ -158,11 +161,16 @@
                 max-width: 600px;
                 width: 100%;
                 margin: 0 auto;
-                padding: 0 20px;
+                padding: 60px 20px;
                 & > div {
                     width: 100% !important;
-                    &:first-child {
-                        margin-bottom: 20px;
+                    min-height: 400px;
+                    max-height: 400px;
+                    a {
+                        height: 100px;
+                    }
+                    div {
+                        height: 300px;
                     }
                     &:last-child {
                         margin-bottom: 0;

@@ -1400,17 +1400,12 @@ header img {
     padding: 0;
     line-height: 200px;
   }
-  .projects .wrap .menu {
-    padding: 60px 0;
-  }
-  .projects .wrap #grid {
-    height: auto;
-  }
   .projects .wrap #grid > div {
-    max-height: 500px;
-    min-height: 300px;
-    height: auto !important;
     margin-bottom: 0;
+  }
+  .projects .wrap #grid > div div {
+    max-height: 300px;
+    min-height: 300px;
   }
   .projects .wrap #grid > div img {
     min-height: 300px;
@@ -1442,13 +1437,18 @@ header img {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 60px 20px;
   }
   .projects .wrap #grid > div {
     width: 100% !important;
+    min-height: 400px;
+    max-height: 400px;
   }
-  .projects .wrap #grid > div:first-child {
-    margin-bottom: 20px;
+  .projects .wrap #grid > div a {
+    height: 100px;
+  }
+  .projects .wrap #grid > div div {
+    height: 300px;
   }
   .projects .wrap #grid > div:last-child {
     margin-bottom: 0;
