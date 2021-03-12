@@ -13,6 +13,7 @@ navBtns.forEach((e) => {
     e.addEventListener('click', function(){
         hamb.classList.remove('is-active');
         document.querySelector('.navigation').classList.remove('active');
+        document.querySelector('.cursor').classList.remove('red');
     })
 })
 //PUT HEADING LETTER TO SPAN

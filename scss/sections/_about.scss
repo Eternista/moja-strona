@@ -35,7 +35,7 @@
             object-fit: cover;
             position: relative;
             z-index: 1;
-            transition: .3s ease-in-out;
+            transition: filter .3s ease-in-out;
             filter: grayscale(100%);
             &:hover {
                 filter: grayscale(0%);
@@ -184,3 +184,24 @@
         }
     }
 }
+
+// //ANIMATIONS
+
+
+// @media all and (min-width: 992px) {
+//     .frameAboutTitle {
+//         transform: translateX(-100%);
+//     }
+//     .about_content {
+//         overflow: hidden;
+//         .frameAboutImg {
+//             transform: translateY(-300%);
+//         }
+//         .frameAboutMe {
+//             transform: translateX(110%);
+//         }
+//         .frameAboutContent {
+//             transform: translateY(200%);
+//         }
+//     }
+// }

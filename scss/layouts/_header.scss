@@ -82,6 +82,21 @@ header {
                     }
                 }
             }
+            &:not(.is-active){
+                .hamburger-box {
+                    .hamburger-inner {
+                width: 30px;
+                        margin-left: 10px;
+                        &::before {
+                            width: 40px;
+                            margin-left: -10px;
+                        }
+                        &::after {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
             .hamburger-inner {
                 background-color: $color-secondary;
                 &::after, &::before {
@@ -108,6 +123,18 @@ header {
     transition: .75s ease-in-out;
     &.active {
         left: 0;
+        ul {
+            li {
+                &:nth-child(2n + 1) {
+                    animation: menuLeft .7s linear forwards;
+                    animation-delay: .7s;
+                }
+                &:nth-child(2n + 2) {
+                    animation: menuRight .7s ease-in-out forwards;
+                    animation-delay: .7s;
+                }
+            }
+        }
     }
     ul {
         min-width: 260px;
@@ -118,6 +145,17 @@ header {
         li {
             width: 100%;
             position: relative;
+            transition: .5s ease-in-out;
+            transition-delay: .75s;
+            opacity: 0;
+            // &:nth-child(2n + 1) {
+            //     transform: translateX(-60%);
+            //     opacity: 0;
+            // }
+            // &:nth-child(2n + 2) {
+            //     transform: translateX(60%);
+            //     opacity: 0;
+            // }
             &:nth-last-child(2) {
                 @include tablet {
                     display: none;
@@ -152,5 +190,41 @@ header {
                 }
             }
         }
+    }
+}
+@keyframes menuLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60%);
+    }
+    33% {
+        opacity: 0.2;
+        transform: translateX(-60%);
+    }
+    66% {
+        opacity: 0.8;
+        transform: translateX(30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes menuRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60%);
+    }
+    33% {
+        opacity: 0.2;
+        transform: translateX(60%);
+    }
+    66% {
+        opacity: 0.8;
+        transform: translateX(-30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

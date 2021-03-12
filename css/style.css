@@ -117,6 +117,7 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   margin: 0 auto;
   position: relative;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 section {
@@ -546,6 +547,20 @@ header .hamburger.hover .hamburger-inner::after, header .hamburger.hover .hambur
   background-color: #fff;
 }
 
+header .hamburger:not(.is-active) .hamburger-box .hamburger-inner {
+  width: 30px;
+  margin-left: 10px;
+}
+
+header .hamburger:not(.is-active) .hamburger-box .hamburger-inner::before {
+  width: 40px;
+  margin-left: -10px;
+}
+
+header .hamburger:not(.is-active) .hamburger-box .hamburger-inner::after {
+  width: 20px;
+}
+
 header .hamburger .hamburger-inner {
   background-color: deepskyblue;
 }
@@ -576,6 +591,20 @@ header img {
   left: 0;
 }
 
+.navigation.active ul li:nth-child(2n + 1) {
+  -webkit-animation: menuLeft .7s linear forwards;
+          animation: menuLeft .7s linear forwards;
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.navigation.active ul li:nth-child(2n + 2) {
+  -webkit-animation: menuRight .7s ease-in-out forwards;
+          animation: menuRight .7s ease-in-out forwards;
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
 .navigation ul {
   min-width: 260px;
   position: absolute;
@@ -588,6 +617,11 @@ header img {
 .navigation ul li {
   width: 100%;
   position: relative;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+  opacity: 0;
 }
 
 @media all and (max-width: 992px) {
@@ -622,6 +656,98 @@ header img {
 
 .navigation ul li:hover::after {
   background-color: white;
+}
+
+@-webkit-keyframes menuLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  33% {
+    opacity: 0.2;
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  66% {
+    opacity: 0.8;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes menuLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  33% {
+    opacity: 0.2;
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  66% {
+    opacity: 0.8;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes menuRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+  33% {
+    opacity: 0.2;
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+  66% {
+    opacity: 0.8;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes menuRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+  33% {
+    opacity: 0.2;
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+  66% {
+    opacity: 0.8;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .banner {
@@ -952,8 +1078,10 @@ header img {
      object-fit: cover;
   position: relative;
   z-index: 1;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: -webkit-filter .3s ease-in-out;
+  transition: -webkit-filter .3s ease-in-out;
+  transition: filter .3s ease-in-out;
+  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
