@@ -1333,7 +1333,7 @@ header img {
 .projects .wrap #grid > div div {
   height: 80%;
   width: 100%;
-  border: 1px solid deepskyblue;
+  border: 1px solid #000;
   overflow-y: scroll;
 }
 
@@ -1371,7 +1371,6 @@ header img {
   font-family: "Poppins", sans-serif;
   line-height: 1;
   text-align: center;
-  opacity: 0;
   display: block;
   cursor: pointer;
   position: absolute;
@@ -1386,10 +1385,6 @@ header img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-}
-
-.projects .wrap #grid > div:hover a {
-  opacity: 1;
 }
 
 .projects .wrap .btn {
