@@ -51,7 +51,7 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   transition: background-color .3s linear;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 98;
+  z-index: 1000;
   pointer-events: none;
   -webkit-transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
   transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
@@ -118,6 +118,52 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   position: relative;
   background-color: #fff;
   overflow-x: hidden;
+}
+
+.welcomeModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcomeModal i:not(.arrow) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: crimson;
+  font-size: 20px;
+}
+
+.welcomeModal .arrow {
+  color: deepskyblue;
+  border: 2px solid deepskyblue;
+  padding: 8px;
+}
+
+.welcomeModal .arrow:first-of-type {
+  color: crimson;
+  border-color: crimson;
+}
+
+.welcomeModal p {
+  border: 2px solid deepskyblue;
+  padding: 40px;
+  width: 650px;
+  background-color: #fff;
+  position: relative;
 }
 
 section {
@@ -294,7 +340,7 @@ h1 span, h2 span, h3 span {
           animation-name: rubberBand;
 }
 
-.btn {
+.btn:not(i) {
   padding: 15px 25px;
   min-width: 160px;
   text-transform: uppercase;
@@ -317,27 +363,27 @@ h1 span, h2 span, h3 span {
 }
 
 @media all and (max-width: 440px) {
-  .btn {
+  .btn:not(i) {
     min-width: 140px;
   }
 }
 
-.btn.big {
+.btn:not(i).big {
   min-width: 260px;
   font-size: 20px;
   padding: 20px 25px;
 }
 
-.btn.long {
+.btn:not(i).long {
   width: 100%;
 }
 
-.btn.primary {
+.btn:not(i).primary {
   background-color: white;
   border: 1px solid deepskyblue;
 }
 
-.btn.primary span {
+.btn:not(i).primary span {
   position: relative;
   z-index: 2;
   color: deepskyblue;
@@ -347,7 +393,7 @@ h1 span, h2 span, h3 span {
           transition-delay: 0s;
 }
 
-.btn.primary::before {
+.btn:not(i).primary::before {
   content: '';
   position: absolute;
   z-index: 1;
@@ -363,7 +409,7 @@ h1 span, h2 span, h3 span {
           transition-delay: .3s;
 }
 
-.btn.primary:hover span {
+.btn:not(i).primary:hover span {
   color: #f6f6f6;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -371,7 +417,7 @@ h1 span, h2 span, h3 span {
           transition-delay: .3s;
 }
 
-.btn.primary:hover::before {
+.btn:not(i).primary:hover::before {
   right: 0;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -379,34 +425,34 @@ h1 span, h2 span, h3 span {
           transition-delay: 0;
 }
 
-.btn.transparent {
+.btn:not(i).transparent {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.btn.transparent span {
+.btn:not(i).transparent span {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-.btn.transparent:hover {
+.btn:not(i).transparent:hover {
   color: white;
 }
 
-.btn.transparent:hover::after {
+.btn:not(i).transparent:hover::after {
   background-color: white;
 }
 
-.btn.transparent:hover span {
+.btn:not(i).transparent:hover span {
   color: white;
 }
 
-.btn.secondary {
+.btn:not(i).secondary {
   background-color: deepskyblue !important;
   color: #fff;
 }
 
-.btn.secondary span {
+.btn:not(i).secondary span {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -416,7 +462,7 @@ h1 span, h2 span, h3 span {
           transition-delay: 0s;
 }
 
-.btn.secondary::before {
+.btn:not(i).secondary::before {
   content: '';
   position: absolute;
   z-index: 1;
@@ -432,7 +478,7 @@ h1 span, h2 span, h3 span {
           transition-delay: .3s;
 }
 
-.btn.secondary:hover::before {
+.btn:not(i).secondary:hover::before {
   right: 0;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -803,6 +849,10 @@ header img {
   padding: 30px;
   background-color: crimson;
   height: calc(100vh - 200px);
+}
+
+.banner article:last-child.wait {
+  color: crimson;
 }
 
 .banner article:last-child a {
@@ -1327,6 +1377,7 @@ header img {
   position: relative;
   width: calc(33% - 20px);
   height: 100%;
+  max-height: 500px;
   margin-bottom: 30px;
 }
 
@@ -1356,6 +1407,10 @@ header img {
 
 .projects .wrap #grid > div img {
   width: 100%;
+}
+
+.projects .wrap #grid > div:nth-of-type(2) img, .projects .wrap #grid > div:nth-of-type(1) img {
+  margin-bottom: -10px;
 }
 
 .projects .wrap #grid > div a {

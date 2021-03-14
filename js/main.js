@@ -16,69 +16,33 @@ navBtns.forEach((e) => {
         document.querySelector('.cursor').classList.remove('red');
     })
 })
-//PUT HEADING LETTER TO SPAN
 
-const h1 = document.querySelector('h1');
-const h1Text = [... h1.textContent];
-h1Text.forEach((e) => {
-    const span = document.createElement('span');
-    span.innerHTML = `${e}`
-    span.classList.add('letter');
-    h1.appendChild(span);
-})
-h1.removeChild(h1.firstChild);
+//CLOSE MODAL
 
-const mainBannerh2 = document.querySelector('.banner h2');
-const h2Text = [... mainBannerh2.textContent];
-h2Text.forEach((e) => {
-    const span = document.createElement('span');
-    span.innerHTML = `${e}`
-    span.classList.add('letter');
-    mainBannerh2.appendChild(span);
-})
-mainBannerh2.removeChild(mainBannerh2.firstChild);
+const closeWelcomeModal = document.querySelector('.close-modal');
+if(width > 992) {
+    document.querySelectorAll('#home .heading').forEach(single => {
+        single.style.animation = 'none';
+        document.querySelector('#home .dual-btn .secondary').style.animation = "none";
+        document.querySelector('#home .dual-btn .primary').style.animation = "none";
+        closeWelcomeModal.addEventListener('click', () => {
+            closeWelcomeModal.parentElement.parentElement.parentElement.removeChild(closeWelcomeModal.parentElement.parentElement);
+            document.querySelector('.wait').classList.remove('wait');
+            typingFunction();
+            document.querySelector('#home h1.heading').removeAttribute('style');
+            document.querySelector('#home h2.heading').removeAttribute('style');
+            document.querySelector('#home h3.heading').removeAttribute('style');
+            document.querySelector('#home .dual-btn .primary').removeAttribute('style');
+            document.querySelector('#home .dual-btn .secondary').removeAttribute('style');
+        })
+    });
+} else {
+    closeWelcomeModal.parentElement.parentElement.parentElement.removeChild(closeWelcomeModal.parentElement.parentElement);
+    typingFunction();
+}
 
-const bigH2 = [... document.querySelectorAll('h2.big')];
-bigH2.forEach(single => {
-    const textArr = [... single.textContent];
-    textArr.forEach(e => {
-        const span = document.createElement('span');
-        span.innerHTML = `${e}`
-        span.classList.add('letter');
-        single.appendChild(span);
-    })
-    if(single.classList.contains('spans')) {
-        single.removeChild(single.firstChild);
-        single.removeChild(single.firstChild);
-    }else {
-        single.removeChild(single.firstChild);
-    }
-    
-});
-
-const gameH2 = document.querySelector('.game-intro h2');
-const gameH2Array = [... gameH2.textContent];
-
-gameH2Array.forEach(e => {
-    const span = document.createElement('span');
-    span.innerHTML = `${e}`
-    span.classList.add('letter');
-    gameH2.appendChild(span);
-})
-gameH2.removeChild(gameH2.firstChild);
-
-const contactH2 = document.querySelector('.contact_content div h2');
-const contactH2Array = [... contactH2.textContent];
-
-contactH2Array.forEach(e => {
-    const span = document.createElement('span');
-    span.innerHTML = `${e}`
-    span.classList.add('letter');
-    contactH2.appendChild(span);
-})
-contactH2.removeChild(contactH2.firstChild);
-
-//TEXT "TYPING"
+const typingFunction = () => {
+    //TEXT "TYPING"
 
 const typing1 = document.querySelector('.typing1 .remove');
 const typ1Array = [... typing1.textContent];
@@ -193,7 +157,70 @@ for(let i=0; i < typing9.textContent.length; i++) {
     span.style.animationDelay = `${i/10 + .1*typing8.textContent.length + .1*typing7.textContent.length + .1*typing6.textContent.length + .1*typing5.textContent.length + .1*typing4.textContent.length + .1*typing3.textContent.length + .1*typing2.textContent.length + .1*typing1.textContent.length + .3}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
+}   
 }
+
+//PUT HEADING LETTER TO SPAN
+
+const h1 = document.querySelector('h1');
+const h1Text = [... h1.textContent];
+h1Text.forEach((e) => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    h1.appendChild(span);
+})
+h1.removeChild(h1.firstChild);
+
+const mainBannerh2 = document.querySelector('.banner h2');
+const h2Text = [... mainBannerh2.textContent];
+h2Text.forEach((e) => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    mainBannerh2.appendChild(span);
+})
+mainBannerh2.removeChild(mainBannerh2.firstChild);
+
+const bigH2 = [... document.querySelectorAll('h2.big')];
+bigH2.forEach(single => {
+    const textArr = [... single.textContent];
+    textArr.forEach(e => {
+        const span = document.createElement('span');
+        span.innerHTML = `${e}`
+        span.classList.add('letter');
+        single.appendChild(span);
+    })
+    if(single.classList.contains('spans')) {
+        single.removeChild(single.firstChild);
+        single.removeChild(single.firstChild);
+    }else {
+        single.removeChild(single.firstChild);
+    }
+    
+});
+
+const gameH2 = document.querySelector('.game-intro h2');
+const gameH2Array = [... gameH2.textContent];
+
+gameH2Array.forEach(e => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    gameH2.appendChild(span);
+})
+gameH2.removeChild(gameH2.firstChild);
+
+const contactH2 = document.querySelector('.contact_content div h2');
+const contactH2Array = [... contactH2.textContent];
+
+contactH2Array.forEach(e => {
+    const span = document.createElement('span');
+    span.innerHTML = `${e}`
+    span.classList.add('letter');
+    contactH2.appendChild(span);
+})
+contactH2.removeChild(contactH2.firstChild);
 
 //BOUNCING LETTERS
 
