@@ -1524,12 +1524,10 @@ header img {
 
 .gameSection .games.game-start .game-intro h2 {
   top: -600px !important;
-  opacity: 0;
 }
 
 .gameSection .games.game-start .gameStartBtn {
   bottom: -600px !important;
-  opacity: 0;
 }
 
 .gameSection .games.game-start .game {
