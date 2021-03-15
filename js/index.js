@@ -4,8 +4,11 @@ if(width > 1280){
       const scroller = new Scroller('#root');
     
       document.addEventListener('wheel', (event) => scroller.listenScroll(event));
-      document.addEventListener('swipeUp', () => scroller.scroll(1));
-      document.addEventListener('swipeDown', () => scroller.scroll(-1));
+      if (document.bodyscrollTop <= 0) {
+        document.addEventListener('swipeDown', () => scroller.scroll(-1));
+      } else {
+        document.addEventListener('swipeUp', () => scroller.scroll(1));
+      }
       document.addEventListener('keydown', (event) => {
         switch (event.keyCode) {
           case 40:
