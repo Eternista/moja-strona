@@ -64,14 +64,12 @@
 
 window.addEventListener('scroll', function(){
   if(width > 1280) {
-    if(Number(window.pageYOffset) >= Number(document.querySelector('#about').scrollHeight) + Number(document.querySelector('#about').offsetHeight)) {
-      document.querySelector('.progressbars').classList.remove('show');
-    }
-    else if(Number(window.pageYOffset) >= Number(document.querySelector('#about').scrollHeight)){
+    if(Number(window.pageYOffset) === Number(document.querySelector('#about').scrollHeight)){
       document.querySelector('.progressbars').classList.add('show');
-    } else {
-      document.querySelector('.progressbars').classList.remove('show');
     }
+    // else {
+    //   document.querySelector('.progressbars').classList.remove('show');
+    // }
   } else {
     document.querySelector('.progressbars').classList.add('show');
   }
