@@ -127,6 +127,23 @@
                 }
             }
         }
+        @include smallLaptops {
+            // @media (max-height: 900px) {
+                .myPhoto {
+                    width: 200px;
+                    height: 200px;
+                }
+                .aboutMe {
+                    width: calc(100% - 200px);
+                }
+                .content {
+                    padding-top: 30px;
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                }
+            // }
+        }
     }
     @include tablet {
         flex-wrap: wrap;

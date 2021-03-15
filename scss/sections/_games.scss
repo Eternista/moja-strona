@@ -30,11 +30,11 @@
                 width: 100%;
             }
             .game-intro h2 {
-                top: -600px !important;
+                top: -1000px !important;
                 // opacity: 0;
             }
             .gameStartBtn {
-                bottom: -600px !important;
+                bottom: -1000px !important;
                 // opacity: 0;
             }
             .game {
@@ -45,6 +45,9 @@
                 .center > h2 {
                     display: block;
                 }
+            }
+            @include smallLaptops {
+                height: 100vh;
             }
         }
         &::after {
@@ -65,7 +68,7 @@
             h2 {
                 margin-bottom: 50px;
                 position: relative;
-                transition: 1s ease-in-out;
+                transition: 2s ease-in-out;
                 transition-delay: 1s;
                 top: 0;
                 span {
@@ -82,7 +85,7 @@
             }
             .btn {
                 margin: 0 auto;
-                transition: 1s ease-in-out;
+                transition: 2s ease-in-out;
                 transition-delay: 1s;
                 position: relative;
                 bottom: 0;

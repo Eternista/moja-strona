@@ -1,6 +1,6 @@
 var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
-if(width > 992){
-  document.addEventListener('DOMContentLoaded', function () {
+if(width > 1280){
+  const scrollFun= function () {
       const scroller = new Scroller('#root');
     
       document.addEventListener('wheel', (event) => scroller.listenScroll(event));
@@ -17,5 +17,5 @@ if(width > 992){
             return;
         }
       })
-    })
+    }
 }

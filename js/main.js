@@ -19,8 +19,30 @@ navBtns.forEach((e) => {
 
 //CLOSE MODAL
 
+// if(width > 992){
+    const scrollFun= function () {
+        const scroller = new Scroller('#root');
+      
+        document.addEventListener('wheel', (event) => scroller.listenScroll(event));
+        document.addEventListener('swipeUp', () => scroller.scroll(1));
+        document.addEventListener('swipeDown', () => scroller.scroll(-1));
+        document.addEventListener('keydown', (event) => {
+          switch (event.keyCode) {
+            case 40:
+              return scroller.scroll(1)
+            case 38:
+              return scroller.scroll(-1)
+      
+            default:
+              return;
+          }
+        })
+      }
+//   }
+
 const closeWelcomeModal = document.querySelector('.close-modal');
-if(width > 992) {
+if(width > 1280) {
+    document.querySelector('.cursor').classList.add('z-index-1000');
     document.querySelectorAll('#home .heading').forEach(single => {
         single.style.animation = 'none';
         document.querySelector('#home .dual-btn .secondary').style.animation = "none";
@@ -34,11 +56,16 @@ if(width > 992) {
             document.querySelector('#home h3.heading').removeAttribute('style');
             document.querySelector('#home .dual-btn .primary').removeAttribute('style');
             document.querySelector('#home .dual-btn .secondary').removeAttribute('style');
+            mouseCursor.classList.remove('hover-btn', 'hover', 'z-index-1000');
+            // document.addEventListener('DOMContentLoaded', scrollFun);
+            scrollFun();
         })
     });
 } else {
     closeWelcomeModal.parentElement.parentElement.parentElement.removeChild(closeWelcomeModal.parentElement.parentElement);
     typingFunction();
+    // document.addEventListener('DOMContentLoaded', scrollFun);
+    // scrollFun();
 }
 
 const typingFunction = () => {
