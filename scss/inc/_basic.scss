@@ -12,7 +12,16 @@
         cursor: none;
     }
     .btn {
-        cursor: pointer;
+        cursor: pointer !important;
+        span {
+            cursor: pointer !important;
+        }
+    }
+    a, input, .hamburger {
+        cursor: pointer !important;
+        span {
+            cursor: pointer !important;
+        }
     }
 }
 
