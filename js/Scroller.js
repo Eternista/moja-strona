@@ -64,7 +64,7 @@
 
 window.addEventListener('scroll', function(){
   if(width > 1280) {
-    if(Number(window.pageYOffset) === Number(document.querySelector('#about').scrollHeight)){
+    if(Number(window.pageYOffset) >= Number(document.querySelector('#about').scrollHeight)){
       document.querySelector('.progressbars').classList.add('show');
     }
     // else {
