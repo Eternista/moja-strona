@@ -48,9 +48,13 @@ if(width > 1280) {
         document.querySelector('#home .dual-btn .secondary').style.animation = "none";
         document.querySelector('#home .dual-btn .primary').style.animation = "none";
         closeWelcomeModal.addEventListener('click', () => {
-            closeWelcomeModal.parentElement.parentElement.parentElement.removeChild(closeWelcomeModal.parentElement.parentElement);
-            document.querySelector('.wait').classList.remove('wait');
-            typingFunction();
+            closeWelcomeModal.parentElement.parentElement.classList.add('none');
+            if(document.querySelector('.wait') == null) {
+            }else {
+                document.querySelector('.wait').classList.remove('wait');
+                typingFunction();
+                scrollFun();
+            }
             document.querySelector('#home h1.heading').removeAttribute('style');
             document.querySelector('#home h2.heading').removeAttribute('style');
             document.querySelector('#home h3.heading').removeAttribute('style');
@@ -58,7 +62,6 @@ if(width > 1280) {
             document.querySelector('#home .dual-btn .secondary').removeAttribute('style');
             mouseCursor.classList.remove('hover-btn', 'hover', 'z-index-1000');
             // document.addEventListener('DOMContentLoaded', scrollFun);
-            scrollFun();
         })
     });
 } else {

@@ -143,6 +143,10 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
           align-items: center;
 }
 
+.welcomeModal.none {
+  display: none;
+}
+
 .welcomeModal i:not(.arrow) {
   position: absolute;
   top: 10px;
