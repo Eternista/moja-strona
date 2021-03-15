@@ -1408,6 +1408,11 @@ header img {
   max-height: 500px;
   min-height: 300px;
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projects .wrap #grid > div div {
@@ -1455,9 +1460,8 @@ header img {
   font-family: "Poppins", sans-serif;
   line-height: 1;
   text-align: center;
-  display: block;
+  display: inline-block;
   cursor: pointer;
-  position: absolute;
   height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1468,6 +1472,10 @@ header img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 50%;
+}
+
+.projects .wrap #grid > div:nth-child(3) a {
   width: 100%;
 }
 
