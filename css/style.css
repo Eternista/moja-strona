@@ -149,10 +149,14 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
 
 .welcomeModal i:not(.arrow) {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  color: crimson;
+  top: -30px;
+  right: -30px;
+  color: #fff;
   font-size: 20px;
+}
+
+.welcomeModal i:not(.arrow) span {
+  margin-left: 10px;
 }
 
 .welcomeModal .arrow {

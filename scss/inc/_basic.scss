@@ -122,10 +122,19 @@ h1.heading, h2.heading {
     }
     i:not(.arrow) {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        color: $color-primary;
+        top: -30px;
+        right: -30px;
+        color: #fff;
         font-size: 20px;
+        span {
+            margin-left: 10px;
+        }
+        // &::before {
+        //     content: '';
+        // }
+        // &::after {
+        //     content: "\f00d";
+        // }
     }
     .arrow {
         color: $color-secondary;

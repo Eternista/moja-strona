@@ -44,6 +44,16 @@ transArray.forEach(single => {
     })
 })
 
+const allAelements  =[... document.querySelectorAll('a:not(.transparent) span')];
+allAelements.forEach(single => {
+    single.addEventListener('mouseover', function(){
+        mouseCursor.classList.add('hover','hover-trans');
+    })
+    single.addEventListener('mouseleave', function(){
+        mouseCursor.classList.remove('hover','hover-trans');
+    })
+})
+
 // BUTTON HOVER
 
 const btns = document.querySelectorAll('.btn:not(.transparent)');
