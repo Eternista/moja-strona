@@ -162,13 +162,14 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
 .welcomeModal i:not(.arrow) {
   position: absolute;
   top: -30px;
-  right: -30px;
+  right: -82px;
   color: #fff;
   font-size: 20px;
 }
 
 .welcomeModal i:not(.arrow) span {
   margin-left: 10px;
+  font-weight: normal;
 }
 
 .welcomeModal .arrow {
@@ -1432,6 +1433,7 @@ header img {
   width: 100%;
   border: 3px solid #f6f6f6;
   overflow-y: scroll;
+  cursor: pointer;
 }
 
 .projects .wrap #grid > div div::-webkit-scrollbar {

@@ -132,11 +132,12 @@ h1.heading, h2.heading {
     i:not(.arrow) {
         position: absolute;
         top: -30px;
-        right: -30px;
+        right: -82px;
         color: #fff;
         font-size: 20px;
         span {
             margin-left: 10px;
+            font-weight: normal;
         }
         // &::before {
         //     content: '';
