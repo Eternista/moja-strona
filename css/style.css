@@ -115,7 +115,7 @@ h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
 
 section {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   background-color: #fff;
 }
 
@@ -747,6 +747,7 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 100vh;
   margin-top: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1013,9 +1014,9 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .about > div {
@@ -1272,8 +1273,8 @@ header img {
 }
 
 .projects {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  min-height: auto;
 }
 
 .projects .wrap {
@@ -1319,7 +1320,7 @@ header img {
 
 .projects .wrap #grid {
   height: calc(100vh - 200px - 5vh - 150px);
-  padding: 80px 40px 30px;
+  padding: 80px 40px 0;
   overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1518,6 +1519,7 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: auto;
 }
 
 .gameSection .games {

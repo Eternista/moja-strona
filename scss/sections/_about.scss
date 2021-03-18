@@ -3,7 +3,7 @@
 
 .about {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     &>div {
         display: flex;
         min-height: 100%;

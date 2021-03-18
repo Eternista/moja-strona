@@ -167,7 +167,7 @@ h1.heading, h2.heading {
 
 section {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
     background-color: #fff;
     // margin-bottom: 100px;
     &:last-child {
