@@ -40,6 +40,11 @@
             &:hover {
                 filter: grayscale(0%);
             }
+            @include tablet {
+                &:hover {
+                    filter: grayscale(100%);
+                }
+            }
         }
         .aboutMe {
             width: calc(100% - 300px);

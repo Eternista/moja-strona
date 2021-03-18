@@ -15,10 +15,6 @@
   }
 }
 
-*:not(.btn) {
-  cursor: none;
-}
-
 * .btn {
   cursor: pointer !important;
 }
@@ -39,7 +35,6 @@ body {
   background-color: #f6f6f6;
   -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
-  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -53,79 +48,6 @@ body {
 h1.heading.hover .rubberBand, h2.heading.hover .rubberBand {
   -webkit-text-fill-color: deepskyblue;
   color: deepskyblue;
-}
-
-.cursor {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  -webkit-transition: background-color .3s linear;
-  transition: background-color .3s linear;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 98;
-  pointer-events: none;
-  -webkit-transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
-  transition: background-color .3s ease-in-out, width .3s ease-in-out .1s,height .3s ease-in-out .1s;
-  border: 1px solid deepskyblue;
-  background-color: transparent;
-}
-
-.cursor.z-index-1000 {
-  z-index: 1000;
-}
-
-.cursor.hover {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: deepskyblue;
-  height: 80px;
-  width: 80px;
-}
-
-.cursor.hover-image {
-  background-color: crimson;
-}
-
-.cursor.hover-trans {
-  background-color: white;
-  mix-blend-mode: difference;
-}
-
-.cursor.imageHover {
-  background-color: white;
-  mix-blend-mode: hue;
-}
-
-.cursor.hover-btn {
-  height: 50px;
-  width: 50px;
-  border-color: #000;
-  background-color: transparent;
-}
-
-.cursor.dotHover {
-  height: 50px;
-  width: 50px;
-  border-color: #fff;
-  background-color: transparent;
-}
-
-.cursor.hover-heading {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 50px;
-  width: 50px;
-}
-
-.cursor.red {
-  border-color: crimson;
-}
-
-@media all and (max-width: 1280px) {
-  .cursor {
-    display: none;
-  }
 }
 
 .wrapper {
@@ -845,6 +767,10 @@ header img {
   padding: 10px;
 }
 
+.banner .remove {
+  display: none;
+}
+
 .banner article {
   min-height: 100%;
   display: -webkit-box;
@@ -874,10 +800,6 @@ header img {
   padding: 30px;
   background-color: crimson;
   height: calc(100vh - 200px);
-}
-
-.banner article:last-child.wait {
-  color: crimson;
 }
 
 .banner article:last-child a {
@@ -1164,6 +1086,13 @@ header img {
 .about .about_content .myPhoto:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+@media all and (max-width: 1280px) {
+  .about .about_content .myPhoto:hover {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
 }
 
 .about .about_content .aboutMe {

@@ -15,9 +15,9 @@
 </head>
 </head>
 <body>
-    <div class="welcomeModal">
+    <!-- <div class="welcomeModal">
         <p>Hi welcome on my portfolio website , to scroll through the page please use <i class="fas arrow fa-arrow-down"></i> to scroll down and <i class="fas arrow fa-arrow-up"></i> to scroll up. Have Fun!!<i class="btn close-modal fas fa-times"><span>Close</span></i></p>
-    </div>
+    </div> -->
     <div class="cursor"></div>
     <aside class="navigation">
         <ul>
@@ -144,12 +144,15 @@
                 <form action="/contact_form.php" method="post" id="contact-form" data-netlify="true">
                     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
                     <p>
+                        <label for="name">Name</label>
                       <input name="name" type="text" placeholder="Your Name" required/>
                     </p>
                     <p>
+                        <label for="email">Email</label>
                       <input style="cursor: pointer;" name="email" placeholder="Your Email" type="text" required/>
                     </p>
                     <p>
+                        <label for="message">Message</label>
                       <textarea rows="8" name="message" placeholder="Your message" required></textarea>
                     </p>
                 

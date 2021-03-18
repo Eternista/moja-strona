@@ -24,6 +24,9 @@
             padding: 10px;
         }
     }
+    .remove {
+        display: none;
+    }
     article {
         min-height: 100%;
         display: flex;
@@ -41,9 +44,9 @@
             padding: 30px;
             background-color: $color-primary;
             height: calc(100vh - 200px);
-            &.wait {
-                color: $color-primary;
-            }
+            // &.wait {
+            //     color: $color-primary;
+            // }
             a {
                 margin: 0 auto 80px;
                 display: block;
