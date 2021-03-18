@@ -826,20 +826,20 @@ header img {
 }
 
 .banner article h1 {
-  -webkit-animation: show 1s linear forwards;
-          animation: show 1s linear forwards;
-  -webkit-animation-delay: 2s !important;
-          animation-delay: 2s !important;
+  -webkit-animation: show 0.5s linear forwards;
+          animation: show 0.5s linear forwards;
+  -webkit-animation-delay: 1s !important;
+          animation-delay: 1s !important;
   opacity: 0;
   margin-bottom: -60px;
   text-align: left;
 }
 
 .banner article h2 {
-  -webkit-animation: show 1s linear forwards;
-          animation: show 1s linear forwards;
-  -webkit-animation-delay: 5s !important;
-          animation-delay: 5s !important;
+  -webkit-animation: show 0.5s linear forwards;
+          animation: show 0.5s linear forwards;
+  -webkit-animation-delay: 2.5s !important;
+          animation-delay: 2.5s !important;
   opacity: 0;
 }
 
@@ -848,10 +848,10 @@ header img {
 }
 
 .banner article h3 {
-  -webkit-animation: show 1s linear forwards;
-          animation: show 1s linear forwards;
-  -webkit-animation-delay: 8s !important;
-          animation-delay: 8s !important;
+  -webkit-animation: show 0.5s linear forwards;
+          animation: show 0.5s linear forwards;
+  -webkit-animation-delay: 4s !important;
+          animation-delay: 4s !important;
   opacity: 0;
 }
 
@@ -866,18 +866,18 @@ header img {
 }
 
 .banner article .dual-btn a:first-child {
-  -webkit-animation: show 1s linear forwards;
-          animation: show 1s linear forwards;
-  -webkit-animation-delay: 15s !important;
-          animation-delay: 15s !important;
+  -webkit-animation: show 0.5s linear forwards;
+          animation: show 0.5s linear forwards;
+  -webkit-animation-delay: 7.5s !important;
+          animation-delay: 7.5s !important;
   opacity: 0;
 }
 
 .banner article .dual-btn a:last-child {
-  -webkit-animation: show 1s linear forwards;
-          animation: show 1s linear forwards;
-  -webkit-animation-delay: 20s !important;
-          animation-delay: 20s !important;
+  -webkit-animation: show 0.5s linear forwards;
+          animation: show 0.5s linear forwards;
+  -webkit-animation-delay: 10s !important;
+          animation-delay: 10s !important;
   opacity: 0;
 }
 

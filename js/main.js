@@ -94,7 +94,7 @@ for(let i=0; i < typing2.textContent.length; i++) {
     const that = typing2;
     const span = document.createElement('span');
     span.innerHTML = `${typ2Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing1.textContent.length + .2}s`
+    span.style.animationDelay = `${(i/10 + time*typing1.textContent.length + .2)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -107,7 +107,7 @@ for(let i=0; i < typing3.textContent.length; i++) {
     const that = typing3;
     const span = document.createElement('span');
     span.innerHTML = `${typ3Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing2.textContent.length + time*typing1.textContent.length + .1}s`
+    span.style.animationDelay = `${(i/10 + time*typing2.textContent.length + time*typing1.textContent.length + .1)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -120,7 +120,7 @@ for(let i=0; i < typing4.textContent.length; i++) {
     const that = typing4;
     const span = document.createElement('span');
     span.innerHTML = `${typ4Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + 3}s`
+    span.style.animationDelay = `${(i/10 + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + .3)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -133,7 +133,7 @@ for(let i=0; i < typing5.textContent.length; i++) {
     const that = typing5;
     const span = document.createElement('span');
     span.innerHTML = `${typ5Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + 3}s`
+    span.style.animationDelay = `${(i/10 + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + .3)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -146,7 +146,7 @@ for(let i=0; i < typing6.textContent.length; i++) {
     const that = typing6;
     const span = document.createElement('span');
     span.innerHTML = `${typ6Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + 3}s`
+    span.style.animationDelay = `${(i/10 + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + .3)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -159,7 +159,7 @@ for(let i=0; i < typing7.textContent.length; i++) {
     const that = typing7;
     const span = document.createElement('span');
     span.innerHTML = `${typ7Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing6.textContent.length + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + 3}s`
+    span.style.animationDelay = `${(i/10 + time*typing6.textContent.length + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + .3)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -171,7 +171,7 @@ for(let i=0; i < typing8.textContent.length; i++) {
     const that = typing8;
     const span = document.createElement('span');
     span.innerHTML = `${typ8Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing7.textContent.length + time*typing6.textContent.length + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + 3}s`
+    span.style.animationDelay = `${(i/10 + time*typing7.textContent.length + time*typing6.textContent.length + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + .3)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }
@@ -184,7 +184,7 @@ for(let i=0; i < typing9.textContent.length; i++) {
     const that = typing9;
     const span = document.createElement('span');
     span.innerHTML = `${typ9Array[i]}`;
-    span.style.animationDelay = `${i/10 + time*typing8.textContent.length + time*typing7.textContent.length + time*typing6.textContent.length + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + 3}s`
+    span.style.animationDelay = `${(i/10 + time*typing8.textContent.length + time*typing7.textContent.length + time*typing6.textContent.length + time*typing5.textContent.length + time*typing4.textContent.length + time*typing3.textContent.length + time*typing2.textContent.length + time*typing1.textContent.length + .3)/2}s`
     that.parentNode.appendChild(span);
     that.style.display = 'none';
 }   
