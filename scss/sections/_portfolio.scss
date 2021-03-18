@@ -8,7 +8,7 @@
     padding-bottom: 100px;
     // min-height: auto;
     .wrap {
-        height: calc(100vh - 200px);
+        // height: calc(100vh - 200px);
         width: 100%;
         h2 {
             padding: 20px 30px;
@@ -16,10 +16,10 @@
         }
         .menu {
             display: flex;
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
             min-height: 5vh;
-            padding: 20px 0;
+            padding: 60px 0 0;
             li {
                 width: 32%;
                 padding: 5px 20px;
@@ -27,6 +27,8 @@
                 text-align: center;
                 position: relative;
                 transition: .3s ease-in-out;
+                z-index: 99;
+                cursor: pointer;
                 &.active, &:hover {
                     font-weight: bold;
                 }
@@ -41,7 +43,7 @@
         }
         #grid {
             // width: 70%;
-            height: calc(100vh - 200px - 5vh - 150px);
+            // height: 600px;
             padding: 80px 40px 30px;
             overflow-y: hidden;
             // display: grid;
@@ -53,24 +55,18 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            &.two-elements {
-                // grid-template-columns: auto auto;
-                & > div {
-                    width: calc(50% - 20px);
-                    height: 100%;
-                }
-            }
             & > div {
                 position: relative;
                 width: calc(33% - 20px);
-                height: 100%;
-                max-height: 500px;
-                min-height: 300px;
+                // height: 100%;
+                // max-height: 500px;
+                // min-height: 300px;
                 margin-bottom: 30px;
                 display: flex;
                 flex-wrap: wrap;
-                div {
-                    height: 80%;
+                .grid-image {
+                    height: 100%;
+                    max-height: 300px;
                     width: 100%;
                     border: 3px solid #f6f6f6;
                     overflow-y: scroll;
@@ -88,6 +84,28 @@
                     }
                     &::-webkit-scrollbar-thumb:hover {
                         background-color: $color-primary;
+                    }
+                    .imageFix {
+                        margin-bottom: -10px;
+                    }
+                }
+                .grid-content {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    border: 2px solid #f6f6f6;;
+                    border-top: 0;
+                    h3 {
+                        text-align: center;
+                        background-color: $color-secondary;
+                        color: #fff;
+                        width: 100%;
+                        line-height: 50px;
+                    }
+                    a  {
+                        width: 50%;
+                        padding: 30px 0;
                     }
                 }
                 img {
@@ -118,16 +136,17 @@
                     align-items: center;
                     justify-content: center;
                     width: 50%;
-                }
-                &:nth-child(3) {
-                    a {
+                    &:hover {
+                        color: $color-secondary;
+                    }
+                    &.width-100 {
                         width: 100%;
                     }
                 }
             }
-            @include tablet {
-                height: 700px;
-            }
+            // @include tablet {
+            //     height: 700px;
+            // }
         }
         .btn {
             margin: 0 auto;
@@ -152,12 +171,30 @@
                     // min-height: 300px;
                     // height: auto !important;
                     margin-bottom: 0;
-                    div {
-                        max-height: 300px;
-                        min-height: 300px;
-                    }
+                    // div {
+                    //     max-height: 300px;
+                    //     min-height: 300px;
+                    // }
                     img {
                         min-height: 300px;
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width: 950px) {
+        .wrap {
+            #grid {
+                max-width: 600px;
+                width: 100%;
+                margin: 0 auto;
+                & > div {
+                    max-width: 400px;
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-bottom: 40px;
+                    &:last-child {
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -177,24 +214,24 @@
             #grid {
                 flex-direction: column;
                 flex-wrap: nowrap;
-                height: auto !important;
-                max-width: 600px;
+                // height: auto !important;
+                // max-width: 600px;
                 width: 100%;
                 margin: 0 auto;
-                padding: 60px 20px;
+                padding: 0 20px;
                 & > div {
                     width: 100% !important;
-                    min-height: 400px;
-                    max-height: 400px;
-                    a {
-                        height: 100px;
-                    }
-                    div {
-                        height: 300px;
-                    }
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
+                    // min-height: 400px;
+                    // max-height: 400px;
+                    // a {
+                    //     height: 100px;
+                    // }
+                    // div {
+                    //     height: 300px;
+                    // }
+                    // &:last-child {
+                    //     margin-bottom: 0;
+                    // }
                 }
             }
         }

@@ -1,14 +1,9 @@
 [
     {
-        "id": 3,
-        "name": "react1",
+        "id": "Gallery",
+        "name": "Gallery",
         "type": "react-app",
-        "url": "image/florian-olivo.png"
-    },
-    {
-        "id": 4,
-        "name": "react2",
-        "type": "react-app",
-        "url": "image/florian-olivo.png"
+        "imageUrl": "./image/projects/Gallery.png",
+        "githubUrl": "https://github.com/Eternista/React/tree/main/Gallery"
     }
 ]

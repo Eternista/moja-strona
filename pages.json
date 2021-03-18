@@ -1,14 +1,26 @@
 [
     {
-        "id": 1,
-        "name": "MOYO",
+        "id": "Mogo",
+        "name": "Mogo Website",
         "type": "Website",
-        "url": "image/florian-olivo.png"
+        "imageUrl": "./image/projects/MoGo.png",
+        "githubUrl": "https://github.com/Eternista/Pages/tree/main/MoGo",
+        "websiteUrl": "https://mogo-rafal-portfolio.netlify.app"
     },
     {
-        "id": 2,
-        "name": "Perfect Melody",
+        "id": "Tajam",
+        "name": "Tajam Website",
         "type": "Website",
-        "url": "image/florian-olivo.png"
+        "imageUrl": "./image/projects/Tajam.png",
+        "githubUrl": "https://github.com/Eternista/Pages/tree/main/Tajam",
+        "websiteUrl": "https://tajam-portfolio.netlify.app"
+    },
+    {
+        "id": "ActiveBox",
+        "name": "ActiveBox Website",
+        "type": "Website",
+        "imageUrl": "./image/projects/ActiveBox.png",
+        "githubUrl": "https://github.com/Eternista/Pages/tree/main/activeBox",
+        "websiteUrl": "https://activebox-portfolio.netlify.app"
     }
 ]

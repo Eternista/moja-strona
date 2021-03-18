@@ -1,4 +1,4 @@
-const all = document.getElementById('all');
+// const all = document.getElementById('all');
 const app = document.getElementById('app');
 const pages = document.getElementById('pages');
 const reactApp = document.getElementById('react');
@@ -19,14 +19,19 @@ xhr.onload = function(){
       var output = '';
       
       for(var i in projects){
-        output += '<div id='+projects[i].id+'>' +
-        '<div class="gridContent">'+'<h3>'+projects[i].name+'</h3>' +
-        '<p>'+projects[i].type+'</p>' +'</div>'+
-        `<img class='grid-image' src=${projects[i].url}>`+
+        output =
+        '<div id='+projects[i].id+'>' +
+          '<div class="grid-image">'+
+              `<img src=${projects[i].imageUrl}>`+
+          '</div>'+
+          '<div class="grid-content">'+
+            '<h3><span>'+projects[i].name+'</span></h3>'+
+            '<a href='+projects[i].websiteUrl+'>View Project</a>'+
+            '<a href='+projects[i].githubUrl+'>GITHUB</a>'+
+          '</div>'+
         '</div>';
       }
     document.getElementById('grid').innerHTML = output;
-    document.getElementById('grid').classList.add('two-elements');
     app.classList.add('active');
     pages.classList.remove('active');
     reactApp.classList.remove('active');
@@ -37,7 +42,7 @@ xhr.onload = function(){
 xhr.send();
 }
 
-loadJsApp();
+// loadJsApp();
 
 function loadPages(){
 var xhr = new XMLHttpRequest();
@@ -50,14 +55,19 @@ xhr.onload = function(){
       var output = '';
       
       for(var i in projects){
-        output += '<div id='+projects[i].id+'>' +
-        '<div class="gridContent">'+'<h3>'+projects[i].name+'</h3>' +
-        '<p>'+projects[i].type+'</p>' +'</div>'+
-        `<img class='grid-image' src=${projects[i].url}>`+
+        output +=
+        '<div id='+projects[i].id+'>' +
+          '<div class="grid-image">'+
+              `<img class="imageFix" src=${projects[i].imageUrl}>`+
+          '</div>'+
+          '<div class="grid-content">'+
+            '<h3><span>'+projects[i].name+'</span></h3>'+
+            '<a href='+projects[i].websiteUrl+'>View Project</a>'+
+            '<a href='+projects[i].githubUrl+'>GITHUB</a>'+
+          '</div>'+
         '</div>';
       }
     document.getElementById('grid').innerHTML = output;
-    document.getElementById('grid').classList.add('two-elements');
   app.classList.remove('active');
   pages.classList.add('active');
   reactApp.classList.remove('active');
@@ -67,6 +77,9 @@ xhr.onload = function(){
 
 xhr.send();
 }
+
+loadPages();
+
 function loadReact(){
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'react-app.json', true);
@@ -78,14 +91,18 @@ xhr.onload = function(){
       var output = '';
       
       for(var i in projects){
-        output += '<div id='+projects[i].id+'>' +
-        '<div class="gridContent">'+'<h3>'+projects[i].name+'</h3>' +
-        '<p>'+projects[i].type+'</p>' +'</div>'+
-        `<img class='grid-image' src=${projects[i].url}>`+
+        output +=
+        '<div id='+projects[i].id+'>' +
+          '<div class="grid-image">'+
+              `<img  src=${projects[i].imageUrl}>`+
+          '</div>'+
+          '<div class="grid-content">'+
+            '<h3><span>'+projects[i].name+'</span></h3>'+
+            '<a class="width-100" href='+projects[i].githubUrl+'>GITHUB</a>'+
+          '</div>'+
         '</div>';
       }
     document.getElementById('grid').innerHTML = output;
-    document.getElementById('grid').classList.add('two-elements');
   app.classList.remove('active');
   pages.classList.remove('active');
   reactApp.classList.add('active');
