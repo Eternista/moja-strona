@@ -115,59 +115,59 @@ h1.heading, h2.heading {
     overflow-x: hidden;
 }
 
-.welcomeModal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,.4);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &.none {
-        display: none;
-    }
-    i:not(.arrow) {
-        position: absolute;
-        top: -30px;
-        right: -82px;
-        color: #fff;
-        font-size: 20px;
-        span {
-            margin-left: 10px;
-            font-weight: normal;
-        }
-        // &::before {
-        //     content: '';
-        // }
-        // &::after {
-        //     content: "\f00d";
-        // }
-    }
-    .arrow {
-        color: $color-secondary;
-        border: 2px solid $color-secondary;
-        padding: 8px;
-        &:first-of-type {
-            color: $color-primary;
-            border-color: $color-primary;
-        }
-    }
-    p {
-        border: 2px solid $color-secondary;
-        padding: 40px;
-        width: 650px;
-        background-color: #fff;
-        position: relative;
+// .welcomeModal {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: rgba(0,0,0,.4);
+//     z-index: 999;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     &.none {
+//         display: none;
+//     }
+//     i:not(.arrow) {
+//         position: absolute;
+//         top: -30px;
+//         right: -82px;
+//         color: #fff;
+//         font-size: 20px;
+//         span {
+//             margin-left: 10px;
+//             font-weight: normal;
+//         }
+//         // &::before {
+//         //     content: '';
+//         // }
+//         // &::after {
+//         //     content: "\f00d";
+//         // }
+//     }
+//     .arrow {
+//         color: $color-secondary;
+//         border: 2px solid $color-secondary;
+//         padding: 8px;
+//         &:first-of-type {
+//             color: $color-primary;
+//             border-color: $color-primary;
+//         }
+//     }
+//     p {
+//         border: 2px solid $color-secondary;
+//         padding: 40px;
+//         width: 650px;
+//         background-color: #fff;
+//         position: relative;
 
-    }
-}
+//     }
+// }
 
 section {
-    position: relative;
-    min-height: calc(100vh - 100px);
+    position: relative; 
+    min-height: 100vh;
     background-color: #fff;
     // margin-bottom: 100px;
     &:last-child {
