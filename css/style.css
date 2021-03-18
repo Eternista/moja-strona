@@ -533,11 +533,11 @@ header .hamburger {
 }
 
 header .hamburger.hover .hamburger-inner {
-  background-color: #fff;
+  background-color: crimson;
 }
 
 header .hamburger.hover .hamburger-inner::after, header .hamburger.hover .hamburger-inner::before {
-  background-color: #fff;
+  background-color: crimson;
 }
 
 header .hamburger:not(.is-active) .hamburger-box .hamburger-inner {

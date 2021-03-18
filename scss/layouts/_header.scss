@@ -75,10 +75,10 @@ header {
             &.hover {
                 
                 .hamburger-inner {
-                    background-color: #fff;
+                    background-color: $color-primary;
                     &::after, &::before {
                         // border-radius: 0;
-                        background-color: #fff;
+                        background-color: $color-primary;
                     }
                 }
             }
