@@ -69,7 +69,7 @@ navBtns.forEach((e) => {
     // document.addEventListener('DOMContentLoaded', scrollFun);
     // scrollFun();
 // }
-console.log('zmiana')
+
 const typingFunction = () => {
     //TEXT "TYPING"
 
