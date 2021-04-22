@@ -55,6 +55,13 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            #FormValidation .grid-image {
+                min-height: 300px;
+                img {
+                    height: 300px;
+                    object-fit: cover !important;
+                }
+            }
             & > div {
                 position: relative;
                 width: calc(33% - 20px);

@@ -1294,6 +1294,16 @@ header img {
           align-items: center;
 }
 
+.projects .wrap #grid #FormValidation .grid-image {
+  min-height: 300px;
+}
+
+.projects .wrap #grid #FormValidation .grid-image img {
+  height: 300px;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
 .projects .wrap #grid > div {
   position: relative;
   width: calc(33% - 20px);
