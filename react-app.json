@@ -5,5 +5,26 @@
         "type": "react-app",
         "imageUrl": "./image/projects/Gallery.png",
         "githubUrl": "https://github.com/Eternista/React/tree/main/Gallery"
+    },
+    {
+        "id": "ReactShop",
+        "name": "React Shop",
+        "type": "react-app",
+        "imageUrl": "./image/projects/React_Shop.png",
+        "githubUrl": "https://github.com/Eternista/react-shop"
+    },
+    {
+        "id": "Gallery",
+        "name": "TRVL",
+        "type": "react-app",
+        "imageUrl": "./image/projects/React_Website.png",
+        "githubUrl": "https://github.com/Eternista/react_website"
+    },
+    {
+        "id": "Spotify",
+        "name": "Spotify Search",
+        "type": "react-app",
+        "imageUrl": "./image/projects/Spotify.png",
+        "githubUrl": "https://github.com/Eternista/spotify"
     }
 ]
