@@ -42,7 +42,7 @@ xhr.onload = function(){
 xhr.send();
 }
 
-loadJsApp();
+// loadJsApp();
 
 function loadPages(){
 var xhr = new XMLHttpRequest();
@@ -78,7 +78,7 @@ xhr.onload = function(){
 xhr.send();
 }
 
-// loadPages();
+loadPages();
 
 function loadReact(){
 const xhr = new XMLHttpRequest();
