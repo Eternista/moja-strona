@@ -19,7 +19,7 @@
         "id": "vacation",
         "name": "Vacation Map App",
         "type": "App",
-        "imageUrl": "image/projects/Vacation_Map",
+        "imageUrl": "image/projects/Vacation_Map.png",
         "githubUrl": "https://github.com/Eternista/mapaFirebase",
         "websiteUrl": "https://user-repository.netlify.app"
     }
