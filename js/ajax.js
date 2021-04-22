@@ -19,7 +19,7 @@ xhr.onload = function(){
       var output = '';
       
       for(var i in projects){
-        output =
+        output +=
         '<div id='+projects[i].id+'>' +
           '<div class="grid-image">'+
               `<img src=${projects[i].imageUrl}>`+
@@ -42,7 +42,7 @@ xhr.onload = function(){
 xhr.send();
 }
 
-// loadJsApp();
+loadJsApp();
 
 function loadPages(){
 var xhr = new XMLHttpRequest();
@@ -67,7 +67,7 @@ xhr.onload = function(){
           '</div>'+
         '</div>';
       }
-    document.getElementById('grid').innerHTML = output;
+  document.getElementById('grid').innerHTML = output;
   app.classList.remove('active');
   pages.classList.add('active');
   reactApp.classList.remove('active');
@@ -78,7 +78,7 @@ xhr.onload = function(){
 xhr.send();
 }
 
-loadPages();
+// loadPages();
 
 function loadReact(){
 const xhr = new XMLHttpRequest();
