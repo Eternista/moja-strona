@@ -7,12 +7,12 @@ app.addEventListener('click', loadJsApp);
 pages.addEventListener('click', loadPages);
 reactApp.addEventListener('click', loadReact);
 
-
 function loadJsApp(){
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'js-app.json', true);
 
 xhr.onload = function(){
+  videoBtns = document.querySelectorAll('.videoBtn');
   if(this.status == 200){
       var projects = JSON.parse(this.responseText);
     
@@ -28,6 +28,7 @@ xhr.onload = function(){
             '<h3><span>'+projects[i].name+'</span></h3>'+
             '<a href='+projects[i].websiteUrl+'>View Project</a>'+
             '<a href='+projects[i].githubUrl+'>GITHUB</a>'+
+            '<button class="videoBtn">Video</button>'+
           '</div>'+
         '</div>';
       }
@@ -85,6 +86,7 @@ const xhr = new XMLHttpRequest();
 xhr.open('GET', 'react-app.json', true);
 
 xhr.onload = function(){
+  videoBtns = document.querySelectorAll('.videoBtn');
   if(this.status == 200){
       var projects = JSON.parse(this.responseText);
     
@@ -99,6 +101,7 @@ xhr.onload = function(){
           '<div class="grid-content">'+
             '<h3><span>'+projects[i].name+'</span></h3>'+
             '<a class="width-100" href='+projects[i].githubUrl+'>GITHUB</a>'+
+            '<button class="videoBtn">Video</button>'+
           '</div>'+
         '</div>';
       }

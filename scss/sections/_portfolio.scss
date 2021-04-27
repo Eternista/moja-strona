@@ -110,8 +110,8 @@
                         width: 100%;
                         line-height: 50px;
                     }
-                    a  {
-                        width: 50%;
+                    a, button  {
+                        width: 33%;
                         padding: 30px 0;
                     }
                 }
@@ -124,7 +124,7 @@
                         margin-bottom: -10px;
                     }
                 }
-                a {
+                a, button {
                     color: $color-primary;
                     text-transform: uppercase;
                     font-weight: bold;
@@ -142,12 +142,15 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 50%;
+                    background-color: transparent;
                     &:hover {
                         color: $color-secondary;
                     }
                     &.width-100 {
-                        width: 100%;
+                        width: 50%;
+                        & + button {
+                            width: 50%;
+                        }
                     }
                 }
             }
