@@ -1,6 +1,6 @@
 const videoUpdate =() => {
     let videoBtns = document.querySelectorAll('.videoBtn');
-    setTimeout(() =>{videoBtns = document.querySelectorAll('.videoBtn')}, 100);
+    setTimeout(() =>{videoBtns = document.querySelectorAll('.videoBtn')}, 200);
     const videoShow  = (e) => {
        const name = e.target.parentNode.children[0];
        document.querySelectorAll('.videoName').forEach(title => {
@@ -21,10 +21,11 @@ const videoUpdate =() => {
         videoBtns.forEach(play => {
             play.addEventListener('click', videoShow);
         });
-    }, 150)
+    }, 250)
 }
 
 app.addEventListener('click', videoUpdate);
 reactApp.addEventListener('click', videoUpdate);
 
+window.addEventListener('load', videoUpdate());
 videoUpdate();
