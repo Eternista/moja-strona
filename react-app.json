@@ -3,28 +3,28 @@
         "id": "Gallery",
         "name": "Gallery",
         "type": "react-app",
-        "imageUrl": "./image/projects/Gallery.png",
+        "imageUrl": "./image/projects/Gallery.jpg",
         "githubUrl": "https://github.com/Eternista/React/tree/main/Gallery"
     },
     {
         "id": "ReactShop",
         "name": "React Shop",
         "type": "react-app",
-        "imageUrl": "./image/projects/React_Shop.png",
+        "imageUrl": "./image/projects/React_Shop.jpg",
         "githubUrl": "https://github.com/Eternista/react-shop"
     },
     {
         "id": "Gallery",
         "name": "TRVL",
         "type": "react-app",
-        "imageUrl": "./image/projects/React_Website.png",
+        "imageUrl": "./image/projects/React_Website.jpg",
         "githubUrl": "https://github.com/Eternista/react_website"
     },
     {
         "id": "Spotify",
         "name": "Spotify Search",
         "type": "react-app",
-        "imageUrl": "./image/projects/Spotify.png",
+        "imageUrl": "./image/projects/Spotify.jpg",
         "githubUrl": "https://github.com/Eternista/spotify"
     }
 ]

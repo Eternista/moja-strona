@@ -3,7 +3,7 @@
         "id": "PhoneBook",
         "name": "Phone Book App",
         "type": "App",
-        "imageUrl": "image/projects/Users.png",
+        "imageUrl": "image/projects/Users.jpg",
         "githubUrl": "https://github.com/Eternista/Javascript/tree/main/User%20Repository",
         "websiteUrl": "https://user-repository.netlify.app"
     },
@@ -11,7 +11,7 @@
         "id": "vacation",
         "name": "Vacation Map App",
         "type": "App",
-        "imageUrl": "image/projects/Vacation_Map.png",
+        "imageUrl": "image/projects/Vacation_Map.jpg",
         "githubUrl": "https://github.com/Eternista/mapaFirebase",
         "websiteUrl": "https://portfolio-map.netlify.app"
     },
@@ -19,7 +19,7 @@
         "id": "FormValidation",
         "name": "Form Validation",
         "type": "App",
-        "imageUrl": "image/projects/Form_Validation.png",
+        "imageUrl": "image/projects/Form_Validation.jpg",
         "githubUrl": "https://github.com/Eternista/FormValidation",
         "websiteUrl": "https://portfolio-formvalidation.netlify.app"
     }
