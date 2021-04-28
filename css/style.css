@@ -722,6 +722,20 @@ header img {
   font-size: 0 !important;
 }
 
+.videoClose {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0px;
+  border: none;
+}
+
+.videoClose.active {
+  font-size: 20px;
+}
+
 .banner {
   display: -webkit-box;
   display: -ms-flexbox;

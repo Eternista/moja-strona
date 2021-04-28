@@ -1,5 +1,6 @@
 const videoUpdate =() => {
     let videoBtns = document.querySelectorAll('.videoBtn');
+    document.querySelector('.videoClose').classList.add('active');
     setTimeout(() =>{videoBtns = document.querySelectorAll('.videoBtn')}, 200);
     const videoShow  = (e) => {
        const name = e.target.parentNode.children[0];
@@ -29,3 +30,8 @@ reactApp.addEventListener('click', videoUpdate);
 
 window.addEventListener('load', videoUpdate());
 videoUpdate();
+
+document.querySelector('.videoClose').addEventListener('click', () => {
+    document.querySelector('.videoContainer.active').classList.remove('active');
+    document.querySelector('.videoClose.active').classList.remove('active');
+})
