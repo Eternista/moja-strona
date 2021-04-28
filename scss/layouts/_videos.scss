@@ -34,7 +34,13 @@
     color: #fff;
     font-size: 0px;
     border: none;
+    z-index: 10000;
+    transition: color .3s linear;
+    cursor: pointer;
     &.active {
         font-size: 20px;
+    }
+    &:hover {
+        color: crimson;
     }
 }

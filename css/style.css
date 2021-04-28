@@ -730,10 +730,18 @@ header img {
   color: #fff;
   font-size: 0px;
   border: none;
+  z-index: 10000;
+  -webkit-transition: color .3s linear;
+  transition: color .3s linear;
+  cursor: pointer;
 }
 
 .videoClose.active {
   font-size: 20px;
+}
+
+.videoClose:hover {
+  color: crimson;
 }
 
 .banner {
