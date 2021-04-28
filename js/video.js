@@ -1,8 +1,8 @@
 const videoUpdate =() => {
     let videoBtns = document.querySelectorAll('.videoBtn');
-    document.querySelector('.videoClose').classList.add('active');
     setTimeout(() =>{videoBtns = document.querySelectorAll('.videoBtn')}, 200);
     const videoShow  = (e) => {
+        document.querySelector('.videoClose').classList.add('active');
        const name = e.target.parentNode.children[0];
        document.querySelectorAll('.videoName').forEach(title => {
             if(title.textContent === name.textContent) {
