@@ -1,0 +1,117 @@
+.btn:not(i) {
+    padding: 15px 25px;
+    min-width: 160px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    text-decoration: none;
+    font-family: $btn-font;
+    line-height: 1;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    @include small-mobile {
+        min-width: 140px;
+    }
+    &.big {
+        min-width: 260px;
+        font-size: 20px;
+        padding: 20px 25px;
+    }
+    &.long {
+        width: 100%;
+    }
+    &.primary {
+        background-color: rgb(255,255,255);
+        border: 1px solid $color-secondary;
+        span {
+            position: relative;
+            z-index: 2;
+            color: $color-secondary;
+            // color: #fff;
+            transition: .3s ease-in-out;
+            transition-delay: 0s;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            // z-index: -1;
+            z-index: 1;
+            top: 0;
+            display: block;
+            left: 0;
+            bottom: 0;
+            background-color: $color-secondary;
+            right: 100%;
+            transition: right.3s ease-in-out;
+            transition-delay: .3s;
+        }
+        &:hover {
+            span {
+                color: #f6f6f6;
+                transition: .3s ease-in-out;
+                transition-delay: .3s;
+            }
+            &::before {
+                right: 0;
+                transition: .3s ease-in-out;
+                transition-delay: 0;
+            }
+        }
+    }
+    &.transparent {
+        color: rgba(255,255,255,.7);
+        span {
+            color: rgba(255,255,255,.7);
+            transition: .3s ease-in-out;
+        }
+        &:hover {
+            color: rgba(255,255,255,1);
+            &::after {
+                background-color: rgba(255,255,255,1);
+            }
+        span {
+            color: rgba(255,255,255,1);
+        }   
+        }
+    }
+    &.secondary {
+        background-color: $color-secondary !important;
+        color: #fff;
+        // border: 1px solid $color-secondary;
+        span {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            // color: #fff;
+            transition: .3s ease-in-out;
+            transition-delay: 0s;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            // z-index: -1;
+            z-index: 1;
+            top: 0;
+            display: block;
+            left: 0;
+            bottom: 0;
+            background-color: $color-primary;
+            right: 100%;
+            transition: right.3s ease-in-out;
+            transition-delay: .3s;
+        }
+        &:hover {
+            &::before {
+                right: 0;
+                transition: .3s ease-in-out;
+                transition-delay: 0;
+            }
+        }
+    }
+}

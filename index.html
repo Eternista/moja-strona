@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coder</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/MyLogo.ico"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css//hamburgers.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,34 +16,39 @@
 </head>
 <body>
     <div class="cursor"></div>
+    <aside class="navigation">
+        <ul>
+            <li><a href="#home" class="btn transparent"><span>Home</span></a></li>
+            <li><a href="#about" class="btn transparent"><span>About</span></a></li>
+            <li><a href="#projects" class="btn transparent"><span>Projects</span></a></li>
+            <li><a href="#games" class="btn transparent"><span>Games</span></a></li>
+            <li><a href="#contact" class="btn transparent"><span>Contact</span></a></li>
+        </ul>
+    </aside>
     <div class="wrapper">
         <div class="followBox"></div>
         <header>
+            <a class="backArrow" href="#home"><i class="fas fa-caret-square-up"></i></a>
             <img src="/image/MyLogo.svg" alt="">
             <button class="hamburger hamburger--emphatic" type="button">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
             </button>
-            <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#" class="primary">My Work</a></li>
-                <li><a href="#contact" class="btn primary"><span>Say Hello</span></a></li>
-            </ul>
         </header>
         <section id='home' class="banner">
             <article>
                 <div class="banner-col">
-                    <h1 class="stroke fl-heading">Hello</h1>
-                    <h2 class="fl-heading">I'm Rafał</h2>
-                    <h3 class="fl-heading">Junior front end developer</h3>
+                    <h1 class="stroke heading">Hello</h1>
+                    <h2 class="heading">I'm Rafał</h2>
+                    <h3 class="heading">Junior front end developer</h3>
                     <div class="dual-btn">
-                        <a href="#mywork" class="btn secondary"><span>My work</span></a>
-                        <a href="#mywork" class="btn primary"><span>Contact Me</span></a>
+                        <a href="#projects" class="btn secondary"><span>My work</span></a>
+                        <a href="#contact" class="btn primary"><span>Contact Me</span></a>
                     </div>
                 </div>
             </article>
-            <article>
+            <article class="wait">
                 <ul>
                     <li><p class="typing typing1"><span class="remove">&lt;section&gt;</span></p>
                         <ul class="code">
@@ -64,108 +70,85 @@
             </article>
         </section>
         <section id='about' class="about">
-            <div class="about_title"><div><h2 class="fl-heading big stroke">About</h2></div></div>
+            <div class="about_title frameAboutTitle"><div><h2 class="heading big stroke">About</h2></div></div>
             <div class="about_content">
-                <img src="image/murzyn.jpg" class="myPhoto" alt="">
-                <div class="aboutMe">
-                    <h3 class="fl-heading title">About Me</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
+                <img src="image/ja2.jpg" class="myPhoto frameAboutImg" alt="My Photo">
+                <div class="aboutMe frameAboutMe">
+                    <h3 class="heading title">About Me</h3>
+                    <p>Hello I'm Rafał and I'm 22 years old and I'm from Poland. Currently I'm a first-year computer science student. I love spending time with music, listening to it, or playing the guitar.</p>
                 </div>
-                <article class="content">
-                    <h3 class="fl-heading title">Skills & Experience</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
-                    <div class="icons">
+                <article class="content frameAboutContent">
+                    <h3 class="heading title">Skills & Experience</h3>
+                    <p>I became interested in coding during the technical school via an internship at a company called "Artneo". This "love" caught the attention of my older brother who made it possible for me to gain commercial experience and help him with his projects. The main area of my expertise is Front End Development.</p>
+                    <!-- <div class="icons">
                         <img src="image/HTML.svg" alt="HTML">
                         <img src="image/CSS.svg" alt="CSS">
                         <img src="image/Js.svg" alt="JS">
+                    </div> -->
+                    <div class="progressbars">
+                        <div class="html"><span>HTML</span><div class="progress"><div class="size">80%</div></div></div>
+                        <div class="css"><span>CSS</span><div class="progress"><div class="size">80%</div></div></div>
+                        <div class="js"><span>JS</span><div class="progress"><div class="size">65%</div></div></div>
+                        <div class="react"><span>REACT</span><div class="progress"><div class="size">30%</div></div></div>
                     </div>
                 </article>
             </div>
         </section>
         <section id='projects' class="projects">
-            <div class="wrapp">
-                <h2 class="fl-heading stroke myWork big">Projects</h2>
-                <i class="fas fa-chevron-right"></i>
-                <i class="fas fa-chevron-left"></i>
-                <div class="slider">
-                    <div class="slide left">
-                        <img src="image/florian-olivo.png" alt="">
-                        <div class="slide_content">
-                            <h2>Project name</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
-                            <a href="#" class="btn transparent">View Project</a>
-                        </div>
-                    </div>
-                    <div class="slide active">
-                        <img src="image/florian-olivo.png" alt="">
-                        <div class="slide_content">
-                            <h2>Project name</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis</p>
-                            <a href="#" class="btn transparent">View Project</a>
-                        </div>
-                    </div>
-                    <div class="slide right">
-                        <img src="image/florian-olivo.png" alt="">
-                        <div class="slide_content">
-                            <h2>Project name</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis omnis rem itaque quos reprehenderit illo quibusdam, similique dolorem culpa quis.</p>
-                            <a href="#" class="btn transparent">View Project</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="image/florian-olivo.png" alt="">
-                        <div class="slide_content">
-                            <h2>Project name</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis omnis rem itaque quos reprehenderit illo quibusdam, similique dolorem culpa quis.</p>
-                            <a href="#" class="btn transparent">View Project</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="image/florian-olivo.png" alt="">
-                        <div class="slide_content">
-                            <h2>Project name</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta quo animi molestias reiciendis omnis rem itaque quos reprehenderit illo quibusdam, similique dolorem culpa quis.</p>
-                            <a href="#" class="btn transparent">View Project</a>
-                        </div>
-                    </div>
+            <div class="wrap">
+                <h2 class="heading stroke big">Projects</h2>
+                <ul class="menu">
+                    <li id="app">Vanilla JS</li>
+                    <li id="react">REACT</li>
+                    <li id="pages">HTML/CSS</li>
+                </ul>
+                <div id="grid">
+                    <!-- <div><div><img src="./image/projects/MoGo.jpg" alt="MoGo"></div><a href="https://mogo-rafal-portfolio.netlify.app" target="blank"><span>View Project</span></a><a href="https://github.com/Eternista/Pages/tree/main/MoGo" target="blank"><span>View Code on Github</span></a></div>
+                    <div><div><img src="./image/projects/Users.jpg" alt="Users"></div><a href="https://user-repository.netlify.app" target="blank"><span>View Project</span></a><a href="https://github.com/Eternista/Javascript/tree/main/User%20Repository" target="blank"><span>View Code on Github</span></a></div>
+                    <div><div><img src="./image/projects/Galleryjpg" alt="Gallery"></div><a href="https://github.com/Eternista/React/tree/main/Gallery" target="blank"><span>View Code on github</span></a></div> -->
                 </div>
             </div>
         </section>
         <section id='games' class="gameSection">
             <div class="games">
                 <div class="game-intro">
-                    <h2 class="fl-heading">Do you like games?</h2>
+                    <h2 class="heading">Do you like games?</h2>
                     <div class="mario"></div>
                     <button class="btn primary big gameStartBtn"><span>Let's play</span></button>
                 </div>
                 <div class="game">
-                    <h2 class="fl-heading levelHead">Level: <span class="lvl">1</span></h2>
+                    <div class="center">
+                    <h2 class="heading levelHead">Level: <span class="lvl">1</span></h2>
                     <div class="activeGame arcanoid">
-                        <h2 class="fl-heading">You Lose, click 'start' to play again :)</h2>
+                        <h2 class="heading">You Lose, click 'start' to play again :)</h2>
                         <canvas id="canvas" width="800" height="600"></canvas>
                         <button class="btn start-game primary"><span>Start</span></button>
+                    </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id='contact' class="contact">
             <div class="contact_title">
-                <h2 class="fl-heading big stroke">Contact</h2>
+                <h2 class="heading big stroke">Contact</h2>
             </div>
             <div class="contact_content">
                 <div>
-                    <h2 class="fl-heading">Say Hello</h2>
-                    <p><a href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line</a>, I'd love to hear from you!</p>
+                    <h2 class="heading">Say Hello</h2>
+                    <p><a class='drop' href="mailto:rafal.ziolkowski1234@gmail.com">Drop me a line, <span>Click, to send me an email :D</span></a>I'd love to hear from you!</p>
                 </div>
                 <form action="/contact_form.php" method="post" id="contact-form" data-netlify="true">
                     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
                     <p>
+                        <label for="name">Name</label>
                       <input name="name" type="text" placeholder="Your Name" required/>
                     </p>
                     <p>
-                      <input style="cursor: pointer;" name="email" placeholder="Your Emiail" type="text" required/>
+                        <label for="email">Email</label>
+                      <input style="cursor: pointer;" name="email" placeholder="Your Email" type="text" required/>
                     </p>
                     <p>
+                        <label for="message">Message</label>
                       <textarea rows="8" name="message" placeholder="Your message" required></textarea>
                     </p>
                 
@@ -175,21 +158,47 @@
                   </form>
             </div>
         </section>
-        <!-- <footer><img src="image/MyLogo.svg" alt="MyLogo"></footer> -->
     </div>
-    <aside class="navigation">
-        <ul>
-            <li><a href="#home" class="btn primary"><span>Home</span></a></li>
-            <li><a href="#about" class="btn primary"><span>About</span></a></li>
-            <li><a href="#projects" class="btn primary"><span>Projects</span></a></li>
-            <li><a href="#games" class="btn primary"><span>Games</span></a></li>
-            <li><a href="#contact" class="btn primary"><span>Contact</span></a></li>
-        </ul>
-    </aside>
+
+    <!-- VIDEOS -->
+
+    <button class="videoClose"><i class="far fa-times-circle"></i> Close</button>
+
+    <div class="videoContainer imageGallery">
+        <h3 class="videoName">Gallery</h3>
+        <video src="./videos/Image Gallery.mp4" muted></video>
+    </div>
+    <div class="videoContainer formValidation">
+        <h3 class="videoName">Form Validation</h3>
+        <video src="./videos/FormValidation.mp4" muted></video>
+    </div>
+    <div class="videoContainer spotify">
+        <h3 class="videoName">Spotify Search</h3>
+        <video src="./videos/Spotify.mp4" muted></video>
+    </div>
+    <div class="videoContainer shop">
+        <h3 class="videoName">React Shop</h3>
+        <video src="./videos/React Shop.mp4" muted></video>
+    </div>
+    <div class="videoContainer usersRepository">
+        <h3 class="videoName">Phone Book App</h3>
+        <video src="./videos/Users.mp4" muted></video>
+    </div>
+    <div class="videoContainer vacationMap">
+        <h3 class="videoName">Vacation Map App</h3>
+        <video src="./videos/Vacation Map.mp4" muted></video>
+    </div>
+    <div class="videoContainer trvl">
+        <h3 class="videoName">TRVL</h3>
+        <video src="./videos/TRVL.mp4" muted></video>
+    </div>
+
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
     <script src="js/cursor.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./js/animations.js"></script>
 </body>
 </html>

@@ -1,0 +1,229 @@
+
+//ABOUT
+
+.about {
+    display: flex;
+    align-items: center;
+    &>div {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about_title {
+        width: 30%;
+        position: relative;
+        height: calc(100vh - 200px);
+        background-color: $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .heading {
+            transform: rotate(-90deg);
+            margin-left: -20px;
+        }
+    }
+    .about_content {
+        width: 70%;
+        padding: 0 65px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .myPhoto {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            transition: filter .3s ease-in-out;
+            filter: grayscale(100%);
+            &:hover {
+                filter: grayscale(0%);
+            }
+            @include tablet {
+                &:hover {
+                    filter: grayscale(100%);
+                }
+            }
+        }
+        .aboutMe {
+            width: calc(100% - 300px);
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3 {
+                margin-bottom: 40px;
+            }
+        }
+        .content {
+            padding: 40px 0 40px 15px;
+            padding-bottom: 0;
+            // margin-left: 40px;
+            // margin-right: 40px;
+            position: relative;
+            z-index: 2;
+            background-color: #fff;
+            h3 {
+                margin-bottom: 40px;
+            }
+            p {
+                margin-bottom: 35px;
+            }
+            .icons {
+                img {
+                    height: 75px;
+                    margin-right: 20px;
+                }
+            }
+            .progressbars {
+                padding: 10px 0;
+                & > div {
+                    // border: 1px solid;
+                    margin-bottom: 15px;
+                    display: flex;
+                    span {
+                        min-width: 70px;
+                        text-align: center;
+                    }
+                    .progress {
+                        background-color: #f6f6f6;
+                        width: 100%;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .size {
+                        line-height: 25px;
+                        color: #fff;
+                        text-align: center;
+                        background-color: $color-secondary;
+                        transition: width 1s ease-in-out;
+                        width: 0%;
+                        font-size: 0;
+                    }
+                }
+                &.show {
+                    div .size {
+                        font-size: 20px;
+                    }
+                    .html {
+                        .size {
+                            width: 80%;
+                        }
+                    }
+                    .css {
+                        .size {
+                            width: 80%;
+                        }
+                    }
+                    .js {
+                        .size {
+                            width: 65%;
+
+                        }
+                    }
+                    .react {
+                        .size {
+                            width: 30%;
+
+                        }
+                    }
+                }
+            }
+        }
+        @include smallLaptops {
+            // @media (max-height: 900px) {
+                .myPhoto {
+                    width: 200px;
+                    height: 200px;
+                }
+                .aboutMe {
+                    width: calc(100% - 200px);
+                }
+                .content {
+                    padding-top: 30px;
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                }
+            // }
+        }
+    }
+    @include tablet {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        .about_title {
+            height: 200px;
+            width: 100%;
+            .heading {
+                transform: rotate(0deg);
+                margin-left: 0;
+            }
+        }
+        .about_content {
+            width: 100%;
+            padding: 80px 65px;
+            .progressbars {
+                padding-bottom: 0 !important;
+            }
+        }
+    }
+    @include mobile {
+        padding-bottom: 0;
+        .about_content {
+            padding: 60px 20px;
+            max-width: 600px;
+            margin:  0 auto;
+            .myPhoto {
+                width: 100%;
+                max-width: 400px;
+                height: 100%;
+                max-height: 400px;
+            }
+            .aboutMe, .content {
+                width: 100%;
+                padding: 50px 0 45px 15px;
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+            .content {
+                padding-top: 0;
+                padding-bottom: 0;
+                .progressbars {
+                    padding: 0;
+                }
+                p{
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
+    @include small-mobile {
+        .about_title {
+            height: 130px;
+        }
+    }
+}
+
+// //ANIMATIONS
+
+
+// @media all and (min-width: 992px) {
+//     .frameAboutTitle {
+//         transform: translateX(-100%);
+//     }
+//     .about_content {
+//         overflow: hidden;
+//         .frameAboutImg {
+//             transform: translateY(-300%);
+//         }
+//         .frameAboutMe {
+//             transform: translateX(110%);
+//         }
+//         .frameAboutContent {
+//             transform: translateY(200%);
+//         }
+//     }
+// }

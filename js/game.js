@@ -153,8 +153,6 @@ function moveBall(){
                 document.querySelector('.arcanoid h2').classList.add('lose');
             }
             lose();
-            // console.log("ga")
-            // alert('Lose')
         }
     }
 
@@ -190,7 +188,6 @@ function moveBall(){
 //INCRESE SCORE
 
 let speedOfaBall = ball.speed;
-// let speedXofABall = ball.dx;
 
 function increaseScore() {
     score++;
@@ -199,8 +196,6 @@ function increaseScore() {
         showAllbricks();
         s++;
         ball.speed = ball.speed + 0.4;
-        // if
-        // ball.dx = ball.dx + 0.4;
         speed = ball.speed
         lvlNum = lvlNum + 1;
         lvl.innerHTML = lvlNum;
@@ -223,8 +218,6 @@ const start = function () {
     ball.dy = 4;
     arcanoid.classList.remove('activeGame')
     document.querySelector('.arcanoid h2').classList.remove('lose');
-    // console.log(this.innerHTML)
-    // this.classlist.add('none');
 }
 
 document.querySelector('.start-game').addEventListener('click', start);

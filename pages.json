@@ -1,0 +1,26 @@
+[
+    {
+        "id": "Mogo",
+        "name": "Mogo Website",
+        "type": "Website",
+        "imageUrl": "./image/projects/MoGo.jpg",
+        "githubUrl": "https://github.com/Eternista/Pages/tree/main/MoGo",
+        "websiteUrl": "https://mogo-rafal-portfolio.netlify.app"
+    },
+    {
+        "id": "Tajam",
+        "name": "Tajam Website",
+        "type": "Website",
+        "imageUrl": "./image/projects/Tajam.jpg",
+        "githubUrl": "https://github.com/Eternista/Pages/tree/main/Tajam",
+        "websiteUrl": "https://tajam-portfolio.netlify.app"
+    },
+    {
+        "id": "ActiveBox",
+        "name": "ActiveBox Website",
+        "type": "Website",
+        "imageUrl": "./image/projects/ActiveBox.jpg",
+        "githubUrl": "https://github.com/Eternista/Pages/tree/main/activeBox",
+        "websiteUrl": "https://activebox-portfolio.netlify.app"
+    }
+]
