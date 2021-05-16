@@ -25,8 +25,8 @@ const videoUpdate =() => {
     }, 350)
 }
 
-app.addEventListener('click', videoUpdate);
-reactApp.addEventListener('click', videoUpdate);
+// app.addEventListener('click', videoUpdate);
+// reactApp.addEventListener('click', videoUpdate);
 
 window.addEventListener('load', videoUpdate());
 videoUpdate();

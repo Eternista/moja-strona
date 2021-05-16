@@ -38,6 +38,7 @@ xhr.onload = function(){
     reactApp.classList.remove('active');
     childOfgrid = document.querySelectorAll('#grid > div')
   }
+  videoUpdate();
 }
 
 xhr.send();
@@ -105,12 +106,14 @@ xhr.onload = function(){
           '</div>'+
         '</div>';
       }
-    document.getElementById('grid').innerHTML = output;
+  document.getElementById('grid').innerHTML = output;
   app.classList.remove('active');
   pages.classList.remove('active');
   reactApp.classList.add('active');
   childOfgrid = document.querySelectorAll('#grid > div')
   }
+  videoUpdate();
+
 }
 
 xhr.send();
