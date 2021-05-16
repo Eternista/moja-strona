@@ -13,6 +13,7 @@ const videoUpdate =() => {
                     title.parentElement.children[1].currentTime=0;
                     if(title.parentElement.classList.contains('videoContainer')) {
                         title.parentElement.classList.remove('active');
+                        document.querySelector('.videoClose.active').classList.remove('active');
                     }
                 })
             }
