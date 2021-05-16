@@ -1550,6 +1550,10 @@ header img {
   }
 }
 
+.projects .two-btn a {
+  width: 50% !important;
+}
+
 @keyframes show {
   0% {
     opacity: 0.2;

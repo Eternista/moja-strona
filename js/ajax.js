@@ -62,7 +62,7 @@ xhr.onload = function(){
           '<div class="grid-image">'+
               `<img class="imageFix" src=${projects[i].imageUrl}>`+
           '</div>'+
-          '<div class="grid-content">'+
+          '<div class="grid-content two-btn">'+
             '<h3><span>'+projects[i].name+'</span></h3>'+
             '<a href='+projects[i].websiteUrl+'>View Project</a>'+
             '<a href='+projects[i].githubUrl+'>GITHUB</a>'+
