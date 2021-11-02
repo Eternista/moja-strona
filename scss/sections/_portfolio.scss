@@ -16,7 +16,7 @@
         }
         .menu {
             display: flex;
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
             min-height: 5vh;
             padding: 60px 0 0;
@@ -55,7 +55,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            #FormValidation .grid-image {
+            #formValidation .grid-image, #spotify {
                 min-height: 300px;
                 img {
                     height: 300px;
@@ -63,12 +63,18 @@
                 }
             }
             & > div {
+                &.none {
+                    transform: scale(0);
+                    width: 0;
+                }
                 position: relative;
                 width: calc(33% - 20px);
                 // height: 100%;
                 // max-height: 500px;
                 // min-height: 300px;
                 margin-bottom: 30px;
+                transform: scale(1);
+                // transition: 1s ease-in-out;
                 display: flex;
                 flex-wrap: wrap;
                 .grid-image {

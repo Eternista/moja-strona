@@ -1182,11 +1182,15 @@ header img {
 }
 
 .about .about_content .content .progressbars.show .css .size {
-  width: 80%;
+  width: 90%;
 }
 
 .about .about_content .content .progressbars.show .js .size {
-  width: 65%;
+  width: 75%;
+}
+
+.about .about_content .content .progressbars.show .php .size {
+  width: 50%;
 }
 
 .about .about_content .content .progressbars.show .react .size {
@@ -1300,7 +1304,7 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   min-height: 5vh;
   padding: 60px 0 0;
@@ -1350,11 +1354,11 @@ header img {
           align-items: center;
 }
 
-.projects .wrap #grid #FormValidation .grid-image {
+.projects .wrap #grid #formValidation .grid-image, .projects .wrap #grid #spotify {
   min-height: 300px;
 }
 
-.projects .wrap #grid #FormValidation .grid-image img {
+.projects .wrap #grid #formValidation .grid-image img, .projects .wrap #grid #spotify img {
   height: 300px;
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -1364,11 +1368,19 @@ header img {
   position: relative;
   width: calc(33% - 20px);
   margin-bottom: 30px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.projects .wrap #grid > div.none {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 0;
 }
 
 .projects .wrap #grid > div .grid-image {
