@@ -1440,6 +1440,10 @@ header img {
   padding: 30px 0;
 }
 
+.projects .wrap #grid > div .grid-content a.single, .projects .wrap #grid > div .grid-content button.single {
+  width: 100%;
+}
+
 .projects .wrap #grid > div .grid-content.two-btn a {
   width: 50%;
 }
