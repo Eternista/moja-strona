@@ -1337,18 +1337,11 @@ header img {
 .projects .wrap #grid {
   padding: 80px 40px 30px;
   overflow-y: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1366,7 +1359,7 @@ header img {
 
 .projects .wrap #grid > div {
   position: relative;
-  width: calc(33% - 20px);
+  width: 100%;
   margin-bottom: 30px;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1381,6 +1374,7 @@ header img {
   -webkit-transform: scale(0);
           transform: scale(0);
   width: 0;
+  display: none;
 }
 
 .projects .wrap #grid > div .grid-image {
@@ -1509,6 +1503,10 @@ header img {
     padding: 0;
     line-height: 200px;
   }
+  .projects .wrap #grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
   .projects .wrap #grid > div {
     margin-bottom: 0;
   }
@@ -1549,12 +1547,8 @@ header img {
     width: 25%;
   }
   .projects .wrap #grid {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
